@@ -113,13 +113,14 @@ export default function FlightBooking() {
             Restrictions apply, for further information read the Terms and Conditions.
           </p>
         </div>
+     </div>
 
         {/* Flight Deals Section */}
         <div className="bg-white">
           <FlightDeals />
         </div>
       </div>
-    </div>
+    
   );
 }
 
