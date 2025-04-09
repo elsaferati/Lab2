@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FlightDeals from '../pages/FlightDeals';
 import TravelPerks from '../pages/TravelPerks';
 import NewsletterSignup from '../pages/NewsletterSignup';
+import WizzBenefits from '../pages/WizzBenefits';
 
 
 export default function FlightBooking() {
@@ -123,6 +124,7 @@ export default function FlightBooking() {
           <FlightDeals />
           <TravelPerks />
           <NewsletterSignup />
+          <WizzBenefits/>
         </div>
       </div>
       
