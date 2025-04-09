@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import FlightDeals from '../pages/FlightDeals';
+import TravelPerks from '../pages/TravelPerks';
+
 
 export default function FlightBooking() {
   const [tripType, setTripType] = useState("return");
@@ -118,9 +120,12 @@ export default function FlightBooking() {
         {/* Flight Deals Section */}
         <div className="bg-white">
           <FlightDeals />
+          <TravelPerks />
         </div>
       </div>
-    
+      
+
+
   );
 }
 
