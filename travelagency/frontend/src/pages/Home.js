@@ -115,7 +115,7 @@ export default function FlightBooking() {
         </div>
 
         {/* Flight Deals Section */}
-        <div className="mt-10">
+        <div className="bg-white">
           <FlightDeals />
         </div>
       </div>
