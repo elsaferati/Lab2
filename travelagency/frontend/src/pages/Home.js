@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FlightDeals from '../pages/FlightDeals';
 import TravelPerks from '../pages/TravelPerks';
+import NewsletterSignup from '../pages/NewsletterSignup';
 
 
 export default function FlightBooking() {
@@ -121,6 +122,7 @@ export default function FlightBooking() {
         <div className="bg-white">
           <FlightDeals />
           <TravelPerks />
+          <NewsletterSignup />
         </div>
       </div>
       
