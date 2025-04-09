@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import Home from './pages/Home';
 import Footer from './components/Footer';
+import SignUp from './components/SignUp';
 
 function App() {
   return (
@@ -11,7 +12,12 @@ function App() {
         <Home />
       </main>
       <Footer />
+      
+      {showSignUp && (
+        <SignUp onClose={() => setShowSignUp(false)} />
+      )}
     </div>
+
   );
 }
 
