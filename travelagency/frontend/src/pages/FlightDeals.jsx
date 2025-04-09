@@ -23,16 +23,16 @@ const deals = [
 
 export default function FlightDeals() {
   return (
-    <div className="mt-10 px-4">
-      <h2 className="text-3xl font-semibold text-white mb-1">Explore direct flights from your area</h2>
-      <p className="text-white mb-6">Cheap flights from <strong>Tirana</strong></p>
+    <div className="mt-20 bg-white text-black px-4 py-12 rounded-t-3xl">
+      <h2 className="text-3xl font-bold mb-1 text-blue-900">Explore direct flights from your area</h2>
+      <p className="mb-6 text-lg text-gray-600">Cheap flights from <strong>Tirana</strong></p>
 
-      <div className="flex gap-4 overflow-x-auto scrollbar-hide">
+      <div className="flex gap-6 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-pink-600 scrollbar-track-gray-200">
         {deals.map((deal, index) => (
-          <div key={index} className="min-w-[250px] bg-white rounded-2xl overflow-hidden shadow-lg">
+          <div key={index} className="min-w-[260px] bg-white rounded-2xl overflow-hidden shadow-lg">
             <img src={deal.image} alt={deal.destination} className="h-40 w-full object-cover" />
             <div className="p-4">
-              <h3 className="text-lg font-semibold text-blue-700">{deal.destination}</h3>
+              <h3 className="text-lg font-bold text-blue-700">{deal.destination}</h3>
               <div className="flex items-center justify-between text-sm mt-2 text-gray-600">
                 <span>📅 {deal.month}</span>
                 <span>✈️ Return</span>
@@ -45,3 +45,4 @@ export default function FlightDeals() {
     </div>
   );
 }
+

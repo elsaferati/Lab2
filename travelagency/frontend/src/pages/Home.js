@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FlightDeals from '../pages/FlightDeals';
 
 export default function FlightBooking() {
   const [tripType, setTripType] = useState("return");
@@ -28,7 +29,7 @@ export default function FlightBooking() {
           </div>
         </div>
 
-        {/* Flight Search Box (Only if Flights is active) */}
+        {/* Flight Search Box */}
         {selectedTab === "flights" && (
           <div className="bg-white rounded-b-2xl p-6 shadow-lg text-black">
             <div className="flex flex-col md:flex-row gap-4">
@@ -89,7 +90,7 @@ export default function FlightBooking() {
           </div>
         )}
 
-        {/* Hotels Placeholder (Optional to expand later) */}
+        {/* Hotels Section */}
         {selectedTab === "hotels" && (
           <div className="bg-white rounded-b-2xl p-6 shadow-lg text-black text-center">
             <h2 className="text-xl font-bold">Search for Hotels</h2>
@@ -112,8 +113,14 @@ export default function FlightBooking() {
             Restrictions apply, for further information read the Terms and Conditions.
           </p>
         </div>
+
+        {/* Flight Deals Section */}
+        <div className="mt-10">
+          <FlightDeals />
+        </div>
       </div>
     </div>
   );
 }
+
 
