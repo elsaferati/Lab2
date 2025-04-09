@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function FlightBooking() {
+  const [tripType, setTripType] = useState("return");
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-pink-600 to-purple-700 text-white">
       <div className="max-w-4xl mx-auto py-10 px-4">
@@ -8,8 +10,20 @@ export default function FlightBooking() {
         <div className="bg-white rounded-2xl p-6 shadow-lg text-black">
           <div className="flex flex-col md:flex-row gap-4">
             <div className="flex gap-2 items-center">
-              <input type="radio" name="trip" defaultChecked /> <label>Return</label>
-              <input type="radio" name="trip" /> <label>One way</label>
+              <input
+                type="radio"
+                name="trip"
+                checked={tripType === "return"}
+                onChange={() => setTripType("return")}
+              />
+              <label>Return</label>
+              <input
+                type="radio"
+                name="trip"
+                checked={tripType === "one-way"}
+                onChange={() => setTripType("one-way")}
+              />
+              <label>One way</label>
             </div>
           </div>
 
@@ -29,10 +43,12 @@ export default function FlightBooking() {
               className="border border-gray-300 p-2 rounded-lg col-span-1"
               defaultValue="2025-04-10"
             />
-            <input
-              type="date"
-              className="border border-gray-300 p-2 rounded-lg col-span-1"
-            />
+            {tripType === "return" && (
+              <input
+                type="date"
+                className="border border-gray-300 p-2 rounded-lg col-span-1"
+              />
+            )}
             <input
               type="number"
               min="1"
