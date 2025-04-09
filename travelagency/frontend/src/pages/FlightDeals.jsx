@@ -19,6 +19,42 @@ const deals = [
     month: "in May",
     price: "ALL 2,980",
   },
+  {
+    destination: "Ancona",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Tempio_del_Valadier_%28Genga%29.jpg/800px-Tempio_del_Valadier_%28Genga%29.jpg",
+    month: "in May",
+    price: "ALL 2,980",
+  },
+  {
+    destination: "Comiso",
+    image: "https://www.wizzair.com/static/assets/img/flight-search-widget/destination2.jpg",
+    month: "in June",
+    price: "ALL 2,980",
+  },
+  {
+    destination: "Pisa (Tuscany)",
+    image: "https://www.wizzair.com/static/assets/img/flight-search-widget/destination3.jpg",
+    month: "in May",
+    price: "ALL 2,980",
+  },
+  {
+    destination: "Ancona",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Tempio_del_Valadier_%28Genga%29.jpg/800px-Tempio_del_Valadier_%28Genga%29.jpg",
+    month: "in May",
+    price: "ALL 2,980",
+  },
+  {
+    destination: "Comiso",
+    image: "https://www.wizzair.com/static/assets/img/flight-search-widget/destination2.jpg",
+    month: "in June",
+    price: "ALL 2,980",
+  },
+  {
+    destination: "Pisa (Tuscany)",
+    image: "https://www.wizzair.com/static/assets/img/flight-search-widget/destination3.jpg",
+    month: "in May",
+    price: "ALL 2,980",
+  },
 ];
 
 export default function FlightDeals() {
