@@ -31,10 +31,10 @@ const Header = () => {
         {/* Navigation Menu */}
         <nav className={`md:flex space-x-6 font-semibold text-sm ${isMenuOpen ? 'block' : 'hidden'} md:block`}>
           <a href="#" className="hover:text-pink-300">HOTELS</a>
-          <a href="#" className="hover:text-pink-300">WIZZ & SERVICES</a>
+
           
           {/* Help Centre Link */}
-          <Link to="/help-center" className="hover:text-pink-300">HELP CENTRE</Link>
+          <Link to="/help-center" className="hover:text-pink-300">HELP CENTER</Link>
 
           {/* Check-in & Booking Link */}
           <Link
