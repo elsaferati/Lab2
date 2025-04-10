@@ -73,28 +73,19 @@ const HelpCenter = () => {
                 )}
             </div>
 
-            {/* Promo Section (Optional) */}
-            <div className="mt-10 text-center px-4">
-                <h1 className="text-4xl font-bold leading-tight text-white">
-                    MAY-MANIA: UP TO <span className="text-yellow-300">20%</span> OFF
-                </h1>
-                <p className="mt-4 text-lg text-white">
-                    Get 20% off on select services during May! Don't miss out.
-                </p>
-                <button className="mt-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg">
-                    Get Help Now!
-                </button>
-            </div>
+            <div className="mt-10 text-center px-4 py-6">
+    <h1 className="text-4xl font-bold leading-tight text-white">
+        MAY-MANIA: UP TO <span className="text-yellow-300">20%</span> OFF
+    </h1>
+    <p className="mt-4 text-lg text-white">
+        Get 20% off on select services during May! Don't miss out.
+    </p>
+    <button className="mt-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg">
+        Get Help Now!
+    </button>
+</div>
 
-            {/* Back to Home Button */}
-            <div className="mt-8 text-center">
-                <button
-                    onClick={() => navigate('/')}
-                    className="bg-pink-600 hover:bg-pink-700 text-white font-semibold px-6 py-2 rounded-lg"
-                >
-                    ⬅ Back to Home
-                </button>
-            </div>
+          
 
             {/* Footer will remain */}
         </div>
