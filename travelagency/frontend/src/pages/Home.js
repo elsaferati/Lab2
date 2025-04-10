@@ -3,12 +3,11 @@ import FlightDeals from '../pages/FlightDeals';
 import TravelPerks from '../pages/TravelPerks';
 import NewsletterSignup from '../pages/NewsletterSignup';
 import WizzBenefits from '../pages/WizzBenefits';
+import AirportParking from '../pages/AirportParking';
 
 export default function FlightBooking() {
   const [tripType, setTripType] = useState("return");
   const [selectedTab, setSelectedTab] = useState("flights");
-  
-
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-pink-600 to-purple-700 text-white">
@@ -32,9 +31,17 @@ export default function FlightBooking() {
             🏨 Hotels
             <span className="bg-blue-500 text-white text-xs px-2 py-0.5 rounded ml-1">-5%</span>
           </div>
+          <div
+            className={`cursor-pointer flex items-center gap-2 border-b-4 pb-2 ${
+              selectedTab === "parking" ? "border-purple-500 text-purple-500" : "border-transparent"
+            }`}
+            onClick={() => setSelectedTab("parking")}
+          >
+            🅿️ Parking
+          </div>
         </div>
 
-        {/* Flight Search Box */}
+        {/* Flights Search Box */}
         {selectedTab === "flights" && (
           <div className="bg-white rounded-b-2xl p-6 shadow-lg text-black">
             <div className="flex flex-col md:flex-row gap-4">
@@ -131,6 +138,9 @@ export default function FlightBooking() {
           </div>
         )}
 
+        {/* Airport Parking Content */}
+        {selectedTab === "parking" && <AirportParking />}
+
         {/* Promo Section */}
         <div className="mt-10 text-center">
           <h1 className="text-4xl font-bold leading-tight">
@@ -148,16 +158,17 @@ export default function FlightBooking() {
         </div>
       </div>
 
-      {/* Flight Deals Section */}
+      {/* Extras Section */}
       <div className="bg-white">
         <FlightDeals />
-        <TravelPerks />
+        <TravelPerks setSelectedTab={setSelectedTab} />
         <NewsletterSignup />
         <WizzBenefits />
       </div>
     </div>
   );
 }
+
 
 
 
