@@ -59,7 +59,7 @@ const Header = ({ onSignUpClick }) => {
 
 {/* Right Side Icons */}
 <div className="flex items-center space-x-4 text-sm">
-  <button className="hover:text-pink-300">SIGN UP</button>
+  
 
   <button
     onClick={onSignUpClick}
