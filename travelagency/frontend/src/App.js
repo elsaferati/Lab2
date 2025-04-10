@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Footer from './components/Footer';
 import SignUp from './components/SignUp';
 import HelpCenter from './pages/HelpCenter';
+import CheckInBooking from './pages/CheckInBooking';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/help-center" element={<HelpCenter />} />
+            <Route path="/check-in-booking" element={<CheckInBooking />} /> {/* <-- New Route */}
           </Routes>
         </main>
         <Footer />
@@ -25,6 +27,3 @@ function App() {
 }
 
 export default App;
-
-
-
