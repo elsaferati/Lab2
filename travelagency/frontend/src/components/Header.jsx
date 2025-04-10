@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom'; 
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <header className="bg-blue-900 text-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
@@ -13,8 +15,17 @@ const Header = () => {
         <nav className="hidden md:flex space-x-6 font-semibold text-sm">
           <a href="#" className="hover:text-pink-300">HOTELS</a>
           <a href="#" className="hover:text-pink-300">WIZZ & SERVICES</a>
-          <a href="#" className="hover:text-pink-300">HELP CENTRE</a>
-          <a href="#" className="hover:text-pink-300">CHECK-IN & BOOKINGS</a>
+          
+          {/* Help Centre Link */}
+          <Link to="/help-center" className="hover:text-pink-300">HELP CENTRE</Link> {/* Use Link component */}
+
+          {/* Back to Home Button */}
+          <button
+            onClick={() => navigate('/')} // <-- This navigates to the homepage
+            className="bg-pink-600 hover:bg-pink-700 text-white font-semibold px-4 py-2 rounded-lg"
+          >
+            ⬅ Back to Home
+          </button>
         </nav>
 
         {/* Right Side Icons */}
