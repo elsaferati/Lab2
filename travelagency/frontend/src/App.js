@@ -13,9 +13,9 @@ function App() {
       </main>
       <Footer />
       
-      {showSignUp && (
+      {/* {showSignUp && (
         <SignUp onClose={() => setShowSignUp(false)} />
-      )}
+      )} */}
     </div>
 
   );
