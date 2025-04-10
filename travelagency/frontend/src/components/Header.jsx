@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({ onSignUpClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -57,11 +57,21 @@ const Header = () => {
           </button>
         </nav>
 
-        {/* Right Side Icons */}
-        <div className="flex items-center space-x-4 text-sm">
-          <button className="hover:text-pink-300">SIGN IN</button>
-          <button className="rounded-full border border-white px-2 py-0.5 text-xs hover:bg-white hover:text-blue-900">🇬🇧</button>
-        </div>
+{/* Right Side Icons */}
+<div className="flex items-center space-x-4 text-sm">
+  <button className="hover:text-pink-300">SIGN UP</button>
+
+  <button
+    onClick={onSignUpClick}
+    className="bg-pink-600 hover:bg-pink-700 text-white px-4 py-1 rounded-lg"
+  >
+    SIGN UP
+  </button>
+
+  <button className="rounded-full border border-white px-2 py-0.5 text-xs hover:bg-white hover:text-blue-900">
+    🇬🇧
+  </button>
+</div>
       </div>
     </header>
   );
