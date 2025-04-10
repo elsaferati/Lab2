@@ -7,6 +7,8 @@ import WizzBenefits from '../pages/WizzBenefits';
 export default function FlightBooking() {
   const [tripType, setTripType] = useState("return");
   const [selectedTab, setSelectedTab] = useState("flights");
+  
+
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-pink-600 to-purple-700 text-white">
