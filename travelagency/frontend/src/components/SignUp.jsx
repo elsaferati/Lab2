@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const SignUp = () => {
+const SignUp = ({onClose}) => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -24,7 +24,12 @@ const SignUp = () => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-white w-full max-w-md p-8 rounded shadow-lg relative">
-        <button className="absolute top-4 right-4 text-gray-500 hover:text-red-500 text-xl font-bold">&times;</button>
+      <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-gray-500 hover:text-red-500 text-xl font-bold"
+        >
+          &times;
+        </button>
         <h2 className="text-2xl font-semibold mb-6 text-center">Sign Up</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
@@ -65,11 +70,12 @@ const SignUp = () => {
           </button>
 
           <button
-            type="button"
-            className="w-full bg-indigo-600 text-white font-semibold py-2 rounded hover:bg-indigo-700"
-          >
-            CANCEL
-          </button>
+          type="button"
+          onClick={onClose}
+          className="w-full bg-indigo-600 text-white font-semibold py-2 rounded hover:bg-indigo-700"
+        >
+          CANCEL
+        </button>
 
           <p className="text-xs text-gray-500 mt-4">
             This site is protected by reCAPTCHA and the Google <a href="#" className="underline">Privacy Policy</a> and <a href="#" className="underline">Terms of Service</a> apply.
