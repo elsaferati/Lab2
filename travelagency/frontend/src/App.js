@@ -10,10 +10,11 @@ import Services from './pages/Services';
 
 
 function App() {
+  const [showSignUp, setShowSignUp] = useState(false);
   return (
     <Router>
-      <div className="min-h-screen flex flex-col">
-        <Header />
+      <div className="min-h-screen flex flex-col relative">
+        <Header onSignUpClick={() => setShowSignUp(true)} />
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -24,6 +25,9 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        {showSignUp && (
+        <SignUp onClose={() => setShowSignUp(false)} />
+      )}
       </div>
     </Router>
   );
