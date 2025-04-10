@@ -1,8 +1,10 @@
-import React from 'react';
-import { Link, useNavigate } from 'react-router-dom'; 
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
+
   return (
     <header className="bg-blue-900 text-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
@@ -15,8 +17,19 @@ const Header = () => {
           />
         </div>
 
+        {/* Hamburger Menu for Mobile */}
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle navigation menu"
+          className="text-white md:hidden"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
         {/* Navigation Menu */}
-        <nav className="hidden md:flex space-x-6 font-semibold text-sm">
+        <nav className={`md:flex space-x-6 font-semibold text-sm ${isMenuOpen ? 'block' : 'hidden'} md:block`}>
           <a href="#" className="hover:text-pink-300">HOTELS</a>
           <a href="#" className="hover:text-pink-300">WIZZ & SERVICES</a>
           
@@ -30,6 +43,10 @@ const Header = () => {
           >
             CHECK-IN & BOOKING
           </Link>
+
+          {/* Services Link */}
+          <Link to="/services" className="hover:text-pink-300">SERVICES</Link>  {/* <-- Added Services Link */}
+
 
           {/* Back to Home Button */}
           <button
