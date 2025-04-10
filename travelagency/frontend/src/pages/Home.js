@@ -4,7 +4,6 @@ import TravelPerks from '../pages/TravelPerks';
 import NewsletterSignup from '../pages/NewsletterSignup';
 import WizzBenefits from '../pages/WizzBenefits';
 
-
 export default function FlightBooking() {
   const [tripType, setTripType] = useState("return");
   const [selectedTab, setSelectedTab] = useState("flights");
@@ -94,11 +93,39 @@ export default function FlightBooking() {
           </div>
         )}
 
-        {/* Hotels Section */}
+        {/* Hotels Search Box */}
         {selectedTab === "hotels" && (
-          <div className="bg-white rounded-b-2xl p-6 shadow-lg text-black text-center">
-            <h2 className="text-xl font-bold">Search for Hotels</h2>
-            <p className="mt-2 text-gray-600">This section is coming soon.</p>
+          <div className="bg-white rounded-b-2xl p-6 shadow-lg text-black">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-4">
+              <input
+                type="text"
+                placeholder="Where are you going?"
+                className="border border-gray-300 p-2 rounded-lg col-span-1"
+              />
+              <input
+                type="date"
+                className="border border-gray-300 p-2 rounded-lg col-span-1"
+                defaultValue="2025-04-10"
+              />
+              <input
+                type="date"
+                className="border border-gray-300 p-2 rounded-lg col-span-1"
+                defaultValue="2025-04-11"
+              />
+              <input
+                type="number"
+                min="1"
+                defaultValue="1"
+                placeholder="Guests"
+                className="border border-gray-300 p-2 rounded-lg col-span-1"
+              />
+            </div>
+
+            <div className="mt-4 text-right">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg">
+                Search
+              </button>
+            </div>
           </div>
         )}
 
@@ -117,20 +144,18 @@ export default function FlightBooking() {
             Restrictions apply, for further information read the Terms and Conditions.
           </p>
         </div>
-     </div>
-
-        {/* Flight Deals Section */}
-        <div className="bg-white">
-          <FlightDeals />
-          <TravelPerks />
-          <NewsletterSignup />
-          <WizzBenefits/>
-        </div>
       </div>
-      
 
-
+      {/* Flight Deals Section */}
+      <div className="bg-white">
+        <FlightDeals />
+        <TravelPerks />
+        <NewsletterSignup />
+        <WizzBenefits />
+      </div>
+    </div>
   );
 }
+
 
 
