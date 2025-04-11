@@ -79,7 +79,7 @@ export default function TravelPerks() {
         ref={scrollRef}
         className="flex gap-6 overflow-x-auto scroll-smooth pb-2 scrollbar-none"
       >
-        {perks.map((perk, index) => {
+ {perks.map((perk, index) => {
           const isAirportParking = perk.title === "Airport parking";
 
           const cardContent = (
@@ -90,9 +90,8 @@ export default function TravelPerks() {
                 className="h-44 w-full object-cover"
               />
               <div className="p-4">
-                <h3 className="text-lg font-bold text-blue-700">
-                  {perk.title}
-                </h3>
+                <h3 className="text-lg font-bold text-blue-700">{perk.title}</h3>
+                <p className="text-sm text-gray-600 mt-1">{perk.description}</p>
               </div>
             </div>
           );
@@ -109,5 +108,8 @@ export default function TravelPerks() {
     </div>
   );
 }
+
+     
+
 
 

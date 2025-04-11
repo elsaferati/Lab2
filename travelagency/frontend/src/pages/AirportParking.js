@@ -12,8 +12,8 @@ export default function AirportParking() {
   };
 
   return (
-    <div className="bg-white rounded-b-2xl p-6 shadow-lg text-black">
-      <h2 className="text-xl font-semibold mb-4">Book Parking Online</h2>
+    <div className="bg-white p-6 shadow-lg text-black max-w-4xl mx-auto mt-10 rounded-2xl">
+      <h2 className="text-2xl font-bold mb-6 text-center">Book Parking Online</h2>
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
         <select
           value={location}
@@ -51,7 +51,7 @@ export default function AirportParking() {
         />
       </div>
 
-      <div className="mt-4 text-right">
+      <div className="mt-6 text-right">
         <button
           onClick={handleSearch}
           className="bg-pink-600 hover:bg-pink-700 text-white font-semibold px-6 py-2 rounded-lg"
@@ -60,7 +60,7 @@ export default function AirportParking() {
         </button>
       </div>
 
-      <div className="mt-6 p-4 bg-gray-100 rounded-lg text-sm text-gray-700">
+      <div className="mt-8 p-4 bg-gray-100 rounded-lg text-sm text-gray-700">
         <p>
           Wizz Air in association with ParkVia offers pre-booking for parking spaces.
           Book online in advance to get a guaranteed space at a great price!
@@ -71,3 +71,4 @@ export default function AirportParking() {
     </div>
   );
 }
+
