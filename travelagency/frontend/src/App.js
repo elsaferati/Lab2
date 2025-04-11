@@ -10,6 +10,7 @@ import CheckInBooking from './pages/CheckInBooking';
 import Services from './pages/Services'; 
 import AirportParking from './pages/AirportParking';
 import FastTrack from './pages/FastTrack';
+import AirportLounge from './pages/AirportLounge';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
             <Route path="/services" element={<Services />} /> 
             <Route path="/airport-parking" element={<AirportParking />} /> 
             <Route path="/fast-track" element={<FastTrack />} />
+            <Route path="/lounge" element={<AirportLounge />} />
           </Routes>
         </main>
         <Footer />
