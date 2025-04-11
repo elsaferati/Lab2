@@ -8,6 +8,7 @@ import Register from './components/Register';
 import HelpCenter from './pages/HelpCenter';
 import CheckInBooking from './pages/CheckInBooking';
 import Services from './pages/Services'; 
+import AirportParking from './pages/AirportParking';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route path="/help-center" element={<HelpCenter />} />
             <Route path="/check-in-booking" element={<CheckInBooking />} /> 
             <Route path="/services" element={<Services />} /> 
+            <Route path="/airport-parking" element={<AirportParking />} /> 
           </Routes>
         </main>
         <Footer />
