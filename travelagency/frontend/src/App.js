@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import Footer from './components/Footer';
 import SignUp from './components/SignUp';
+import Register from './components/Register';
 import HelpCenter from './pages/HelpCenter';
 import CheckInBooking from './pages/CheckInBooking';
 import Services from './pages/Services'; 
@@ -11,6 +12,7 @@ import Services from './pages/Services';
 
 function App() {
   const [showSignUp, setShowSignUp] = useState(false);
+  const [showRegister, setShowRegister] = useState(false);
   return (
     <Router>
       <div className="min-h-screen flex flex-col relative">
@@ -26,7 +28,17 @@ function App() {
         </main>
         <Footer />
         {showSignUp && (
-        <SignUp onClose={() => setShowSignUp(false)} />
+        <SignUp
+          onClose={() => setShowSignUp(false)}
+          onRegisterClick={() => {
+            setShowSignUp(false);
+            setShowRegister(true);
+          }}
+        />
+      )}
+
+      {showRegister && (
+        <Register onClose={() => setShowRegister(false)} />
       )}
       </div>
     </Router>
