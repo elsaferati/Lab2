@@ -6,11 +6,17 @@ const FastTrack = () => {
         <div className="min-h-screen bg-gray-100 py-12 px-4">
   {/* Tab Selector */}
   <div className="flex justify-center mb-10">
-    <div className="bg-white rounded-lg shadow-md inline-flex overflow-hidden">
-      <button className="px-6 py-3 font-semibold bg-white text-pink-700 border-r border-gray-300">SECURITY FAST TRACK</button>
-      <button className="px-6 py-3 font-semibold bg-pink-600 text-white hover:bg-pink-700">PASSPORT FAST TRACK</button>
-      <button className="px-6 py-3 font-semibold bg-pink-600 text-white hover:bg-pink-700">AIRPORT LOUNGE</button>
-    </div>
+  <div className="bg-white rounded-lg shadow-md inline-flex overflow-hidden">
+  <Link to="/fast-track">
+    <button className="px-6 py-3 font-semibold text-pink-700 hover:bg-pink-100">SECURITY FAST TRACK</button>
+  </Link>
+  <Link to="/passport-fast-track">
+    <button className="px-6 py-3 font-semibold text-pink-700 hover:bg-pink-100">PASSPORT FAST TRACK</button>
+  </Link>
+  <Link to="/lounge">
+    <button className="px-6 py-3 font-semibold bg-pink-600 text-white">AIRPORT LOUNGE</button>
+  </Link>
+</div>
   </div>
 
   {/* Form Section */}
