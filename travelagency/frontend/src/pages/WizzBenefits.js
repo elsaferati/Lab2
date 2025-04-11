@@ -1,36 +1,42 @@
 import { useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import wizz from '../assets/images/wizz.avif';
+import priority from '../assets/images/priority.jpg';
+import club from '../assets/images/club.jpg';
+import all from '../assets/images/all.webp';
+import voucher from '../assets/images/giftvoucher.jpg';
+import multi from '../assets/images/multi.webp';
 
 const benefits = [
   {
     title: "WIZZ Bundle",
     description: "Save even more with our flight bundles.",
-    image: "/images/bundle.jpg",
+    image: wizz,
   },
   {
     title: "WIZZ Priority",
     description: "Bring an extra trolley bag onboard and enjoy the benefits of priority boarding and check-in.",
-    image: "/images/priority.jpg",
+    image: priority,
   },
   {
     title: "WIZZ Discount Club",
     description: "Join the Club to save on booking and baggage. Special offers await you!",
-    image: "/images/discount.jpg",
+    image: club,
   },
   {
     title: "WIZZ All you can fly",
     description: "One pass, unlimited adventures.",
-    image: "/images/allyoucanfly.jpg",
+    image: all,
   },
   {
     title: "WIZZ Multipass",
     description: "Fly more while saving money with a monthly subscription!",
-    image: "/images/multipass.jpg",
+    image: multi,
   },
   {
     title: "Gift voucher",
     description: "Surprise your loved ones with the gift of travel!",
-    image: "/images/voucher.jpg",
+    image: voucher,
   },
 ];
 
