@@ -14,6 +14,7 @@ import AirportLounge from './pages/AirportLounge';
 import TravelInsurance from './pages/TravelInsurance';
 import Priorities from './pages/Priorities';
 import FareLock from './pages/FareLock';
+import TravelInsurancePage from './pages/Bundles';
 
 function App() {
   const [showSignUp, setShowSignUp] = useState(false);
@@ -35,6 +36,7 @@ function App() {
             <Route path="/travel-insurance" element={<TravelInsurance />} />
             <Route path="/priorities" element={<Priorities />} />
             <Route path="/services/fare-lock" element={<FareLock />} />
+            <Route path="/bundles" element={<TravelInsurancePage />} />
           </Routes>
         </main>
         <Footer />
