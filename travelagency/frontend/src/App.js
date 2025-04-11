@@ -33,6 +33,7 @@ function App() {
             <Route path="/lounge" element={<AirportLounge />} />
             <Route path="/travel-insurance" element={<TravelInsurance />} />
             <Route path="/priorities" element={<Priorities />} />
+            <Route path="/services/fare-lock" element={<FareLock />} />
           </Routes>
         </main>
         <Footer />
