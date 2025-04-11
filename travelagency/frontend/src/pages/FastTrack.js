@@ -1,5 +1,7 @@
 import React from 'react';
 import { FaPlaneArrival, FaCalendarAlt, FaClock, FaUserFriends } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+
 
 const FastTrack = () => {
     return (
