@@ -70,12 +70,12 @@ const ServicesPage = () => {
         <Link to="/terms" className="text-purple-700 font-semibold mt-4 inline-block">Read More</Link>
       </div>
 
-      {/* Prices & Discounts Section */}
+      <Link to="/services/discounts">
       <div className="bg-white p-6 rounded-lg shadow-md mt-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-gray-800 mb-6">Prices & Discounts</h2>
         <p className="text-gray-600 mt-2">Explore our competitive pricing and exclusive discounts for members and more.</p>
       </div>
-
+      </Link>
       {/* Memberships Section */}
       <div className="bg-white p-6 rounded-lg shadow-md mt-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-gray-800 mb-6">Memberships</h2>
