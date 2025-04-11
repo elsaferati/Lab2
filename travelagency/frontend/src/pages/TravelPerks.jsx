@@ -1,37 +1,43 @@
 import React, { useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import bookingImg from '../assets/images/booking.jpg';
+import carImg from '../assets/images/car.jpg';
+import parkingImg from '../assets/images/airportparking.jpg';
+import securityImg from '../assets/images/security.jpg';
+import loungeImg from '../assets/images/lounge.jpg';
+import insuranceImg from '../assets/images/insurance.jpg';
 
 const perks = [
   {
     title: "Booking.com",
     description: "Book your home away from home and get 5% off your hotel booking back as WIZZ credit.",
-    image: "/images/booking.jpg",
+    image: bookingImg,
   },
   {
     title: "Rent a car",
     description: "Get back 5% in WIZZ credits when you rent a car and save on your future trips!",
-    image: "/images/rentacar.jpg",
+    image: carImg,
   },
   {
     title: "Airport parking",
     description: "Reserve hassle-free parking and save up to 60%.",
-    image: "/images/parking.jpg",
+    image: parkingImg,
   },
   {
     title: "Security Fast Track",
     description: "Skip the long lines and pass through security quickly, even during peak hours.",
-    image: "/images/security.jpg",
+    image: securityImg,
   },
   {
     title: "Exclusive Lounge",
     description: "Relax and enjoy complimentary food, drink, WiFi access and other premium services while at the airport.",
-    image: "/images/lounge.jpg",
+    image: loungeImg,
   },
   {
     title: "Insurance",
     description: "Add insurance to your trip and be prepared for the unexpected.",
-    image: "/images/insurance.jpg",
+    image: insuranceImg,
   },
 ];
 
