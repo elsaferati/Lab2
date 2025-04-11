@@ -46,8 +46,30 @@ const FastTrack = () => {
         <div className="flex justify-end mt-6">
           <button className="bg-pink-600 text-white px-6 py-2 rounded-full hover:bg-pink-700 transition">Search</button>
         </div>
+
+    
+        {/* Benefits Section */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10">
+          <div className="bg-white p-4 rounded-xl shadow-md text-center">
+            <div className="text-pink-600 text-3xl mb-2">⏩</div>
+            <p className="text-gray-700 text-sm">Our Fast Track passes give you access to a dedicated lane straight to the security checkpoint.</p>
+          </div>
+
+          <div className="bg-white p-4 rounded-xl shadow-md text-center">
+            <div className="text-pink-600 text-3xl mb-2">🕐</div>
+            <p className="text-gray-700 text-sm">You can book Security Fast Track up to 1 hour prior to departure.</p>
+          </div>
+
+          <div className="bg-white p-4 rounded-xl shadow-md text-center">
+            <div className="text-pink-600 text-3xl mb-2">✔️</div>
+            <p className="text-gray-700 text-sm">Cut queues not corners and reach the departure lounge quicker.</p>
+          </div>
+        </div>
+
       </div>
     </div>
+
+    
   );
 };
 
