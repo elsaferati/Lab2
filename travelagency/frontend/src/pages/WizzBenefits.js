@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import wizz from '../assets/images/wizz.avif';
 import priority from '../assets/images/priority.jpg';
 import club from '../assets/images/club.jpg';
@@ -76,19 +77,32 @@ export default function WizzBenefits() {
         ref={scrollRef}
         className="flex gap-6 overflow-x-auto scrollbar-none scroll-smooth pb-2"
       >
-        {benefits.map((benefit, index) => (
-          <div
-            key={index}
-            className="min-w-[300px] max-w-[300px] bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200"
-          >
-            <img src={benefit.image} alt={benefit.title} className="h-44 w-full object-cover" />
-            <div className="p-4">
-              <h3 className="text-lg font-bold text-blue-900">{benefit.title}</h3>
-              <p className="text-gray-600 text-sm mt-2">{benefit.description}</p>
+        {benefits.map((benefit, index) => {
+          const card = (
+            <div
+              key={index}
+              className="min-w-[300px] max-w-[300px] bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200"
+            >
+              <img src={benefit.image} alt={benefit.title} className="h-44 w-full object-cover" />
+              <div className="p-4">
+                <h3 className="text-lg font-bold text-blue-900">{benefit.title}</h3>
+                <p className="text-gray-600 text-sm mt-2">{benefit.description}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+
+          if (benefit.title === "WIZZ Priority") {
+            return (
+              <Link to="/priorities" key={index} className="block">
+                {card}
+              </Link>
+            );
+          }
+
+          return <div key={index}>{card}</div>;
+        })}
       </div>
     </div>
   );
 }
+
