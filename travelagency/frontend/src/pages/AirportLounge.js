@@ -13,9 +13,6 @@ const AirportLounge = () => {
   <Link to="/fast-track">
     <button className="px-6 py-3 font-semibold text-pink-700 hover:bg-pink-100">SECURITY FAST TRACK</button>
   </Link>
-  <Link to="/passport-fast-track">
-    <button className="px-6 py-3 font-semibold text-pink-700 hover:bg-pink-100">PASSPORT FAST TRACK</button>
-  </Link>
   <Link to="/lounge">
     <button className="px-6 py-3 font-semibold bg-pink-600 text-white">AIRPORT LOUNGE</button>
   </Link>
