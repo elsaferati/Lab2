@@ -3,7 +3,7 @@ import FlightDeals from '../pages/FlightDeals';
 import TravelPerks from '../pages/TravelPerks';
 import NewsletterSignup from '../pages/NewsletterSignup';
 import WizzBenefits from '../pages/WizzBenefits';
-import AirportParking from '../pages/AirportParking';
+
 
 export default function FlightBooking() {
   const [tripType, setTripType] = useState("return");
@@ -37,7 +37,7 @@ export default function FlightBooking() {
             }`}
             onClick={() => setSelectedTab("parking")}
           >
-            🅿️ Parking
+            
           </div>
         </div>
 
@@ -138,8 +138,7 @@ export default function FlightBooking() {
           </div>
         )}
 
-        {/* Airport Parking Content */}
-        {selectedTab === "parking" && <AirportParking />}
+       
 
         {/* Promo Section */}
         <div className="mt-10 text-center">

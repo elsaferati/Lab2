@@ -8,7 +8,13 @@ import Register from './components/Register';
 import HelpCenter from './pages/HelpCenter';
 import CheckInBooking from './pages/CheckInBooking';
 import Services from './pages/Services'; 
-
+import AirportParking from './pages/AirportParking';
+import FastTrack from './pages/FastTrack';
+import AirportLounge from './pages/AirportLounge';
+import TravelInsurance from './pages/TravelInsurance';
+import Priorities from './pages/Priorities';
+import FareLock from './pages/FareLock';
+import TravelInsurancePage from './pages/Bundles';
 
 function App() {
   const [showSignUp, setShowSignUp] = useState(false);
@@ -24,6 +30,13 @@ function App() {
             <Route path="/help-center" element={<HelpCenter />} />
             <Route path="/check-in-booking" element={<CheckInBooking />} /> 
             <Route path="/services" element={<Services />} /> 
+            <Route path="/airport-parking" element={<AirportParking />} /> 
+            <Route path="/fast-track" element={<FastTrack />} />
+            <Route path="/lounge" element={<AirportLounge />} />
+            <Route path="/travel-insurance" element={<TravelInsurance />} />
+            <Route path="/priorities" element={<Priorities />} />
+            <Route path="/services/fare-lock" element={<FareLock />} />
+            <Route path="/bundles" element={<TravelInsurancePage />} />
           </Routes>
         </main>
         <Footer />
