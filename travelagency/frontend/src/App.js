@@ -9,7 +9,7 @@ import HelpCenter from './pages/HelpCenter';
 import CheckInBooking from './pages/CheckInBooking';
 import Services from './pages/Services'; 
 import AirportParking from './pages/AirportParking';
-import FastTrack from './FastTrack';
+import FastTrack from './pages/FastTrack';
 
 
 function App() {
