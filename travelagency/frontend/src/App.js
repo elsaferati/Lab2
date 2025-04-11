@@ -13,6 +13,7 @@ import FastTrack from './pages/FastTrack';
 import AirportLounge from './pages/AirportLounge';
 import TravelInsurance from './pages/TravelInsurance';
 import Priorities from './pages/Priorities';
+import FareLock from './pages/FareLock';
 
 function App() {
   const [showSignUp, setShowSignUp] = useState(false);
