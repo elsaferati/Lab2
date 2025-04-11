@@ -81,6 +81,7 @@ export default function TravelPerks() {
       >
  {perks.map((perk, index) => {
           const isAirportParking = perk.title === "Airport parking";
+          const isSecurityFastTrack = perk.title === "Security Fast Track";          
 
           const cardContent = (
             <div className="min-w-[280px] bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl transition">
@@ -96,13 +97,22 @@ export default function TravelPerks() {
             </div>
           );
 
-          return isAirportParking ? (
-            <Link to="/airport-parking" key={index} className="block min-w-[280px]">
-              {cardContent}
-            </Link>
-          ) : (
-            <div key={index}>{cardContent}</div>
-          );
+          if (isAirportParking) {
+            return (
+              <Link to="/airport-parking" key={index} className="block min-w-[280px]">
+                {cardContent}
+              </Link>
+            );
+          } else if (isSecurityFastTrack) {
+            return (
+              <Link to="/fast-track" key={index} className="block min-w-[280px]">
+                {cardContent}
+              </Link>
+            );
+          } else {
+            return <div key={index}>{cardContent}</div>;
+          }
+          
         })}
       </div>
     </div>
