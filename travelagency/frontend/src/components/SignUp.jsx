@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const SignUp = ({onClose}) => {
+const SignUp = ({onClose, onRegisterClick}) => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -82,9 +82,17 @@ const SignUp = ({onClose}) => {
           </p>
 
           <div className="flex justify-between text-sm mt-4">
-            <a href="#" className="text-pink-600 underline">REGISTRATION</a>
-            <a href="#" className="text-pink-600 underline">AGENCY LOGIN</a>
-          </div>
+  <button
+    type="button"
+    onClick={onRegisterClick}
+    className="text-pink-600 underline"
+  >
+    REGISTRATION
+  </button>
+
+  <a href="#" className="text-pink-600 underline">AGENCY LOGIN</a>
+</div>
+
         </form>
       </div>
     </div>
