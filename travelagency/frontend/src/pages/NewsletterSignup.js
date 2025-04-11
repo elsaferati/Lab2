@@ -1,15 +1,16 @@
 import React from "react";
+import staytuned from '../assets/images/staytuned.jpg';
 
 export default function NewsletterSignup() {
   return (
     <div className="bg-gray-50 py-12 px-4 md:px-12 rounded-2xl flex flex-col md:flex-row items-center gap-8 shadow-md">
       {/* Left Image */}
       <div className="w-full md:w-1/2">
-        <img
-          src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" // Replace with your own image URL
-          alt="Celebration"
-          className="rounded-xl w-full h-auto object-cover"
-        />
+      <img
+      src={staytuned}
+      alt="Celebration"
+      className="rounded-xl w-full h-48 object-cover"
+    />
       </div>
 
       {/* Right Form */}
