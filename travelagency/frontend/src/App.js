@@ -16,6 +16,7 @@ import Priorities from './pages/Priorities';
 import FareLock from './pages/FareLock';
 import TravelInsurancePage from './pages/Bundles';
 import Discounts  from './pages/Discounts';
+import Partner  from './pages/Partner';
 
 function App() {
   const [showSignUp, setShowSignUp] = useState(false);
@@ -39,6 +40,7 @@ function App() {
             <Route path="/services/fare-lock" element={<FareLock />} />
             <Route path="/bundles" element={<TravelInsurancePage />} />
             <Route path="/services/discounts" element={<Discounts />} />
+            <Route path="/services/partners" element={<Partner />} />
           </Routes>
         </main>
         <Footer />
