@@ -58,11 +58,12 @@ const ServicesPage = () => {
       </div>
 
       {/* Partner Services Section */}
+      <Link to="/services/partners">
       <div className="bg-white p-6 rounded-lg shadow-md mt-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-gray-800 mb-6">Partner Services</h2>
         <p className="text-gray-600 mt-2">We collaborate with trusted partners to bring you additional services like hotels, car rentals, and more.</p>
       </div>
-
+      </Link>
       {/* Terms & Conditions Section */}
       <div className="bg-white p-6 rounded-lg shadow-md mt-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-gray-800 mb-6">Terms & Conditions</h2>
