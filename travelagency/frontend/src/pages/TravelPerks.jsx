@@ -83,7 +83,7 @@ export default function TravelPerks() {
           const isAirportParking = perk.title === "Airport parking";
           const isSecurityFastTrack = perk.title === "Security Fast Track";    
           const isAirportLounge = perk.title === "Exclusive Lounge"; 
-          const isTravelInsurance = perk.title === "Insurance Services";     
+          const isTravelInsurance = perk.title === "Insurance";     
 
           const cardContent = (
             <div className="min-w-[280px] bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl transition">
