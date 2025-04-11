@@ -97,6 +97,12 @@ export default function WizzBenefits() {
                 {card}
               </Link>
             );
+          }else if (benefit.title === "WIZZ Bundle") {
+            return (
+              <Link to="/bundles" key={index} className="block">
+                {card}
+              </Link>
+            );
           }
 
           return <div key={index}>{card}</div>;

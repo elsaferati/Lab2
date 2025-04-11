@@ -13,6 +13,7 @@ import FastTrack from './pages/FastTrack';
 import AirportLounge from './pages/AirportLounge';
 import TravelInsurance from './pages/TravelInsurance';
 import Priorities from './pages/Priorities';
+import TravelInsurancePage from './pages/Bundles';
 
 function App() {
   const [showSignUp, setShowSignUp] = useState(false);
@@ -33,6 +34,7 @@ function App() {
             <Route path="/lounge" element={<AirportLounge />} />
             <Route path="/travel-insurance" element={<TravelInsurance />} />
             <Route path="/priorities" element={<Priorities />} />
+            <Route path="/bundles" element={<TravelInsurancePage />} />
           </Routes>
         </main>
         <Footer />
