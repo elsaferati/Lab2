@@ -12,6 +12,7 @@ export default function AirportParking() {
   };
 
   return (
+    <div className="min-h-screen bg-gray-100 py-12 px-4">
     <div className="bg-white p-6 shadow-lg text-black max-w-4xl mx-auto mt-10 rounded-2xl">
       <h2 className="text-2xl font-bold mb-6 text-center">Book Parking Online</h2>
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
@@ -68,6 +69,7 @@ export default function AirportParking() {
           allowing you to relax and enjoy your journey.
         </p>
       </div>
+    </div>
     </div>
   );
 }
