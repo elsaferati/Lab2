@@ -20,7 +20,7 @@ import Partner from './pages/Partner';
 import ChangeBooking from './pages/faq/ChangeBooking';
 import BaggagePolicy from './pages/faq/BaggagePolicy';
 import RequestRefund from './pages/faq/RequestRefund';
-
+import Hotels from './components/Hotels.jsx';
 function App() {
   const [showSignUp, setShowSignUp] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
@@ -48,6 +48,7 @@ function App() {
             <Route path="/faq/change-booking" element={<ChangeBooking />} />
             <Route path="/faq/baggage-policy" element={<BaggagePolicy />} />
             <Route path="/faq/request-refund" element={<RequestRefund />} />
+            <Route path="/hotels" element={<Hotels />} />
           </Routes>
         </main>
         <Footer />

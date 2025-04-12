@@ -30,7 +30,7 @@ const Header = ({ onSignUpClick }) => {
 
         {/* Navigation Menu */}
         <nav className={`md:flex space-x-6 font-semibold text-sm ${isMenuOpen ? 'block' : 'hidden'} md:block`}>
-          <a href="#" className="hover:text-pink-300">HOTELS</a>
+        <Link to="/hotels" className="hover:text-pink-300">HOTELS</Link>
 
           
           {/* Help Centre Link */}
