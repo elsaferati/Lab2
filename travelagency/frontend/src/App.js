@@ -16,13 +16,19 @@ import Priorities from './pages/Priorities';
 import FareLock from './pages/FareLock';
 import TravelInsurancePage from './pages/Bundles';
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import Discounts  from './pages/Discounts';
 import Partner  from './pages/Partner';
 =======
+=======
+>>>>>>> Stashed changes
 import ChangeBooking from './pages/faq/ChangeBooking';
 import BaggagePolicy from './pages/faq/BaggagePolicy';
 import RequestRefund from './pages/faq/RequestRefund';
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 function App() {
@@ -47,13 +53,19 @@ function App() {
             <Route path="/services/fare-lock" element={<FareLock />} />
             <Route path="/bundles" element={<TravelInsurancePage />} />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             <Route path="/services/discounts" element={<Discounts />} />
             <Route path="/services/partners" element={<Partner />} />
 =======
+=======
+>>>>>>> Stashed changes
             <Route path="/faq/change-booking" element={<ChangeBooking />} />
             <Route path="/faq/baggage-policy" element={<BaggagePolicy />} />
             <Route path="/faq/request-refund" element={<RequestRefund />} />
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
           </Routes>
         </main>
