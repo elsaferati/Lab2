@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
+
 const ServicesPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-pink-600 to-purple-700 text-white">
@@ -55,10 +56,15 @@ const ServicesPage = () => {
       </div>
 
       {/* About Us Section */}
-      <div className="bg-white p-6 rounded-lg shadow-md mt-10 max-w-4xl mx-auto">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-6">About Us</h2>
-        <p className="text-gray-600 mt-2">We are dedicated to providing safe, affordable, and enjoyable air travel experiences. Learn more about our mission and values.</p>
-      </div>
+      <Link to="/about-us">
+  <div className="bg-white p-6 rounded-lg shadow-md mt-10 max-w-4xl mx-auto hover:bg-gray-100 transition duration-300 cursor-pointer">
+    <h2 className="text-2xl font-semibold text-gray-800 mb-6">About Us</h2>
+    <p className="text-gray-600 mt-2">
+      We are dedicated to providing safe, affordable, and enjoyable air travel experiences. Learn more about our mission and values.
+    </p>
+  </div>
+</Link>
+
 
       {/* Partner Services Section */}
       <Link to="/services/partners">
