@@ -1,27 +1,20 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FaSuitcaseRolling, FaWeightHanging, FaPlusCircle } from 'react-icons/fa';
 
 const BaggagePolicy = () => {
-    const navigate = useNavigate();  // Hook to navigate between pages
-
-    // Handle the back button click
-    const handleBackClick = () => {
-        navigate(-1);  // Go back to the previous page
-    };
-
     return (
         <div className="min-h-screen bg-white text-black py-12 px-6 max-w-4xl mx-auto">
             {/* Back Button */}
             <button
-                onClick={handleBackClick}
-                className="text-white bg-pink-600 py-2 px-4 rounded-lg mb-4"
+                onClick={() => window.history.back()}
+                className="text-white bg-pink-600 py-2 px-4 rounded-lg mb-6"
             >
                 &larr; Back
             </button>
 
             <h1 className="text-4xl font-bold text-pink-600 mb-6">Baggage Policy</h1>
-
+            
             <p className="text-gray-700 mb-6 text-lg">
                 We're here to make your travel smoother. Here's what you need to know about our baggage rules:
             </p>
@@ -41,27 +34,23 @@ const BaggagePolicy = () => {
                 </div>
             </div>
 
-            <div className="mt-10">
-                <h2 className="text-2xl font-semibold text-purple-700 mb-4">Quick Links</h2>
-
-                {/* Quick Links - Buttons */}
-                <div className="space-y-8"> {/* Increased space between buttons */}
-                    <Link to="/check-in-booking">
-                        <button className="w-full bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 focus:outline-none">
-                            Check in and Add Baggage
-                        </button>
-                    </Link>
-                    <Link to="/services">
-                        <button className="w-full bg-green-600 text-white py-2 px-6 rounded-lg hover:bg-green-700 focus:outline-none">
-                            Explore Travel Services
-                        </button>
-                    </Link>
-                    <Link to="/faq/change-booking">
-                        <button className="w-full bg-yellow-600 text-white py-2 px-6 rounded-lg hover:bg-yellow-700 focus:outline-none">
-                            How to Change a Booking
-                        </button>
-                    </Link>
-                </div>
+            {/* Quick Links - Buttons */}
+            <div className="space-y-8 mt-8"> {/* Increased space between buttons */}
+                <Link to="/check-in-booking">
+                    <button className="w-full bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 focus:outline-none">
+                        Check in and Add Baggage
+                    </button>
+                </Link>
+                <Link to="/services">
+                    <button className="w-full bg-green-600 text-white py-2 px-6 rounded-lg hover:bg-green-700 focus:outline-none">
+                        Explore Travel Services
+                    </button>
+                </Link>
+                <Link to="/faq/change-booking">
+                    <button className="w-full bg-yellow-600 text-white py-2 px-6 rounded-lg hover:bg-yellow-700 focus:outline-none">
+                        How to Change a Booking
+                    </button>
+                </Link>
             </div>
         </div>
     );
