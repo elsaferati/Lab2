@@ -74,12 +74,13 @@ const ServicesPage = () => {
       </div>
       </Link>
       {/* Terms & Conditions Section */}
+      <Link to="/terms" >
       <div className="bg-white p-6 rounded-lg shadow-md mt-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-gray-800 mb-6">Terms & Conditions</h2>
         <p className="text-gray-600 mt-2">Read the terms and conditions of using our services to ensure a smooth experience.</p>
         <Link to="/terms" className="text-purple-700 font-semibold mt-4 inline-block">Read More</Link>
       </div>
-
+      </Link>
       <Link to="/services/discounts">
       <div className="bg-white p-6 rounded-lg shadow-md mt-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-gray-800 mb-6">Prices & Discounts</h2>
