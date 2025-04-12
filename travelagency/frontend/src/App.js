@@ -25,6 +25,8 @@ import Hotels from './components/Hotels.jsx';
 =======
 >>>>>>> c9730e0b4a9ebb5505ecc665e0bea88c5d817e50
 import AboutUs from './pages/AboutUs';
+import TermsAndConditions from './pages/Terms&Conditions';
+
 
 function App() {
   const [showSignUp, setShowSignUp] = useState(false);
@@ -58,6 +60,8 @@ function App() {
 =======
 >>>>>>> c9730e0b4a9ebb5505ecc665e0bea88c5d817e50
             <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/terms" element={<TermsAndConditions />} />
+
           </Routes>
         </main>
         <Footer />
