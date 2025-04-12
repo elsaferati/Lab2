@@ -20,6 +20,7 @@ import Partner from './pages/Partner';
 import ChangeBooking from './pages/faq/ChangeBooking';
 import BaggagePolicy from './pages/faq/BaggagePolicy';
 import RequestRefund from './pages/faq/RequestRefund';
+import AboutUs from './pages/AboutUs';
 
 function App() {
   const [showSignUp, setShowSignUp] = useState(false);
@@ -48,6 +49,7 @@ function App() {
             <Route path="/faq/change-booking" element={<ChangeBooking />} />
             <Route path="/faq/baggage-policy" element={<BaggagePolicy />} />
             <Route path="/faq/request-refund" element={<RequestRefund />} />
+            <Route path="/about-us" element={<AboutUs />} />
           </Routes>
         </main>
         <Footer />
