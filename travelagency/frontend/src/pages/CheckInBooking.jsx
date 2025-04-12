@@ -22,8 +22,19 @@ const CheckInBooking = () => {
         navigate('/confirmation'); // Navigate to a confirmation page after successful booking
     };
 
+    const handleBackClick = () => {
+        navigate(-1); // Navigate to the previous page
+    };
+
     return (
         <div className="min-h-screen bg-gradient-to-b from-pink-600 to-purple-700 text-white">
+            {/* Back Button */}
+            <button
+                onClick={handleBackClick}
+                className="text-white bg-pink-600 py-2 px-4 rounded-lg mb-6"
+            >
+                &larr; Back
+            </button>
             <div className="max-w-4xl mx-auto py-10 px-4">
                 {/* Card for check-in and booking */}
                 <div className="bg-white rounded-lg shadow-lg p-8 text-black">
@@ -31,7 +42,7 @@ const CheckInBooking = () => {
 
                     <form onSubmit={handleSubmit}>
                         {/* Booking Reference */}
-                        <div className="mb-4">
+                        <div className="mb-6">
                             <label className="block text-sm font-semibold text-gray-700 mb-2">Booking Reference</label>
                             <input
                                 type="text"
@@ -45,7 +56,7 @@ const CheckInBooking = () => {
                         </div>
 
                         {/* Last Name */}
-                        <div className="mb-4">
+                        <div className="mb-6">
                             <label className="block text-sm font-semibold text-gray-700 mb-2">Last Name</label>
                             <input
                                 type="text"
@@ -59,7 +70,7 @@ const CheckInBooking = () => {
                         </div>
 
                         {/* First Name */}
-                        <div className="mb-4">
+                        <div className="mb-6">
                             <label className="block text-sm font-semibold text-gray-700 mb-2">First Name</label>
                             <input
                                 type="text"
@@ -73,7 +84,7 @@ const CheckInBooking = () => {
                         </div>
 
                         {/* Flight Date */}
-                        <div className="mb-4">
+                        <div className="mb-6">
                             <label className="block text-sm font-semibold text-gray-700 mb-2">Flight Date</label>
                             <input
                                 type="date"
@@ -86,7 +97,7 @@ const CheckInBooking = () => {
                         </div>
 
                         {/* Flight Number */}
-                        <div className="mb-4">
+                        <div className="mb-6">
                             <label className="block text-sm font-semibold text-gray-700 mb-2">Flight Number</label>
                             <input
                                 type="text"
