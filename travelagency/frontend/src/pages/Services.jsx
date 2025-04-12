@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 const ServicesPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-pink-600 to-purple-700 text-white">
@@ -32,10 +33,12 @@ const ServicesPage = () => {
             <p className="text-gray-600 mt-2">Skip the queue with our automatic check-in service.</p>
           </div>
           {/* Frequently Asked Questions */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="font-semibold text-lg text-purple-700">Frequently Asked Questions</h3>
-            <p className="text-gray-600 mt-2">Find answers to common questions about our services.</p>
-          </div>
+          <Link to="/help-center"> {/* Wrap with Link component */}
+  <div className="bg-white p-6 rounded-lg shadow-md cursor-pointer hover:bg-gray-100">
+    <h3 className="font-semibold text-lg text-purple-700">Frequently Asked Questions</h3>
+    <p className="text-gray-600 mt-2">Find answers to common questions about our services.</p>
+  </div>
+</Link>
           {/* Wizz Account */}
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h3 className="font-semibold text-lg text-purple-700">Wizz Account</h3>
