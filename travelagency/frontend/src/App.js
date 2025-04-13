@@ -63,7 +63,8 @@ function App() {
             <Route path="/services/auto-check-in" element={<AutoCheckIn />} />
             <Route path="/services/wizz-account" element={<WizzAccount />} />
             <Route path="/allyyoucanfly" element={<Allyoucanfly />} />
-            <Route path="/register" element={<MembershipRegistration />} />
+            <Route path="/membership" element={<MembershipRegistration />} />
+
           </Routes>
         </main>
         <Footer />
