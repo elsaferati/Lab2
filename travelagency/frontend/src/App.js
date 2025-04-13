@@ -23,6 +23,7 @@ import RequestRefund from './pages/faq/RequestRefund';
 import Hotels from './components/Hotels.jsx';
 import AboutUs from './pages/AboutUs';
 import TermsAndConditions from './pages/Terms&Conditions';
+import SittingTogether from './pages/SittingTogether';
 
 function App() {
   const [showSignUp, setShowSignUp] = useState(false);
@@ -54,6 +55,7 @@ function App() {
             <Route path="/hotels" element={<Hotels />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/terms" element={<TermsAndConditions />} />
+            <Route path="/services/sitting-together" element={<SittingTogether />} />
           </Routes>
         </main>
         <Footer />

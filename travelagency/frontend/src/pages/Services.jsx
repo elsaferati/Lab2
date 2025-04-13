@@ -24,10 +24,13 @@ const ServicesPage = () => {
   </p>
 </Link>
           {/* Sitting Together */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="font-semibold text-lg text-purple-700">Sitting Together</h3>
-            <p className="text-gray-600 mt-2">Choose your preferred seats and sit together with your friends and family.</p>
-          </div>
+<Link
+  to="/services/sitting-together"
+  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 block"
+>
+  <h3 className="font-semibold text-lg text-purple-700">Sitting Together</h3>
+  <p className="text-gray-600 mt-2">Choose your preferred seats and sit together with your friends and family.</p>
+</Link>
           {/* Auto Check-In */}
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h3 className="font-semibold text-lg text-purple-700">Auto Check-In</h3>
