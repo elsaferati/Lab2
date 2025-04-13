@@ -11,11 +11,11 @@ const Allyoucanfly = () => {
         <p className="text-xl max-w-2xl mx-auto">
           Travel unlimited for a fixed fee. Join our membership and unlock freedom in the skies.
         </p>
-        <Link to="/register">
-        <button className="mt-8 bg-white text-sky-600 font-semibold px-8 py-3 rounded-full hover:bg-gray-100 transition">
-           Become a Member
-          </button>
-        </Link>
+        <Link to="/membership">
+  <button className="mt-8 bg-white text-sky-600 font-semibold px-8 py-3 rounded-full hover:bg-gray-100 transition">
+    Become a Member
+  </button>
+</Link>
 
       </section>
 
@@ -139,11 +139,12 @@ const Allyoucanfly = () => {
       <section className="py-16 px-6 bg-sky-600 text-white text-center">
         <h2 className="text-3xl font-bold mb-4">Ready to Fly Freely?</h2>
         <p className="text-lg mb-6">Get your wings today and travel as much as your heart desires.</p>
-        <Link to="/register">
-          <button className="bg-white text-sky-600 font-semibold px-8 py-3 rounded-full hover:bg-gray-100 transition">
-            Join Now
-          </button>
-        </Link>
+        <Link to="/membership">
+  <button className="bg-white text-sky-600 font-semibold px-8 py-3 rounded-full hover:bg-gray-100 transition">
+    Join Now
+  </button>
+</Link>
+
       </section>
     </div>
   );
