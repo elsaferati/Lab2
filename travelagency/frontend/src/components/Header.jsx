@@ -31,6 +31,10 @@ const Header = ({ onSignUpClick }) => {
         {/* Navigation Menu */}
         <nav className={`md:flex space-x-6 font-semibold text-sm ${isMenuOpen ? 'block' : 'hidden'} md:block`}>
         <Link to="/hotels" className="hover:text-pink-300">HOTELS</Link>
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
           
           {/* Help Centre Link */}
