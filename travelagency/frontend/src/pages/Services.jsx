@@ -16,8 +16,7 @@ const ServicesPage = () => {
       <div className="max-w-4xl mx-auto py-10 px-4">
         <h2 className="text-2xl font-semibold text-gray-800 mb-6">App Services</h2>
         <div className="grid grid-cols-2 gap-8 text-black">
-          </div>
-          </div>
+          
 {/* Fare Lock */}
 <Link to="/services/fare-lock" className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 block">
   <h3 className="font-semibold text-lg text-purple-700">Fare Lock</h3>
@@ -52,7 +51,8 @@ const ServicesPage = () => {
     <p className="text-gray-600 mt-2">Create and manage your Wizz account for easy booking and personalized offers.</p>
   </div>
 </Link>
-
+</div>
+</div>
 
       {/* Travel Information Section */}
       <div className="bg-white p-6 rounded-lg shadow-md mt-10 max-w-4xl mx-auto">
