@@ -32,10 +32,10 @@ const ServicesPage = () => {
   <p className="text-gray-600 mt-2">Choose your preferred seats and sit together with your friends and family.</p>
 </Link>
           {/* Auto Check-In */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="font-semibold text-lg text-purple-700">Auto Check-In</h3>
-            <p className="text-gray-600 mt-2">Skip the queue with our automatic check-in service.</p>
-          </div>
+<Link to="/services/auto-check-in" className="bg-white p-6 rounded-lg shadow-md block hover:shadow-lg transition-shadow duration-300">
+  <h3 className="font-semibold text-lg text-purple-700">Auto Check-In</h3>
+  <p className="text-gray-600 mt-2">Skip the queue with our automatic check-in service.</p>
+</Link>
           {/* Frequently Asked Questions */}
           <Link to="/help-center"> {/* Wrap with Link component */}
   <div className="bg-white p-6 rounded-lg shadow-md cursor-pointer hover:bg-gray-100">
