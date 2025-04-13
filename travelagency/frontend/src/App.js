@@ -26,7 +26,12 @@ import TermsAndConditions from './pages/Terms&Conditions';
 import SittingTogether from './pages/SittingTogether';
 import AutoCheckIn from './pages/AutoCheckIn';
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import WizzAccount from './pages/WizzAccount';
+=======
+import Allyoucanfly from './pages/allyoucanfly';
+import MembershipRegistration from './pages/MembershipRegistration'; 
+>>>>>>> Stashed changes
 =======
 import Allyoucanfly from './pages/allyoucanfly';
 import MembershipRegistration from './pages/MembershipRegistration'; 
@@ -65,8 +70,14 @@ function App() {
             <Route path="/services/sitting-together" element={<SittingTogether />} />
             <Route path="/services/auto-check-in" element={<AutoCheckIn />} />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             <Route path="/services/wizz-account" element={<WizzAccount />} />
           </Routes>
+=======
+            <Route path="/allyoucanfly" element={<Allyoucanfly />} />
+            <Route path="/register" element={<MembershipRegistration />} />     
+                 </Routes>
+>>>>>>> Stashed changes
 =======
             <Route path="/allyoucanfly" element={<Allyoucanfly />} />
             <Route path="/register" element={<MembershipRegistration />} />     
