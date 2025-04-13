@@ -26,7 +26,7 @@ import TermsAndConditions from './pages/Terms&Conditions';
 import SittingTogether from './pages/SittingTogether';
 import AutoCheckIn from './pages/AutoCheckIn';
 import WizzAccount from './pages/WizzAccount';
-import Allyoucanfly from './pages/allyoucanfly';
+import Allyoucanfly from './pages/allyoucanfly'; 
 import MembershipRegistration from './pages/MembershipRegistration';
 
 function App() {
@@ -62,8 +62,8 @@ function App() {
             <Route path="/services/sitting-together" element={<SittingTogether />} />
             <Route path="/services/auto-check-in" element={<AutoCheckIn />} />
             <Route path="/services/wizz-account" element={<WizzAccount />} />
-            <Route path="/allyyoucanfly" element={<Allyoucanfly />} />
-            <Route path="/membership" element={<MembershipRegistration />} />
+            <Route path="/allyoucanfly" element={<Allyoucanfly />} />     
+             <Route path="/membership" element={<MembershipRegistration />} />
 
           </Routes>
         </main>
