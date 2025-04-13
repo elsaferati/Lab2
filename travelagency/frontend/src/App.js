@@ -25,17 +25,9 @@ import AboutUs from './pages/AboutUs';
 import TermsAndConditions from './pages/Terms&Conditions';
 import SittingTogether from './pages/SittingTogether';
 import AutoCheckIn from './pages/AutoCheckIn';
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 import WizzAccount from './pages/WizzAccount';
-=======
 import Allyoucanfly from './pages/allyoucanfly';
-import MembershipRegistration from './pages/MembershipRegistration'; 
->>>>>>> Stashed changes
-=======
-import Allyoucanfly from './pages/allyoucanfly';
-import MembershipRegistration from './pages/MembershipRegistration'; 
->>>>>>> Stashed changes
+import MembershipRegistration from './pages/MembershipRegistration';
 
 function App() {
   const [showSignUp, setShowSignUp] = useState(false);
@@ -69,22 +61,13 @@ function App() {
             <Route path="/terms" element={<TermsAndConditions />} />
             <Route path="/services/sitting-together" element={<SittingTogether />} />
             <Route path="/services/auto-check-in" element={<AutoCheckIn />} />
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
             <Route path="/services/wizz-account" element={<WizzAccount />} />
+            <Route path="/allyyoucanfly" element={<Allyoucanfly />} />
+            <Route path="/register" element={<MembershipRegistration />} />
           </Routes>
-=======
-            <Route path="/allyoucanfly" element={<Allyoucanfly />} />
-            <Route path="/register" element={<MembershipRegistration />} />     
-                 </Routes>
->>>>>>> Stashed changes
-=======
-            <Route path="/allyoucanfly" element={<Allyoucanfly />} />
-            <Route path="/register" element={<MembershipRegistration />} />     
-                 </Routes>
->>>>>>> Stashed changes
         </main>
         <Footer />
+
         {showSignUp && (
           <SignUp
             onClose={() => setShowSignUp(false)}
