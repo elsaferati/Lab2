@@ -14,17 +14,18 @@ import AirportLounge from './pages/AirportLounge';
 import TravelInsurance from './pages/TravelInsurance';
 import Priorities from './pages/Priorities';
 import FareLock from './pages/FareLock';
+<<<<<<< Updated upstream
 import TravelInsurancePage from './pages/Bundles';
 import Discounts from './pages/Discounts';
 import Partner from './pages/Partner';
 import ChangeBooking from './pages/faq/ChangeBooking';
 import BaggagePolicy from './pages/faq/BaggagePolicy';
 import RequestRefund from './pages/faq/RequestRefund';
-<<<<<<< HEAD
 import Hotels from './components/Hotels.jsx';
-=======
->>>>>>> c9730e0b4a9ebb5505ecc665e0bea88c5d817e50
 import AboutUs from './pages/AboutUs';
+=======
+import Hotels from './components/Hotels.jsx';
+>>>>>>> Stashed changes
 
 function App() {
   const [showSignUp, setShowSignUp] = useState(false);
@@ -47,17 +48,19 @@ function App() {
             <Route path="/travel-insurance" element={<TravelInsurance />} />
             <Route path="/priorities" element={<Priorities />} />
             <Route path="/services/fare-lock" element={<FareLock />} />
+<<<<<<< Updated upstream
             <Route path="/bundles" element={<TravelInsurancePage />} />
             <Route path="/services/discounts" element={<Discounts />} />
             <Route path="/services/partners" element={<Partner />} />
             <Route path="/faq/change-booking" element={<ChangeBooking />} />
             <Route path="/faq/baggage-policy" element={<BaggagePolicy />} />
             <Route path="/faq/request-refund" element={<RequestRefund />} />
-<<<<<<< HEAD
             <Route path="/hotels" element={<Hotels />} />
-=======
->>>>>>> c9730e0b4a9ebb5505ecc665e0bea88c5d817e50
             <Route path="/about-us" element={<AboutUs />} />
+=======
+            <Route path="/hotels" element={<Hotels />} />
+
+>>>>>>> Stashed changes
           </Routes>
         </main>
         <Footer />
