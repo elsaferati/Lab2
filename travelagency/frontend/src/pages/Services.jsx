@@ -95,10 +95,14 @@ const ServicesPage = () => {
         <h2 className="text-2xl font-semibold text-gray-800 mb-6">Memberships</h2>
         <div className="grid grid-cols-2 gap-8">
           {/* All You Can Fly */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="font-semibold text-lg text-purple-700">All You Can Fly</h3>
-            <p className="text-gray-600 mt-2">Get unlimited flights with our "All You Can Fly" membership.</p>
-          </div>
+          <Link to="/allyoucanfly">
+  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 cursor-pointer">
+    <h3 className="font-semibold text-lg text-purple-700">All You Can Fly</h3>
+    <p className="text-gray-600 mt-2">
+      Get unlimited flights with our "All You Can Fly" membership.
+    </p>
+  </div>
+</Link>
           {/* Discount Club */}
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h3 className="font-semibold text-lg text-purple-700">Discount Club</h3>
