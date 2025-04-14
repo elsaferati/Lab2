@@ -14,7 +14,6 @@ import AirportLounge from './pages/AirportLounge';
 import TravelInsurance from './pages/TravelInsurance';
 import Priorities from './pages/Priorities';
 import FareLock from './pages/FareLock';
-<<<<<<< Updated upstream
 import TravelInsurancePage from './pages/Bundles';
 import Discounts from './pages/Discounts';
 import Partner from './pages/Partner';
@@ -23,9 +22,7 @@ import BaggagePolicy from './pages/faq/BaggagePolicy';
 import RequestRefund from './pages/faq/RequestRefund';
 import Hotels from './components/Hotels.jsx';
 import AboutUs from './pages/AboutUs';
-=======
-import Hotels from './components/Hotels.jsx';
->>>>>>> Stashed changes
+import TravelInfo from './pages/TravelInfo';
 
 function App() {
   const [showSignUp, setShowSignUp] = useState(false);
@@ -48,7 +45,7 @@ function App() {
             <Route path="/travel-insurance" element={<TravelInsurance />} />
             <Route path="/priorities" element={<Priorities />} />
             <Route path="/services/fare-lock" element={<FareLock />} />
-<<<<<<< Updated upstream
+
             <Route path="/bundles" element={<TravelInsurancePage />} />
             <Route path="/services/discounts" element={<Discounts />} />
             <Route path="/services/partners" element={<Partner />} />
@@ -57,10 +54,8 @@ function App() {
             <Route path="/faq/request-refund" element={<RequestRefund />} />
             <Route path="/hotels" element={<Hotels />} />
             <Route path="/about-us" element={<AboutUs />} />
-=======
             <Route path="/hotels" element={<Hotels />} />
-
->>>>>>> Stashed changes
+            <Route path="/travel-info" element={<TravelInfo />} />
           </Routes>
         </main>
         <Footer />
