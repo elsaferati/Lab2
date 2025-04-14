@@ -1,33 +1,172 @@
-import React from 'react';
+import React, { useState } from "react";
 
-const hotels = [
-  { city: 'Paris, France', image: '/images/paris.jpg' },
-  { city: 'Budapest, Hungary', image: '/images/budapest.jpg' },
-  { city: 'New York, USA', image: '/images/newyork.jpg' },
-  { city: 'Rome, Italy', image: '/images/rome.jpg' },
-  { city: 'Berlin, Germany', image: '/images/berlin.jpg' },
-  { city: 'Stockholm, Sweden', image: '/images/stockholm.jpg' },
-];
+export default function Hotels() {
+  const [location, setLocation] = useState("");
+  const [adults, setAdults] = useState(2);
+  const [children, setChildren] = useState(0);
+  const [rooms, setRooms] = useState(1);
 
-const Hotels = () => {
+  const handleSearch = () => {
+    alert(
+      `Search: ${location}, Adults: ${adults}, Children: ${children}, Rooms: ${rooms}`
+    );
+  };
+
   return (
-    <div className="p-6 bg-slate-100 min-h-screen">
-      <h1 className="text-4xl font-bold text-center mb-8">Explore Our Hotels</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {hotels.map((hotel, index) => (
-          <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden">
-            <img src={hotel.image} alt={hotel.city} className="w-full h-56 object-cover" />
-            <div className="p-4 text-center">
-              <h2 className="font-semibold text-lg mb-2">{hotel.city}</h2>
-              <button className="bg-sky-400 text-white px-4 py-2 rounded hover:bg-sky-600 transition">
-                Book 
-              </button>
-            </div>
-          </div>
-        ))}
+    <div className="px-6 py-10 max-w-7xl mx-auto font-sans">
+      {/* 🔍 Search Box */}
+      <div className="bg-white rounded-xl shadow-md p-4 mb-10 space-y-4 border-2 border-yellow-400">
+        
+        <select
+          value={location}
+          onChange={(e) => setLocation(e.target.value)}
+          className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          <option value="">Where are you going?</option>
+          <option value="paris">Paris</option>
+          <option value="milano">Milano</option>
+          <option value="london">London</option>
+          <option value="vienna">Vienna</option>
+          <option value="berlin">Berlin</option>
+          <option value="athens">Athens</option>
+          <option value="budapest">Budapest</option>
+        </select>
+
+        <div className="flex flex-col sm:flex-row gap-4">
+          <input
+            type="date"
+            className="flex-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <input
+            type="date"
+            className="flex-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <select
+            value={adults}
+            onChange={(e) => setAdults(Number(e.target.value))}
+            className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <option value="">Adults</option>
+            {[...Array(5)].map((_, i) => (
+              <option key={i + 1} value={i + 1}>
+                {i + 1}
+              </option>
+            ))}
+          </select>
+
+          <select
+            value={children}
+            onChange={(e) => setChildren(Number(e.target.value))}
+            className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <option value="">Children</option>
+            {[...Array(6)].map((_, i) => (
+              <option key={i} value={i}>
+                {i}
+              </option>
+            ))}
+          </select>
+
+          <select
+            value={rooms}
+            onChange={(e) => setRooms(Number(e.target.value))}
+            className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <option value="">Rooms</option>
+            {[...Array(5)].map((_, i) => (
+              <option key={i + 1} value={i + 1}>
+                {i + 1}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <button
+          onClick={handleSearch}
+          className="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition"
+        >
+          Search
+        </button>
       </div>
+
+      {/* 🏠 Property Types */}
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold mb-4">Browse by property type</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="bg-gray-100 p-4 rounded-xl text-center">Hotels</div>
+          <div className="bg-gray-100 p-4 rounded-xl text-center">Apartments</div>
+          <div className="bg-gray-100 p-4 rounded-xl text-center">Resorts</div>
+          <div className="bg-gray-100 p-4 rounded-xl text-center">Villas</div>
+        </div>
+      </section>
+
+      {/* 📍 Trending Destinations */}
+      <section className="mb-10">
+  <h2 className="text-2xl font-bold">Trending destinations</h2>
+  <p className="text-gray-500 mb-4">
+    Most popular choices for travellers from Kosovo
+  </p>
+  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+    {[
+      { name: "Milano", img: "" },
+      { name: "Paris", img: "" },
+      { name: "Budapest", img: "" },
+      { name: "Berlin", img: "" },
+      { name: "Vienna", img: "" },
+    ].map((city) => (
+      <div
+        key={city.name}
+        className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition"
+      >
+        <img
+          src={city.img}
+          alt={city.name}
+          className="w-full h-32 object-cover"
+        />
+        <div className="p-2 text-center font-medium">{city.name}</div>
+      </div>
+    ))}
+  </div>
+</section>
+
+
+      {/* 💸 Deals */}
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold mb-4">Deals for the weekend</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="p-4 border rounded-lg shadow-sm">
+            <h3 className="font-semibold">The Caravan</h3>
+            <p className="text-blue-600 font-medium">€289 (2 nights)</p>
+          </div>
+          <div className="p-4 border rounded-lg shadow-sm">
+            <h3 className="font-semibold"></h3>
+            <p className="text-blue-600 font-medium">€168 (2 nights)</p>
+          </div>
+          <div className="p-4 border rounded-lg shadow-sm">
+            <h3 className="font-semibold">Holiday Park Olive Tree</h3>
+            <p className="text-blue-600 font-medium">€166 (2 nights)</p>
+          </div>
+        </div>
+      </section>
+
+      {/* 🏡 Unique Properties */}
+      <section>
+        <h2 className="text-2xl font-bold mb-4">
+          Stay at our top unique properties
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="p-4 border rounded-lg text-center">
+            Domki Wierszyki Shelters
+          </div>
+          <div className="p-4 border rounded-lg text-center">Ranczo w Dolinie</div>
+          <div className="p-4 border rounded-lg text-center">
+            Tiny House Dreischwesternherz
+          </div>
+        </div>
+      </section>
     </div>
   );
-};
-
-export default Hotels;
+}
