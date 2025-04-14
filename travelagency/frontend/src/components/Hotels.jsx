@@ -1,4 +1,13 @@
 import React, { useState } from "react";
+import milanoImg from "../assets/images/milano.jpg";
+import parisImg from "../assets/images/paris.webp";
+import budapestImg from "../assets/images/budapest.webp";
+import berlinImg from "../assets/images/berlin.jpg";
+import viennaImg from "../assets/images/vienna.jpeg";
+import hotelImg from "../assets/images/hotels.webp";
+import apartmentImg from "../assets/images/apartments.jpg";
+import resortImg from "../assets/images/resorts.jpg";
+import villaImg from "../assets/images/villas.jpg"; 
 
 export default function Hotels() {
   const [location, setLocation] = useState("");
@@ -92,16 +101,30 @@ export default function Hotels() {
         </button>
       </div>
 
-      {/* 🏠 Property Types */}
-      <section className="mb-10">
-        <h2 className="text-2xl font-bold mb-4">Browse by property type</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="bg-gray-100 p-4 rounded-xl text-center">Hotels</div>
-          <div className="bg-gray-100 p-4 rounded-xl text-center">Apartments</div>
-          <div className="bg-gray-100 p-4 rounded-xl text-center">Resorts</div>
-          <div className="bg-gray-100 p-4 rounded-xl text-center">Villas</div>
-        </div>
-      </section>
+     {/* 🏠 Property Types */}
+<section className="mb-10">
+  <h2 className="text-2xl font-bold mb-4">Browse by property type</h2>
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+    {[
+      { name: "Hotels", img: hotelImg },
+      { name: "Apartments", img: apartmentImg },
+      { name: "Resorts", img: resortImg },
+      { name: "Villas", img: villaImg },
+    ].map((type) => (
+      <div
+        key={type.name}
+        className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition"
+      >
+        <img
+          src={type.img}
+          alt={type.name}
+          className="w-full h-32 object-cover"
+        />
+        <div className="p-2 text-center font-medium">{type.name}</div>
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* 📍 Trending Destinations */}
       <section className="mb-10">
@@ -111,11 +134,11 @@ export default function Hotels() {
   </p>
   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
     {[
-      { name: "Milano", img: "" },
-      { name: "Paris", img: "" },
-      { name: "Budapest", img: "" },
-      { name: "Berlin", img: "" },
-      { name: "Vienna", img: "" },
+     { name: "Milano", img: milanoImg },
+     { name: "Paris", img: parisImg },
+     { name: "Budapest", img: budapestImg },
+     { name: "Berlin", img: berlinImg },
+     { name: "Vienna", img: viennaImg },
     ].map((city) => (
       <div
         key={city.name}
