@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import milanoImg from "../assets/images/milano.jpg";
 import parisImg from "../assets/images/paris.webp";
 import budapestImg from "../assets/images/budapest.webp";
@@ -8,6 +11,12 @@ import hotelImg from "../assets/images/hotels.webp";
 import apartmentImg from "../assets/images/apartments.jpg";
 import resortImg from "../assets/images/resorts.jpg";
 import villaImg from "../assets/images/villas.jpg"; 
+import dealBudapestImg from "../assets/images/budapestaprt.jpg";
+import dealLondonImg from "../assets/images/londonhotel.webp";
+import dealAthensImg from "../assets/images/athenshotel.jpg";
+import dealViennaImg from "../assets/images/viennahotel.jpg";
+import dealMilanoImg from "../assets/images/milanoaprt.avif";
+import dealBerlinImg from "../assets/images/berlinhotel.jpg";
 
 export default function Hotels() {
   const [location, setLocation] = useState("");
@@ -19,6 +28,16 @@ export default function Hotels() {
     alert(
       `Search: ${location}, Adults: ${adults}, Children: ${children}, Rooms: ${rooms}`
     );
+  };
+
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
   };
 
   return (
@@ -158,23 +177,56 @@ export default function Hotels() {
 
       {/* 💸 Deals */}
       <section className="mb-10">
-        <h2 className="text-2xl font-bold mb-4">Deals for the weekend</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="p-4 border rounded-lg shadow-sm">
-            <h3 className="font-semibold">The Caravan</h3>
-            <p className="text-blue-600 font-medium">€289 (2 nights)</p>
-          </div>
-          <div className="p-4 border rounded-lg shadow-sm">
-            <h3 className="font-semibold"></h3>
-            <p className="text-blue-600 font-medium">€168 (2 nights)</p>
-          </div>
-          <div className="p-4 border rounded-lg shadow-sm">
-            <h3 className="font-semibold">Holiday Park Olive Tree</h3>
-            <p className="text-blue-600 font-medium">€166 (2 nights)</p>
+  <h2 className="text-2xl font-bold mb-4 ">Deals for the weekend</h2>
+  <Slider {...sliderSettings}className="h-[380px] w-[70%] mx-auto">
+    {[
+      {
+        name: " Apartment in Budapest",
+        price: "€289 (2 nights)",
+        img: dealBudapestImg,
+      },
+      {
+        name: "Hotel in London",
+        price: "€1068 (2 nights)",
+        img: dealLondonImg,
+      },
+      {
+        name: "Hotel in Athens",
+        price: "€466 (2 nights)",
+        img: dealAthensImg,
+      },
+      {
+        name: "Luxury Stay in Vienna",
+        price: "€350 (3 nights)",
+        img: dealViennaImg,
+      },
+      {
+        name: "Modern Apartment in Milan",
+        price: "€210 (2 nights)",
+        img: dealMilanoImg,
+      },
+      {
+        name: "Hotel in Berlin",
+        price: "€180 (2 nights)",
+        img: dealBerlinImg,
+      },
+    ].map((deal, index) => (
+      <div key={index} className="px-2"> 
+        <div className="bg-white rounded-xl overflow-hidden shadow-md h-[350px]">
+          <img
+            src={deal.img}
+            alt={deal.name}
+            className="w-full h-[250px] object-cover"
+          />
+          <div className="p-4 text-center">
+            <h3 className="font-semibold text-lg">{deal.name}</h3>
+            <p className="text-blue-600 font-medium">{deal.price}</p>
           </div>
         </div>
-      </section>
-
+      </div>
+    ))}
+  </Slider>
+</section>
       {/* 🏡 Unique Properties */}
       <section>
         <h2 className="text-2xl font-bold mb-4">
