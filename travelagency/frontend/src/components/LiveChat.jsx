@@ -1,10 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 
-const LiveChat = () => {
+const LiveChat = ({ onClose }) => {
     const [messages, setMessages] = useState([]);
     const [newMsg, setNewMsg] = useState('');
+    const [isDragging, setIsDragging] = useState(false);
+    const [position, setPosition] = useState({ x: 100, y: 100 });
+    const chatRef = useRef(null);
     const sender = 'User';
+
+    useEffect(() => {
+        fetchMessages();
+        const interval = setInterval(fetchMessages, 1500);
+        return () => clearInterval(interval);
+    }, []);
 
     const fetchMessages = async () => {
         try {
@@ -29,15 +38,54 @@ const LiveChat = () => {
         }
     };
 
+    const handleMouseDown = (e) => {
+        setIsDragging(true);
+        chatRef.current.startX = e.clientX - position.x;
+        chatRef.current.startY = e.clientY - position.y;
+    };
+
+    const handleMouseMove = (e) => {
+        if (!isDragging) return;
+        const newX = e.clientX - chatRef.current.startX;
+        const newY = e.clientY - chatRef.current.startY;
+        setPosition({ x: newX, y: newY });
+    };
+
+    const handleMouseUp = () => {
+        setIsDragging(false);
+    };
+
     useEffect(() => {
-        fetchMessages();
-        const interval = setInterval(fetchMessages, 1500);
-        return () => clearInterval(interval);
-    }, []);
+        document.addEventListener('mousemove', handleMouseMove);
+        document.addEventListener('mouseup', handleMouseUp);
+        return () => {
+            document.removeEventListener('mousemove', handleMouseMove);
+            document.removeEventListener('mouseup', handleMouseUp);
+        };
+    });
 
     return (
-        <div className="fixed bottom-4 right-4 w-80 bg-white border rounded-lg shadow-lg text-black z-50">
-            <div className="p-3 bg-pink-600 text-white font-semibold rounded-t-lg">💬 Live Chat</div>
+        <div
+            ref={chatRef}
+            style={{
+                position: 'absolute',
+                left: position.x,
+                top: position.y,
+                width: '320px',
+                minHeight: '300px',
+                resize: 'both',
+                overflow: 'hidden',
+                zIndex: 1000
+            }}
+            className="bg-white border rounded-lg shadow-xl text-black"
+        >
+            <div
+                onMouseDown={handleMouseDown}
+                className="p-3 cursor-move bg-pink-600 text-white font-semibold flex justify-between items-center rounded-t-lg"
+            >
+                💬 Live Chat
+                <button onClick={onClose} className="text-white text-lg hover:text-gray-200">×</button>
+            </div>
             <div className="p-3 h-60 overflow-y-auto">
                 {messages.map((msg, index) => (
                     <div key={index} className="mb-2">
