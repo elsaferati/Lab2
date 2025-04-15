@@ -84,8 +84,11 @@ const HelpCenter = () => {
                 <p className="mt-4 text-lg text-white">
                     Get 20% off on select services during May! Don't miss out.
                 </p>
-                <button className="mt-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg">
-                    Get Help Now!
+                <button
+            onClick={() => setSelectedTab("contact")}
+             className="mt-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg"
+                >
+                Get Help Now!
                 </button>
             </div>
         </div>
