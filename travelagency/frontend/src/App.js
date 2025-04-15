@@ -28,6 +28,8 @@ import MembershipRegistration from './pages/MembershipRegistration';
 import SittingTogether from './pages/SittingTogether';
 import AutoCheckIn from './pages/AutoCheckIn';
 import WizzAccount from './pages/WizzAccount';
+import TermsAndConditions from './pages/TermsAndConditions';
+
 
 function App() {
   const [showSignUp, setShowSignUp] = useState(false);
@@ -66,6 +68,7 @@ function App() {
             <Route path="/services/sitting-together" element={<SittingTogether />} />
              <Route path="/services/auto-check-in" element={<AutoCheckIn />} />
              <Route path="/services/wizz-account" element={<WizzAccount />} />
+             <Route path="/terms" element={<TermsAndConditions />} />
           </Routes>
         </main>
         <Footer />
