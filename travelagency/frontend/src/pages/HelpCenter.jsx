@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // ✅ Correct import
+import LiveChat from '../components/LiveChat'; // Import the LiveChat component
 
 const HelpCenter = () => {
     const [selectedTab, setSelectedTab] = useState("faq");
@@ -10,17 +11,13 @@ const HelpCenter = () => {
                 {/* Tabs Section */}
                 <div className="bg-white rounded-t-2xl px-6 pt-6 pb-2 flex gap-6 text-black font-semibold text-lg">
                     <div
-                        className={`cursor-pointer flex items-center gap-2 border-b-4 pb-2 ${
-                            selectedTab === "faq" ? "border-pink-600 text-pink-600" : "border-transparent"
-                        }`}
+                        className={`cursor-pointer flex items-center gap-2 border-b-4 pb-2 ${selectedTab === "faq" ? "border-pink-600 text-pink-600" : "border-transparent"}`}
                         onClick={() => setSelectedTab("faq")}
                     >
                         ❓ FAQs
                     </div>
                     <div
-                        className={`cursor-pointer flex items-center gap-2 border-b-4 pb-2 ${
-                            selectedTab === "contact" ? "border-blue-500 text-blue-500" : "border-transparent"
-                        }`}
+                        className={`cursor-pointer flex items-center gap-2 border-b-4 pb-2 ${selectedTab === "contact" ? "border-blue-500 text-blue-500" : "border-transparent"}`}
                         onClick={() => setSelectedTab("contact")}
                     >
                         📞 Contact Us
@@ -77,20 +74,8 @@ const HelpCenter = () => {
                 )}
             </div>
 
-            <div className="mt-10 text-center px-4 py-6">
-                <h1 className="text-4xl font-bold leading-tight text-white">
-                    MAY-MANIA: UP TO <span className="text-yellow-300">20%</span> OFF
-                </h1>
-                <p className="mt-4 text-lg text-white">
-                    Get 20% off on select services during May! Don't miss out.
-                </p>
-                <button
-            onClick={() => setSelectedTab("contact")}
-             className="mt-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg"
-                >
-                Get Help Now!
-                </button>
-            </div>
+            {/* LiveChat Component */}
+            <LiveChat /> {/* Include LiveChat here */}
         </div>
     );
 };
