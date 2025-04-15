@@ -70,12 +70,18 @@ const HelpCenter = () => {
                                 <span className="text-purple-700">Available 24/7</span>
                             </div>
                         </div>
+                        {/* Button to Navigate to Live Chat */}
+                        <Link to="/faq/live-chat">
+                            <button className="mt-4 bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">
+                                Get Help Now
+                            </button>
+                        </Link>
                     </div>
                 )}
             </div>
 
-            {/* LiveChat Component */}
-            <LiveChat /> {/* Include LiveChat here */}
+            {/* LiveChat Component - Optional if you want it always visible */}
+            {/* <LiveChat /> */}
         </div>
     );
 };
