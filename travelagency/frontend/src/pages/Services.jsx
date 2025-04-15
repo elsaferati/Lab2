@@ -55,13 +55,14 @@ const ServicesPage = () => {
 </div>
 
       {/* Travel Information Section */}
-      <Link to="/travel-info" className="text-purple-700 font-semibold mt-4 inline-block">
-      <div className="bg-white p-6 rounded-lg shadow-md mt-10 max-w-4xl mx-auto">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-6">Travel Information</h2>
-        <p className="text-gray-600 mt-2">Find essential travel information to prepare for your journey.</p>
-        <Link to="/travel-info" className="text-purple-700 font-semibold mt-4 inline-block">Learn More</Link>
-      </div>
+      <Link to="/travel-info">
+  <div className="bg-white p-6 rounded-lg shadow-md mt-10 max-w-4xl mx-auto hover:bg-gray-100 transition duration-300 cursor-pointer">
+    <h2 className="text-2xl font-semibold text-gray-800 mb-6">Travel Information</h2>
+    <p className="text-gray-600 mt-2">Find essential travel information to prepare for your journey.</p>
+    <span className="text-purple-700 font-semibold mt-4 inline-block">Learn More</span>
+  </div>
 </Link>
+
       {/* About Us Section */}
       <Link to="/about-us">
   <div className="bg-white p-6 rounded-lg shadow-md mt-10 max-w-4xl mx-auto hover:bg-gray-100 transition duration-300 cursor-pointer">
@@ -81,13 +82,14 @@ const ServicesPage = () => {
       </div>
       </Link>
       {/* Terms & Conditions Section */}
-      <Link to="/terms" >
-      <div className="bg-white p-6 rounded-lg shadow-md mt-10 max-w-4xl mx-auto">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-6">Terms & Conditions</h2>
-        <p className="text-gray-600 mt-2">Read the terms and conditions of using our services to ensure a smooth experience.</p>
-        <Link to="/terms" className="text-purple-700 font-semibold mt-4 inline-block">Read More</Link>
-      </div>
-      </Link>
+      <Link to="/terms">
+  <div className="bg-white p-6 rounded-lg shadow-md mt-10 max-w-4xl mx-auto hover:bg-gray-100 transition duration-300 cursor-pointer">
+    <h2 className="text-2xl font-semibold text-gray-800 mb-6">Terms & Conditions</h2>
+    <p className="text-gray-600 mt-2">Read the terms and conditions of using our services to ensure a smooth experience.</p>
+    <span className="text-purple-700 font-semibold mt-4 inline-block">Read More</span>
+  </div>
+</Link>
+
       <Link to="/services/discounts">
       <div className="bg-white p-6 rounded-lg shadow-md mt-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-gray-800 mb-6">Prices & Discounts</h2>
