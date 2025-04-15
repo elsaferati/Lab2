@@ -29,6 +29,7 @@ import SittingTogether from './pages/SittingTogether';
 import AutoCheckIn from './pages/AutoCheckIn';
 import WizzAccount from './pages/WizzAccount';
 import TermsAndConditions from './pages/TermsAndConditions';
+import LiveChat from "./components/LiveChat"; 
 
 
 function App() {
@@ -69,6 +70,8 @@ function App() {
              <Route path="/services/auto-check-in" element={<AutoCheckIn />} />
              <Route path="/services/wizz-account" element={<WizzAccount />} />
              <Route path="/terms" element={<TermsAndConditions />} />
+
+
           </Routes>
         </main>
         <Footer />
@@ -85,6 +88,10 @@ function App() {
         {showRegister && (
           <Register onClose={() => setShowRegister(false)} />
         )}
+
+        {/* LiveChat component globally available on all pages */}
+        <LiveChat />
+        
       </div>
     </Router>
   );
