@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // ✅ Correct import
-import LiveChat from '../components/LiveChat'; // Import the LiveChat component
+import { Link } from 'react-router-dom';
+import LiveChat from '../components/LiveChat';
 
 const HelpCenter = () => {
     const [selectedTab, setSelectedTab] = useState("faq");
+    const [showChat, setShowChat] = useState(false);
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-pink-600 to-purple-700 text-white">
             <div className="max-w-4xl mx-auto py-10 px-4">
-                {/* Tabs Section */}
+                {/* Tabs */}
                 <div className="bg-white rounded-t-2xl px-6 pt-6 pb-2 flex gap-6 text-black font-semibold text-lg">
                     <div
                         className={`cursor-pointer flex items-center gap-2 border-b-4 pb-2 ${selectedTab === "faq" ? "border-pink-600 text-pink-600" : "border-transparent"}`}
@@ -24,7 +25,7 @@ const HelpCenter = () => {
                     </div>
                 </div>
 
-                {/* FAQs Section */}
+                {/* FAQ Section */}
                 {selectedTab === "faq" && (
                     <div className="bg-white rounded-b-2xl p-6 shadow-lg text-black mt-6">
                         <h2 className="text-2xl font-semibold text-gray-800 mb-4">Frequently Asked Questions</h2>
@@ -51,9 +52,16 @@ const HelpCenter = () => {
                     </div>
                 )}
 
-                {/* Contact Us Section */}
+                {/* Contact Section with Promo and Button */}
                 {selectedTab === "contact" && (
                     <div className="bg-white rounded-b-2xl p-6 shadow-lg text-black mt-6">
+                        {/* Promo Section */}
+                        <div className="bg-gradient-to-r from-purple-400 to-pink-500 text-white p-4 rounded-lg shadow-md mb-6 text-center">
+                            <h2 className="text-2xl font-bold">🎉 May Maniac Deals</h2>
+                            <p className="mt-1">Need help with your booking or refund? We're here for you 24/7!</p>
+                        </div>
+
+                        {/* Contact Info */}
                         <h2 className="text-2xl font-semibold text-gray-800 mb-4">Contact Us</h2>
                         <p className="text-gray-600 mb-4">If you need further assistance, please reach out to us:</p>
                         <div className="flex flex-col space-y-4">
@@ -70,18 +78,21 @@ const HelpCenter = () => {
                                 <span className="text-purple-700">Available 24/7</span>
                             </div>
                         </div>
-                        {/* Button to Navigate to Live Chat */}
-                        <Link to="/faq/live-chat">
-                            <button className="mt-4 bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">
-                                Get Help Now
-                            </button>
-                        </Link>
+
+                        {/* Help Now Button */}
+                        <button
+                            onClick={() => setShowChat(true)}
+                            className="mt-6 bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600"
+                        >
+                            Get Help Now
+                        </button>
+
+                        {/* Show Live Chat Component */}
+                        {showChat && <LiveChat onClose={() => setShowChat(false)} />}
+
                     </div>
                 )}
             </div>
-
-            {/* LiveChat Component - Optional if you want it always visible */}
-            {/* <LiveChat /> */}
         </div>
     );
 };
