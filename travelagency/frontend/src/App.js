@@ -70,6 +70,8 @@ function App() {
              <Route path="/services/auto-check-in" element={<AutoCheckIn />} />
              <Route path="/services/wizz-account" element={<WizzAccount />} />
              <Route path="/terms" element={<TermsAndConditions />} />
+             <Route path="/live-chat" element={<LiveChat />} />
+
 
 
           </Routes>
@@ -89,8 +91,6 @@ function App() {
           <Register onClose={() => setShowRegister(false)} />
         )}
 
-        {/* LiveChat component globally available on all pages */}
-        <LiveChat />
         
       </div>
     </Router>
