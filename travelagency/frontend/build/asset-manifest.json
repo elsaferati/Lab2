@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c1cc0df1.css",
-    "main.js": "/static/js/main.f6496c10.js",
+    "main.css": "/static/css/main.452a14ff.css",
+    "main.js": "/static/js/main.5edac59c.js",
     "static/js/453.cf26cb0e.chunk.js": "/static/js/453.cf26cb0e.chunk.js",
     "static/media/vienna.jpeg": "/static/media/vienna.d89889ef815f5c9f6b49.jpeg",
     "static/media/paris.webp": "/static/media/paris.4ba61b2a6bd99a810485.webp",
@@ -37,17 +37,17 @@
     "static/media/apartment1Img.avif": "/static/media/apartment1Img.6759f687e9dbb302711f.avif",
     "static/media/airportparking.jpg": "/static/media/airportparking.8a8cfd6d69acec24dc8e.jpg",
     "static/media/insurance.jpg": "/static/media/insurance.c4dc69b519efee42313e.jpg",
-    "static/media/slick.svg": "/static/media/slick.7ba97953187dc2907930.svg",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.c1cc0df1.css.map": "/static/css/main.c1cc0df1.css.map",
-    "main.f6496c10.js.map": "/static/js/main.f6496c10.js.map",
+    "main.452a14ff.css.map": "/static/css/main.452a14ff.css.map",
+    "main.5edac59c.js.map": "/static/js/main.5edac59c.js.map",
     "453.cf26cb0e.chunk.js.map": "/static/js/453.cf26cb0e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c1cc0df1.css",
-    "static/js/main.f6496c10.js"
+    "static/css/main.452a14ff.css",
+    "static/js/main.5edac59c.js"
   ]
 }
