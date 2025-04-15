@@ -22,10 +22,7 @@ import BaggagePolicy from './pages/faq/BaggagePolicy';
 import RequestRefund from './pages/faq/RequestRefund';
 import Hotels from './components/Hotels.jsx';
 import AboutUs from './pages/AboutUs';
-import TermsAndConditions from './pages/Terms&Conditions';
-import SittingTogether from './pages/SittingTogether';
-import AutoCheckIn from './pages/AutoCheckIn';
-import WizzAccount from './pages/WizzAccount';
+import TravelInfo from './pages/TravelInfo';
 
 function App() {
   const [showSignUp, setShowSignUp] = useState(false);
@@ -48,6 +45,7 @@ function App() {
             <Route path="/travel-insurance" element={<TravelInsurance />} />
             <Route path="/priorities" element={<Priorities />} />
             <Route path="/services/fare-lock" element={<FareLock />} />
+
             <Route path="/bundles" element={<TravelInsurancePage />} />
             <Route path="/services/discounts" element={<Discounts />} />
             <Route path="/services/partners" element={<Partner />} />
@@ -56,10 +54,8 @@ function App() {
             <Route path="/faq/request-refund" element={<RequestRefund />} />
             <Route path="/hotels" element={<Hotels />} />
             <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/terms" element={<TermsAndConditions />} />
-            <Route path="/services/sitting-together" element={<SittingTogether />} />
-            <Route path="/services/auto-check-in" element={<AutoCheckIn />} />
-            <Route path="/services/wizz-account" element={<WizzAccount />} />
+            <Route path="/hotels" element={<Hotels />} />
+            <Route path="/travel-info" element={<TravelInfo />} />
           </Routes>
         </main>
         <Footer />

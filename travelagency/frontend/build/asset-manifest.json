@@ -1,15 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.4288e5fc.css",
-    "main.js": "/static/js/main.ff5d7b8d.js",
+    "main.css": "/static/css/main.23ca40a2.css",
+    "main.js": "/static/js/main.06b3c9fc.js",
     "static/js/453.883ee8ba.chunk.js": "/static/js/453.883ee8ba.chunk.js",
+    "static/media/all.webp": "/static/media/all.893bfe3c39a260e8b5aa.webp",
+    "static/media/booking.jpg": "/static/media/booking.cd7a040aa8f835987845.jpg",
+    "static/media/priority.jpg": "/static/media/priority.ab9337182ab20f727b86.jpg",
+    "static/media/club.jpg": "/static/media/club.f1167b9dd4f64afb18e5.jpg",
+    "static/media/wizz.avif": "/static/media/wizz.0eac93e8c1a3a3d04b0a.avif",
+    "static/media/multi.webp": "/static/media/multi.ec94e1b075666f846a46.webp",
+    "static/media/giftvoucher.jpg": "/static/media/giftvoucher.1362d26fd6d11ba3384a.jpg",
+    "static/media/car.jpg": "/static/media/car.6bf7e7a28141624ed460.jpg",
+    "static/media/staytuned.jpg": "/static/media/staytuned.69cad7acfdf87d2c6745.jpg",
+    "static/media/lounge.jpg": "/static/media/lounge.e05ef4914a5137a118df.jpg",
+    "static/media/security.jpg": "/static/media/security.306c795a7512a172753c.jpg",
+    "static/media/airportparking.jpg": "/static/media/airportparking.8a8cfd6d69acec24dc8e.jpg",
+    "static/media/insurance.jpg": "/static/media/insurance.c4dc69b519efee42313e.jpg",
     "index.html": "/index.html",
-    "main.4288e5fc.css.map": "/static/css/main.4288e5fc.css.map",
-    "main.ff5d7b8d.js.map": "/static/js/main.ff5d7b8d.js.map",
+    "main.23ca40a2.css.map": "/static/css/main.23ca40a2.css.map",
+    "main.06b3c9fc.js.map": "/static/js/main.06b3c9fc.js.map",
     "453.883ee8ba.chunk.js.map": "/static/js/453.883ee8ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4288e5fc.css",
-    "static/js/main.ff5d7b8d.js"
+    "static/css/main.23ca40a2.css",
+    "static/js/main.06b3c9fc.js"
   ]
 }

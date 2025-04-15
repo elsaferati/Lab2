@@ -55,12 +55,13 @@ const ServicesPage = () => {
 </div>
 
       {/* Travel Information Section */}
+      <Link to="/travel-info" className="text-purple-700 font-semibold mt-4 inline-block">
       <div className="bg-white p-6 rounded-lg shadow-md mt-10 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-gray-800 mb-6">Travel Information</h2>
         <p className="text-gray-600 mt-2">Find essential travel information to prepare for your journey.</p>
         <Link to="/travel-info" className="text-purple-700 font-semibold mt-4 inline-block">Learn More</Link>
       </div>
-
+</Link>
       {/* About Us Section */}
       <Link to="/about-us">
   <div className="bg-white p-6 rounded-lg shadow-md mt-10 max-w-4xl mx-auto hover:bg-gray-100 transition duration-300 cursor-pointer">
@@ -98,10 +99,14 @@ const ServicesPage = () => {
         <h2 className="text-2xl font-semibold text-gray-800 mb-6">Memberships</h2>
         <div className="grid grid-cols-2 gap-8">
           {/* All You Can Fly */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="font-semibold text-lg text-purple-700">All You Can Fly</h3>
-            <p className="text-gray-600 mt-2">Get unlimited flights with our "All You Can Fly" membership.</p>
-          </div>
+          <Link to="/allyoucanfly">
+  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 cursor-pointer">
+    <h3 className="font-semibold text-lg text-purple-700">All You Can Fly</h3>
+    <p className="text-gray-600 mt-2">
+      Get unlimited flights with our "All You Can Fly" membership.
+    </p>
+  </div>
+</Link>
           {/* Discount Club */}
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h3 className="font-semibold text-lg text-purple-700">Discount Club</h3>
