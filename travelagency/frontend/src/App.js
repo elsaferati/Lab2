@@ -23,6 +23,14 @@ import RequestRefund from './pages/faq/RequestRefund';
 import Hotels from './components/Hotels.jsx';
 import AboutUs from './pages/AboutUs';
 import TravelInfo from './pages/TravelInfo';
+import Allyoucanfly from './pages/allyoucanfly'; 
+import MembershipRegistration from './pages/MembershipRegistration';
+import SittingTogether from './pages/SittingTogether';
+import AutoCheckIn from './pages/AutoCheckIn';
+import WizzAccount from './pages/WizzAccount';
+import TermsAndConditions from './pages/TermsAndConditions';
+import LiveChat from "./components/LiveChat"; 
+
 
 function App() {
   const [showSignUp, setShowSignUp] = useState(false);
@@ -56,6 +64,16 @@ function App() {
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/hotels" element={<Hotels />} />
             <Route path="/travel-info" element={<TravelInfo />} />
+            <Route path="/allyoucanfly" element={<Allyoucanfly />} />     
+            <Route path="/membership" element={<MembershipRegistration />} />
+            <Route path="/services/sitting-together" element={<SittingTogether />} />
+             <Route path="/services/auto-check-in" element={<AutoCheckIn />} />
+             <Route path="/services/wizz-account" element={<WizzAccount />} />
+             <Route path="/terms" element={<TermsAndConditions />} />
+             <Route path="/live-chat" element={<LiveChat />} />
+
+
+
           </Routes>
         </main>
         <Footer />
@@ -72,6 +90,8 @@ function App() {
         {showRegister && (
           <Register onClose={() => setShowRegister(false)} />
         )}
+
+        
       </div>
     </Router>
   );
