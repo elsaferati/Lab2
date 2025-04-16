@@ -30,7 +30,7 @@ import AutoCheckIn from './pages/AutoCheckIn';
 import WizzAccount from './pages/WizzAccount';
 import TermsAndConditions from './pages/TermsAndConditions';
 import LiveChat from "./components/LiveChat"; 
-
+import DiscountClub from './pages/DiscountClub.jsx';
 
 function App() {
   const [showSignUp, setShowSignUp] = useState(false);
@@ -71,8 +71,7 @@ function App() {
              <Route path="/services/wizz-account" element={<WizzAccount />} />
              <Route path="/terms" element={<TermsAndConditions />} />
              <Route path="/live-chat" element={<LiveChat />} />
-
-
+          <Route path="/discount-club" element={<DiscountClub />} />
 
           </Routes>
         </main>
