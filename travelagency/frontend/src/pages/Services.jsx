@@ -110,12 +110,16 @@ const ServicesPage = () => {
   </div>
 </Link>
           {/* Discount Club */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="font-semibold text-lg text-purple-700">Discount Club</h3>
-            <p className="text-gray-600 mt-2">Join our Discount Club for exclusive offers and discounts on flights and services.</p>
-          </div>
-        </div>
+          <Link to="/discount-club">
+      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 cursor-pointer">
+        <h3 className="font-semibold text-lg text-purple-700">Discount Club</h3>
+        <p className="text-gray-600 mt-2">
+          Join our Discount Club for exclusive offers and discounts on flights and services.
+        </p>
       </div>
+    </Link>
+  </div>
+</div>
 
       {/* Footer Section */}
       <div className="bg-black text-white py-4 mt-10 text-center">
