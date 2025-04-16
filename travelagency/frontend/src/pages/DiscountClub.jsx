@@ -49,7 +49,7 @@ const plans = [
       "Café & Boutique promotions",
       "€10.00 discount on flight fares from €19.99",
       "€5.00 discount on checked-in baggages",
-      "WIZZ Priority with trolley bag",
+      "Priority with trolley bag",
       "Premium seat selection"
     ],
     disabled: [],
