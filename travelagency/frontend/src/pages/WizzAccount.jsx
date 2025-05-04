@@ -44,18 +44,18 @@ const WizzAccount = () => {
           <h2 className="text-xl font-semibold text-purple-700 mb-2">Frequently Asked Questions</h2>
 
           <div className="bg-gray-100 p-4 rounded mb-4">
-            <h3 className="font-semibold">I can't log in, what should I do?</h3>
+            <h3 className="font-semibold">I can&apos;t log in, what should I do?</h3>
             <p>
-              It’s possible that multiple registrations belong to one e-mail address, which in these cases block each
-              other’s access. Please contact the <a href="#" className="text-pink-600 underline">Wizz Air Call Centre</a>
+              It&apos;s possible that multiple registrations belong to one e-mail address, which in these cases block each
+              other&apos;s access. Please contact the <a href="#" className="text-pink-600 underline">Wizz Air Call Centre</a>
               , and our colleagues will merge multiple accounts into one.
             </p>
           </div>
 
           <div className="bg-gray-100 p-4 rounded mb-4">
-            <h3 className="font-semibold">I can't find my booking. Why is that?</h3>
+            <h3 className="font-semibold">I can&apos;t find my booking. Why is that?</h3>
             <p>
-              It’s possible that you were logged in and booked your flights using a different profile. Please contact the
+              It&apos;s possible that you were logged in and booked your flights using a different profile. Please contact the
               <a href="#" className="text-pink-600 underline"> Wizz Air Call Centre</a>!
             </p>
           </div>

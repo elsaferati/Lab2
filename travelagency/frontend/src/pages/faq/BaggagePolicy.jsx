@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaSuitcaseRolling, FaWeightHanging, FaPlusCircle, FaInfoCircle, FaCheckCircle, FaExclamationTriangle } from 'react-icons/fa';
+import { FaWeightHanging, FaPlusCircle, FaInfoCircle, FaCheckCircle, FaExclamationTriangle } from 'react-icons/fa'; // Hequr FaSuitcaseRolling
 
 const BaggagePolicy = () => {
     return (

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -127,11 +128,11 @@ export default function Hotels() {
       </div>
 
      {/* 🏠 Property Types */}
-<section className="mb-10">
+     <section className="mb-10">
   <h2 className="text-2xl font-bold mb-4">Browse by property type</h2>
   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
     {[
-      { name: "Hotels", img: hotelImg },
+      { name: "Hotels", img: hotelImg, path: "/all-hotels" },
       { name: "Apartments", img: apartmentImg },
       { name: "Resorts", img: resortImg },
       { name: "Villas", img: villaImg },
@@ -140,12 +141,25 @@ export default function Hotels() {
         key={type.name}
         className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition"
       >
-        <img
-          src={type.img}
-          alt={type.name}
-          className="w-full h-32 object-cover"
-        />
-        <div className="p-2 text-center font-medium">{type.name}</div>
+        {type.path ? (
+          <Link to={type.path}>
+            <img
+              src={type.img}
+              alt={type.name}
+              className="w-full h-32 object-cover"
+            />
+            <div className="p-2 text-center font-medium">{type.name}</div>
+          </Link>
+        ) : (
+          <>
+            <img
+              src={type.img}
+              alt={type.name}
+              className="w-full h-32 object-cover"
+            />
+            <div className="p-2 text-center font-medium">{type.name}</div>
+          </>
+        )}
       </div>
     ))}
   </div>

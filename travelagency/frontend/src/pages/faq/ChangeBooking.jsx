@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 
 const ChangeBooking = () => {
     const navigate = useNavigate();
-    const [showBookingCard, setShowBookingCard] = useState(false);
     const [selectedBooking, setSelectedBooking] = useState(null);
 
     // Simulate available bookings (you can replace this with real data)

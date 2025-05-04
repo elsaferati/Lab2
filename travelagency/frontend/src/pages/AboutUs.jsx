@@ -11,7 +11,7 @@ const AboutUs = () => {
         <h2 className="text-3xl font-semibold text-purple-700 mb-4">✈️ Our Mission</h2>
         <p className="text-lg">
           At <strong>Your Airline Company</strong>, our mission is to revolutionize the way people travel by providing
-          seamless, secure, and joyful experiences. We believe travel should be more than just getting from one place to another —
+          seamless, secure, and joyful experiences. We believe travel should be more than just getting from one place to another — 
           it should be a part of the adventure.
         </p>
       </section>
@@ -65,14 +65,14 @@ const AboutUs = () => {
           Our passionate team is made up of experienced professionals from aviation, technology, and customer service backgrounds. We work day and night to make sure your journey is safe, smooth, and memorable.
         </p>
         <p className="text-lg">
-          We’re not just building an airline — we’re building a community of happy travelers.
+          We&apos;re not just building an airline — we&apos;re building a community of happy travelers.
         </p>
       </section>
 
       {/* Join Us CTA */}
       <section className="text-center mt-16">
         <h2 className="text-3xl font-bold text-pink-600 mb-4">Ready to Explore with Us?</h2>
-        <p className="text-lg mb-6">Whether you're traveling for business, adventure, or family — we're here to make it great.</p>
+        <p className="text-lg mb-6">Whether you&apos;re traveling for business, adventure, or family — we&apos;re here to make it great.</p>
         <a href="/services" className="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">
           Explore Our Services
         </a>

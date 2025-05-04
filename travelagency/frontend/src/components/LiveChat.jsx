@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
+import PropTypes from 'prop-types'; // Import PropTypes
 
 const LiveChat = ({ onClose }) => {
     const [messages, setMessages] = useState([]);
@@ -109,6 +110,11 @@ const LiveChat = ({ onClose }) => {
             </div>
         </div>
     );
+};
+
+// PropTypes validation
+LiveChat.propTypes = {
+  onClose: PropTypes.func.isRequired, // Ensures that onClose is passed and is a function
 };
 
 export default LiveChat;
