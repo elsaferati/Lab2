@@ -55,7 +55,7 @@ const TravelInfo = () => {
         <section>
           <h2 className="text-2xl font-semibold mb-2">🌱 Sustainable Travel</h2>
           <p>
-            We're committed to greener skies. Choose digital boarding passes, offset your carbon
+            We&apos;re committed to greener skies. Choose digital boarding passes, offset your carbon
             footprint, and help us protect the planet.
           </p>
         </section>

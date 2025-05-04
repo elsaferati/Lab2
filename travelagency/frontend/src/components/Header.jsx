@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types'; // Import PropTypes
 
 const Header = ({ onSignUpClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,7 +31,7 @@ const Header = ({ onSignUpClick }) => {
 
         {/* Navigation Menu */}
         <nav className={`md:flex space-x-6 font-semibold text-sm ${isMenuOpen ? 'block' : 'hidden'} md:block`}>
-        <Link to="/hotels" className="hover:text-pink-300">HOTELS</Link>
+          <Link to="/hotels" className="hover:text-pink-300">HOTELS</Link>
           
           {/* Help Centre Link */}
           <Link to="/help-center" className="hover:text-pink-300">HELP CENTER</Link>
@@ -46,7 +47,6 @@ const Header = ({ onSignUpClick }) => {
           {/* Services Link */}
           <Link to="/services" className="hover:text-pink-300">SERVICES</Link>  {/* <-- Added Services Link */}
 
-
           {/* Back to Home Button */}
           <button
             onClick={() => navigate('/')}  // This navigates to the homepage
@@ -56,24 +56,27 @@ const Header = ({ onSignUpClick }) => {
           </button>
         </nav>
 
-{/* Right Side Icons */}
-<div className="flex items-center space-x-4 text-sm">
-  
+        {/* Right Side Icons */}
+        <div className="flex items-center space-x-4 text-sm">
+          <button
+            onClick={onSignUpClick}
+            className="bg-pink-600 hover:bg-pink-700 text-white px-4 py-1 rounded-lg"
+          >
+            SIGN UP
+          </button>
 
-  <button
-    onClick={onSignUpClick}
-    className="bg-pink-600 hover:bg-pink-700 text-white px-4 py-1 rounded-lg"
-  >
-    SIGN UP
-  </button>
-
-  <button className="rounded-full border border-white px-2 py-0.5 text-xs hover:bg-white hover:text-blue-900">
-    🇬🇧
-  </button>
-</div>
+          <button className="rounded-full border border-white px-2 py-0.5 text-xs hover:bg-white hover:text-blue-900">
+            🇬🇧
+          </button>
+        </div>
       </div>
     </header>
   );
+};
+
+// Prop validation for onSignUpClick
+Header.propTypes = {
+  onSignUpClick: PropTypes.func.isRequired,  // Ensures onSignUpClick is passed and is a function
 };
 
 export default Header;
