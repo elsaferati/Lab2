@@ -32,7 +32,7 @@ const RequestRefund = () => {
             <h1 className="text-3xl font-bold text-pink-600 mb-6">How do I request a refund?</h1>
 
             <p className="mb-4">
-                Refund requests can be made directly on our website. Navigate to the "My Bookings" section and select the booking 
+                Refund requests can be made directly on our website. Navigate to the &quot;My Bookings&quot; section and select the booking 
                 for which you want to request a refund. Follow the instructions provided.
             </p>
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types'; // Import PropTypes
 
-const SignUp = ({onClose, onRegisterClick}) => {
+const SignUp = ({ onClose, onRegisterClick }) => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -24,7 +25,7 @@ const SignUp = ({onClose, onRegisterClick}) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-white w-full max-w-md p-8 rounded shadow-lg relative">
-      <button
+        <button
           onClick={onClose}
           className="absolute top-4 right-4 text-gray-500 hover:text-red-500 text-xl font-bold"
         >
@@ -70,33 +71,38 @@ const SignUp = ({onClose, onRegisterClick}) => {
           </button>
 
           <button
-          type="button"
-          onClick={onClose}
-          className="w-full bg-indigo-600 text-white font-semibold py-2 rounded hover:bg-indigo-700"
-        >
-          CANCEL
-        </button>
+            type="button"
+            onClick={onClose}
+            className="w-full bg-indigo-600 text-white font-semibold py-2 rounded hover:bg-indigo-700"
+          >
+            CANCEL
+          </button>
 
           <p className="text-xs text-gray-500 mt-4">
             This site is protected by reCAPTCHA and the Google <a href="#" className="underline">Privacy Policy</a> and <a href="#" className="underline">Terms of Service</a> apply.
           </p>
 
           <div className="flex justify-between text-sm mt-4">
-  <button
-    type="button"
-    onClick={onRegisterClick}
-    className="text-pink-600 underline"
-  >
-    REGISTRATION
-  </button>
+            <button
+              type="button"
+              onClick={onRegisterClick}
+              className="text-pink-600 underline"
+            >
+              REGISTRATION
+            </button>
 
-  <a href="#" className="text-pink-600 underline">AGENCY LOGIN</a>
-</div>
-
+            <a href="#" className="text-pink-600 underline">AGENCY LOGIN</a>
+          </div>
         </form>
       </div>
     </div>
   );
+};
+
+// Prop validation for onClose and onRegisterClick
+SignUp.propTypes = {
+  onClose: PropTypes.func.isRequired, // onClose should be a function
+  onRegisterClick: PropTypes.func.isRequired, // onRegisterClick should be a function
 };
 
 export default SignUp;

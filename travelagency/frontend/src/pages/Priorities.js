@@ -6,7 +6,7 @@ const Priorities = () => {
       <h1 className="text-3xl font-bold mb-4">Priorities</h1>
       <p className="mb-6">
         Protect your journey with our comprehensive travel priority services.
-        From peace of mind to hassle-free assistance, we're here for you every
+        From peace of mind to hassle-free assistance, we&apos;re here for you every
         step of the way.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
