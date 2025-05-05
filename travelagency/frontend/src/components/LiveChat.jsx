@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
-import PropTypes from 'prop-types'; // Import PropTypes
+import PropTypes from 'prop-types';
 
 const LiveChat = ({ onClose }) => {
     const [messages, setMessages] = useState([]);
@@ -27,13 +27,21 @@ const LiveChat = ({ onClose }) => {
 
     const sendMessage = async () => {
         if (!newMsg.trim()) return;
+
         try {
-            await axios.post('http://localhost/livechat/sendMessage.php', {
+            // Send user message to backend
+            const res = await axios.post('http://localhost/livechat/sendMessage.php', {
                 sender,
                 message: newMsg
             });
             setNewMsg('');
-            fetchMessages();
+
+            // Add both the user's message and the bot's response to the messages state
+            setMessages(prevMessages => [
+                ...prevMessages,
+                { sender, message: newMsg },
+                res.data.bot // Bot's response
+            ]);
         } catch (error) {
             console.error("Error sending message", error);
         }
@@ -100,6 +108,11 @@ const LiveChat = ({ onClose }) => {
                     onChange={(e) => setNewMsg(e.target.value)}
                     className="flex-1 border rounded p-2 mr-2"
                     placeholder="Type your message..."
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                            sendMessage();
+                        }
+                    }}
                 />
                 <button
                     onClick={sendMessage}
