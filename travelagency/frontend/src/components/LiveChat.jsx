@@ -1,133 +1,96 @@
-import React, { useState, useEffect, useRef } from 'react';
-import axios from 'axios';
-import PropTypes from 'prop-types';
+import React, { useState } from "react";
+import axios from "axios";
 
-const LiveChat = ({ onClose }) => {
-    const [messages, setMessages] = useState([]);
-    const [newMsg, setNewMsg] = useState('');
-    const [isDragging, setIsDragging] = useState(false);
-    const [position, setPosition] = useState({ x: 100, y: 100 });
-    const chatRef = useRef(null);
-    const sender = 'User';
+const LiveChat = () => {
+  const [messages, setMessages] = useState([]);
+  const [input, setInput] = useState("");
 
-    useEffect(() => {
-        fetchMessages();
-        const interval = setInterval(fetchMessages, 1500);
-        return () => clearInterval(interval);
-    }, []);
+  // Add API key for authentication
+  const apiKey = 'YOUR_API_KEY_HERE'; // Replace this with your actual API key
 
-    const fetchMessages = async () => {
-        try {
-            const res = await axios.get('http://localhost/livechat/getMessages.php');
-            setMessages(res.data);
-        } catch (error) {
-            console.error("Error fetching messages", error);
-        }
-    };
+  // Function to fetch flight deals with API key in headers
+  const fetchFlightDeals = async () => {
+    try {
+      const response = await axios.get('http://localhost/backend/api/flights.php', {
+        headers: {
+          'Authorization': `Bearer ${apiKey}`,
+        },
+      });
+      if (response.data.error) {
+        return `Error: ${response.data.error}`;
+      }
+      return `We found some great flight deals: ${response.data.map((flight) => flight.destination + ' ' + flight.price).join(', ')}`;
+    } catch (error) {
+      return 'Sorry, I could not fetch flight deals at the moment.';
+    }
+  };
 
-    const sendMessage = async () => {
-        if (!newMsg.trim()) return;
+  // Function to fetch hotel deals with API key in headers
+  const fetchHotelDeals = async () => {
+    try {
+      const response = await axios.get('http://localhost/backend/api/hotels.php', {
+        headers: {
+          'Authorization': `Bearer ${apiKey}`,
+        },
+      });
+      if (response.data.error) {
+        return `Error: ${response.data.error}`;
+      }
+      return `We found some great hotel deals: ${response.data.map((hotel) => hotel.name + ' ' + hotel.price).join(', ')}`;
+    } catch (error) {
+      return 'Sorry, I could not fetch hotel deals at the moment.';
+    }
+  };
 
-        try {
-            // Send user message to backend
-            const res = await axios.post('http://localhost/livechat/sendMessage.php', {
-                sender,
-                message: newMsg
-            });
-            setNewMsg('');
+  // Function to handle user input
+  const handleUserInput = async (e) => {
+    e.preventDefault();
 
-            // Add both the user's message and the bot's response to the messages state
-            setMessages(prevMessages => [
-                ...prevMessages,
-                { sender, message: newMsg },
-                res.data.bot // Bot's response
-            ]);
-        } catch (error) {
-            console.error("Error sending message", error);
-        }
-    };
+    // Add the user input to the message list
+    setMessages((prevMessages) => [
+      ...prevMessages,
+      { text: input, sender: "user" },
+    ]);
 
-    const handleMouseDown = (e) => {
-        setIsDragging(true);
-        chatRef.current.startX = e.clientX - position.x;
-        chatRef.current.startY = e.clientY - position.y;
-    };
+    // Simulate bot response
+    let botResponse = "";
+    if (input.toLowerCase().includes("flight")) {
+      botResponse = await fetchFlightDeals();  // Fetch flight deals when user asks for flights
+    } else if (input.toLowerCase().includes("hotel")) {
+      botResponse = await fetchHotelDeals();  // Fetch hotel deals when user asks for hotels
+    } else {
+      botResponse = "Sorry, I didn't understand that.";
+    }
 
-    const handleMouseMove = (e) => {
-        if (!isDragging) return;
-        const newX = e.clientX - chatRef.current.startX;
-        const newY = e.clientY - chatRef.current.startY;
-        setPosition({ x: newX, y: newY });
-    };
+    // Add the bot response to the message list
+    setMessages((prevMessages) => [
+      ...prevMessages,
+      { text: botResponse, sender: "bot" },
+    ]);
 
-    const handleMouseUp = () => {
-        setIsDragging(false);
-    };
+    setInput("");  // Clear the input field
+  };
 
-    useEffect(() => {
-        document.addEventListener('mousemove', handleMouseMove);
-        document.addEventListener('mouseup', handleMouseUp);
-        return () => {
-            document.removeEventListener('mousemove', handleMouseMove);
-            document.removeEventListener('mouseup', handleMouseUp);
-        };
-    });
-
-    return (
-        <div
-            ref={chatRef}
-            style={{
-                position: 'absolute',
-                left: position.x,
-                top: position.y,
-                width: '320px',
-                minHeight: '300px',
-                resize: 'both',
-                overflow: 'hidden',
-                zIndex: 1000
-            }}
-            className="bg-white border rounded-lg shadow-xl text-black"
-        >
-            <div
-                onMouseDown={handleMouseDown}
-                className="p-3 cursor-move bg-pink-600 text-white font-semibold flex justify-between items-center rounded-t-lg"
-            >
-                💬 Live Chat
-                <button onClick={onClose} className="text-white text-lg hover:text-gray-200">×</button>
-            </div>
-            <div className="p-3 h-60 overflow-y-auto">
-                {messages.map((msg, index) => (
-                    <div key={index} className="mb-2">
-                        <strong>{msg.sender}:</strong> {msg.message}
-                    </div>
-                ))}
-            </div>
-            <div className="flex p-2 border-t">
-                <input
-                    value={newMsg}
-                    onChange={(e) => setNewMsg(e.target.value)}
-                    className="flex-1 border rounded p-2 mr-2"
-                    placeholder="Type your message..."
-                    onKeyDown={(e) => {
-                        if (e.key === 'Enter') {
-                            sendMessage();
-                        }
-                    }}
-                />
-                <button
-                    onClick={sendMessage}
-                    className="bg-blue-500 text-white px-3 rounded hover:bg-blue-600"
-                >
-                    Send
-                </button>
-            </div>
-        </div>
-    );
-};
-
-// PropTypes validation
-LiveChat.propTypes = {
-  onClose: PropTypes.func.isRequired, // Ensures that onClose is passed and is a function
+  return (
+    <div className="chat-box">
+      <div className="messages">
+        {messages.map((msg, index) => (
+          <div key={index} className={msg.sender}>
+            <p>{msg.text}</p>
+          </div>
+        ))}
+      </div>
+      <form onSubmit={handleUserInput} className="input-form">
+        <input
+          type="text"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          placeholder="Type your message..."
+        />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  );
 };
 
 export default LiveChat;

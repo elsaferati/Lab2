@@ -33,28 +33,32 @@ const HelpCenter = () => {
 
                         <ul className="space-y-6">
                             {/* FAQ Item 1 */}
-                            <Link to="/faq/change-booking" className="flex items-center gap-3">
-                                <span className="bg-pink-600 text-white p-2 rounded-full">
-                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12H9m0 0l6 6m-6-6l6-6"></path>
-                                    </svg>
-                                </span>
-                                <h3 className="font-semibold text-lg text-pink-600 hover:text-pink-700">
-                                    How do I change my booking&#63;
-                                </h3>
-                            </Link>
+                            <li className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                                <Link to="/faq/change-booking" className="flex items-center gap-3">
+                                    <span className="bg-pink-600 text-white p-2 rounded-full">
+                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12H9m0 0l6 6m-6-6l6-6"></path>
+                                        </svg>
+                                    </span>
+                                    <h3 className="font-semibold text-lg text-pink-600 hover:text-pink-700">
+                                        How do I change my booking&#63;
+                                    </h3>
+                                </Link>
+                            </li>
 
                             {/* FAQ Item 2 */}
-                            <Link to="/faq/baggage-policy" className="flex items-center gap-3">
-                                <span className="bg-pink-600 text-white p-2 rounded-full">
-                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12H9m0 0l6 6m-6-6l6-6"></path>
-                                    </svg>
-                                </span>
-                                <h3 className="font-semibold text-lg text-pink-600 hover:text-pink-700">
-                                    What is the baggage policy&#63;
-                                </h3>
-                            </Link>
+                            <li className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                                <Link to="/faq/baggage-policy" className="flex items-center gap-3">
+                                    <span className="bg-pink-600 text-white p-2 rounded-full">
+                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12H9m0 0l6 6m-6-6l6-6"></path>
+                                        </svg>
+                                    </span>
+                                    <h3 className="font-semibold text-lg text-pink-600 hover:text-pink-700">
+                                        What is the baggage policy&#63;
+                                    </h3>
+                                </Link>
+                            </li>
 
                             {/* FAQ Item 3 */}
                             <li className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
