@@ -32,6 +32,7 @@ import TermsAndConditions from './pages/TermsAndConditions';
 import LiveChat from "./components/LiveChat"; 
 import DiscountClub from './pages/DiscountClub.jsx';
 import AllHotels from "./components/AllHotels";
+import Milanohotels from "./components/Milanohotels.jsx";
 
 function App() {
   const [showSignUp, setShowSignUp] = useState(false);
@@ -54,7 +55,6 @@ function App() {
             <Route path="/travel-insurance" element={<TravelInsurance />} />
             <Route path="/priorities" element={<Priorities />} />
             <Route path="/services/fare-lock" element={<FareLock />} />
-
             <Route path="/bundles" element={<TravelInsurancePage />} />
             <Route path="/services/discounts" element={<Discounts />} />
             <Route path="/services/partners" element={<Partner />} />
@@ -68,12 +68,13 @@ function App() {
             <Route path="/allyoucanfly" element={<Allyoucanfly />} />     
             <Route path="/membership" element={<MembershipRegistration />} />
             <Route path="/services/sitting-together" element={<SittingTogether />} />
-             <Route path="/services/auto-check-in" element={<AutoCheckIn />} />
-             <Route path="/services/wizz-account" element={<WizzAccount />} />
-             <Route path="/terms" element={<TermsAndConditions />} />
-             <Route path="/live-chat" element={<LiveChat />} />
-          <Route path="/discount-club" element={<DiscountClub />} />
-          <Route path="/all-hotels" element={<AllHotels />} />
+            <Route path="/services/auto-check-in" element={<AutoCheckIn />} />
+            <Route path="/services/wizz-account" element={<WizzAccount />} />
+            <Route path="/terms" element={<TermsAndConditions />} />
+            <Route path="/live-chat" element={<LiveChat />} />
+            <Route path="/discount-club" element={<DiscountClub />} />
+            <Route path="/all-hotels" element={<AllHotels />} />
+            <Route path="/milanohotels" element={<Milanohotels />} />
           </Routes>
         </main>
         <Footer />

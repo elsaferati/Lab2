@@ -1,40 +1,48 @@
 import React from "react";
-import dealAthensImg from "../assets/images/athenshotel.jpg";
-import dealViennaImg from "../assets/images/viennahotel.jpg";
-import dealBerlinImg from "../assets/images/berlinhotel.jpg";
-import dealLondonImg from "../assets/images/londonhotel.webp";
-import hotel1Img from '../assets/images/hotel1Img.jpg';
-import hotel2Img from '../assets/images/hotel2Img.jpg';
+
 import budapesthotel from "../assets/images/budapesthotel.jpg";
-import milanohotel from "../assets/images/milanohotel.jpg";
 import budapesthotel2 from "../assets/images/budapesthotel2.jpg";
+import budapesthotel3 from "../assets/images/budapesthotel3.webp";
+import budapesthotel4 from "../assets/images/budapesthotel4.jpg"; 
+import budapesthotel5 from "../assets/images/budapesthotel5.jpg"; 
+
+import milanohotel from "../assets/images/milanohotel.jpg";
 import milanohotel2 from "../assets/images/milanohotel2.webp";
 import milanohotel3 from "../assets/images/milanohotel3.avif";
-import parishotel from "../assets/images/parishotel.jpg";
-import londonhotel2 from "../assets/images/londonhotel2.jpg";
-import londonhotel3 from "../assets/images/londonhotel3.jpg";
-import berlinhotel2 from "../assets/images/berlinhotel2.jpg";
-import viennahotel2 from "../assets/images/viennahotel2.jpg";
-import berlinhotel3 from "../assets/images/berlinhotel3.jpg";
-import athenshotel2 from "../assets/images/athenshotel2.webp";
-import berlinhotel4 from "../assets/images/berlinhotel4.jpg";
-import budapesthotel3 from "../assets/images/budapesthotel3.webp";
-import athenshotel3 from "../assets/images/athenshotel3.avif";
 import milanohotel4 from "../assets/images/milanohotel4.jpg";
-import berlinhotel5 from "../assets/images/berlinhotel5.jpg";
-import athenshotel4 from "../assets/images/athenshotel4.avif";
-import budapesthotel4 from "../assets/images/budapesthotel4.jpg"; 
-import viennahotel3 from "../assets/images/viennahotel3.webp";
+import milanohotel5 from "../assets/images/milanohotel5.jpg";
+
+import parishotel from "../assets/images/parishotel.jpg";
 import parishotel2 from "../assets/images/parishotel2.webp";
-import viennahotel4 from "../assets/images/viennahotel4.jpg";
-import londonhotel4 from "../assets/images/londonhotel4.jpg";
 import parishotel3 from "../assets/images/parishotel3.jpg";
-import budapesthotel5 from "../assets/images/budapesthotel5.jpg"; 
-import athenshotel5 from "../assets/images/athenshotel5.jpeg";
-import viennahotel5 from "../assets/images/viennahotel5.avif";
 import parishotel4 from "../assets/images/parishotel4.jpeg";
 import parishotel5 from "../assets/images/parishotel5.jpg";
-import milanohotel5 from "../assets/images/milanohotel5.jpg";
+
+import dealLondonImg from "../assets/images/londonhotel.webp";
+import londonhotel2 from "../assets/images/londonhotel2.jpg";
+import londonhotel3 from "../assets/images/londonhotel3.jpg";
+import londonhotel4 from "../assets/images/londonhotel4.jpg";
+
+import dealBerlinImg from "../assets/images/berlinhotel.jpg";
+import berlinhotel2 from "../assets/images/berlinhotel2.jpg";
+import berlinhotel3 from "../assets/images/berlinhotel3.jpg";
+import berlinhotel4 from "../assets/images/berlinhotel4.jpg";
+import berlinhotel5 from "../assets/images/berlinhotel5.jpg";
+
+import hotel2Img from '../assets/images/hotel2Img.jpg';
+import dealViennaImg from "../assets/images/viennahotel.jpg";
+import viennahotel2 from "../assets/images/viennahotel2.jpg";
+import viennahotel3 from "../assets/images/viennahotel3.webp";
+import viennahotel4 from "../assets/images/viennahotel4.jpg";
+import viennahotel5 from "../assets/images/viennahotel5.avif";
+
+import hotel1Img from '../assets/images/hotel1Img.jpg';
+import dealAthensImg from "../assets/images/athenshotel.jpg";
+import athenshotel2 from "../assets/images/athenshotel2.webp";
+import athenshotel3 from "../assets/images/athenshotel3.avif";
+import athenshotel4 from "../assets/images/athenshotel4.avif";
+import athenshotel5 from "../assets/images/athenshotel5.jpeg";
+
 
 const hotels = [
   {
@@ -42,7 +50,7 @@ const hotels = [
     name: "City Center Hotel",
     city: "Athens",
     rating: 7.7,
-    ratingText: "Excellent",
+    ratingText: "Good",
     reviews: 1401,
     stars: 4,
     guests: 2,
@@ -72,7 +80,7 @@ const hotels = [
     name: "The Marriott Hotel",
     city: "Berlin",
     rating: 8.0,
-    ratingText: "Excellent",
+    ratingText: "Good",
     reviews: 2213,
     stars: 4,
     guests: 2,
@@ -117,7 +125,7 @@ const hotels = [
     name: "Grand City Hotel",
     city: "Vienna",
     rating: 7.1,
-    ratingText: "Good",
+    ratingText: "Pleasant",
     reviews: 830,
     stars: 4,
     guests: 2,
@@ -132,7 +140,7 @@ const hotels = [
     name: "Belmond Hotel",
     city: "Milano",
     rating: 6.8,
-    ratingText: "Good",
+    ratingText: "Pleasant",
     reviews: 753,
     stars: 5,
     guests: 2,
@@ -224,7 +232,7 @@ const hotels = [
     name: "Park Hyatt Hotel",
     city: "Milano",
     rating: 9.0,
-    ratingText: "Very Good",
+    ratingText: "Excellent",
     reviews: 1711,
     stars: 5,
     guests: 2,
@@ -267,9 +275,9 @@ const hotels = [
   {
     id: 5,
     name: "The Hilton Hotel",
-    city: "Excellent",
+    city: "Budapest",
     rating: 9.0,
-    ratingText: "Good",
+    ratingText: "Excellent",
     reviews: 2200,
     stars: 5,
     guests: 2,
@@ -284,7 +292,7 @@ const hotels = [
     id: 5,
     name: "The Ritz Hotel",
     city: "Vienna",
-    rating: 9.1,
+    rating: 8.7,
     ratingText: "Very Good",
     reviews: 1606,
     stars: 5,
@@ -314,7 +322,7 @@ const hotels = [
     name: "Evergreen Hotel",
     city: "Berlin",
     rating: 7.0,
-    ratingText: "Good",
+    ratingText: "Pleasant",
     reviews: 710,
     stars: 5,
     guests: 4,
@@ -330,7 +338,7 @@ const hotels = [
     name: "Seine Hotel",
     city: "Paris",
     rating: 7.0,
-    ratingText: "Good",
+    ratingText: "Pleasant",
     reviews: 1113,
     stars: 5,
     guests: 4,
@@ -352,7 +360,7 @@ const hotels = [
     bedroom: 1,
     bath: 1,
     bed: "1 Queen",
-    price: "$$",
+    price: "$",
     image: milanohotel2,
   },
   
@@ -391,7 +399,7 @@ const hotels = [
     name: "Alexandra Hotel",
     city: "London",
     rating: 7.0,
-    ratingText: "Good",
+    ratingText: "Pleasant",
     reviews: 741,
     stars: 5,
     guests: 4,
@@ -437,7 +445,7 @@ const hotels = [
     name: "Astoria Hotel",
     city: "Berlin",
     rating: 7.0,
-    ratingText: "Good",
+    ratingText: "Pleasant",
     reviews: 1221,
     stars: 5,
     guests: 2,
@@ -464,10 +472,10 @@ const hotels = [
   },
   {
     id: 5,
-    name: "Hilton Hotel",
+    name: "The Hillton Hotel",
     city: "Paris",
     rating: 9.0,
-    ratingText: "Good",
+    ratingText: "Excellent",
     reviews: 1706,
     stars: 5,
     guests: 2,
@@ -482,7 +490,7 @@ const hotels = [
     id: 5,
     name: "Apollo Hotel",
     city: "Athens",
-    rating: 8.0,
+    rating: 7.7,
     ratingText: "Good",
     reviews: 888,
     stars: 5,
@@ -528,8 +536,8 @@ const hotels = [
     id: 5,
     name: "Four Seasons Hotel",
     city: "Milano",
-    rating: 8.0,
-    ratingText: "Good",
+    rating: 8.3,
+    ratingText: "Very Good",
     reviews: 2700,
     stars: 5,
     guests: 2,
@@ -558,7 +566,7 @@ const hotels = [
     id: 5,
     name: "Emerald Hotel",
     city: "Athens",
-    rating: 8.5,
+    rating: 7.6,
     ratingText: "Good",
     reviews: 1210,
     stars: 5,
