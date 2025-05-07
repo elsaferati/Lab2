@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -30,7 +31,7 @@ export default function Hotels() {
   const [adults, setAdults] = useState(2);
   const [children, setChildren] = useState(0);
   const [rooms, setRooms] = useState(1);
-
+  const navigate = useNavigate();
   const handleSearch = () => {
     alert(
       `Search: ${location}, Adults: ${adults}, Children: ${children}, Rooms: ${rooms}`
@@ -173,15 +174,18 @@ export default function Hotels() {
   </p>
   <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-8">
     {[
-     { name: "Milano", img: milanoImg },
-     { name: "Paris", img: parisImg },
-     { name: "Budapest", img: budapestImg },
-     { name: "Berlin", img: berlinImg },
-     { name: "Vienna", img: viennaImg },
+      { name: "Milano", img: milanoImg, path: "/milanohotels" },
+      { name: "Paris", img: parisImg },
+      { name: "Budapest", img: budapestImg },
+      { name: "Berlin", img: berlinImg },
+      { name: "Vienna", img: viennaImg },
     ].map((city) => (
       <div
         key={city.name}
-        className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition"
+        onClick={() => {
+          if (city.path) navigate(city.path); // ✅ navigo vetëm nëse ka path
+        }}
+        className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition cursor-pointer"
       >
         <img
           src={city.img}
@@ -193,6 +197,7 @@ export default function Hotels() {
     ))}
   </div>
 </section>
+
 
 
       {/* 💸 Deals */}
