@@ -176,7 +176,7 @@ export default function Hotels() {
     {[
       { name: "Milano", img: milanoImg, path: "/milanohotels" },
       { name: "Paris", img: parisImg },
-      { name: "Budapest", img: budapestImg },
+      { name: "Budapest", img: budapestImg,path: "/budapesthotels" },
       { name: "Berlin", img: berlinImg },
       { name: "Vienna", img: viennaImg },
     ].map((city) => (
