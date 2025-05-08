@@ -43,22 +43,22 @@ import parishotel30 from "../assets/images/parishotel30.jpg";
     bedroom: 1,
     bath: 1,
     bed: "1 King",
-    price: "$$$",
+    price: "€3,720 / 2 nights",
     image: parishotel,
   },
   {
     id: 2,
     name: "The Hillton Hotel",
     city: "Paris",
-    rating: 9.0,
-    ratingText: "Excellent",
+    rating: 8.8,
+    ratingText: "Very Good",
     reviews: 1706,
     stars: 5,
     guests: 2,
     bedroom: 1,
     bath: 1,
     bed: "1 Double",
-    price: "$$$",
+    price: "€2,720 / 2 nights",
     image: parishotel2,
   },
     {
@@ -73,7 +73,7 @@ import parishotel30 from "../assets/images/parishotel30.jpg";
         bedroom: 2,
         bath: 1,
         bed: "1 Double-2 Single",
-        price: "$$",
+        price: "€550 / 2 nights",
         image: parishotel3,
       },
 {
@@ -88,22 +88,22 @@ import parishotel30 from "../assets/images/parishotel30.jpg";
     bedroom: 1,
     bath: 1,
     bed: "1 King",
-    price: "$$$",
+    price: "€1,220 / 2 nights",
     image: parishotel4,
   },
     {
        id: 5,
-       name: "Seine Hotel",
+       name: "Seine Riverside Hotel",
        city: "Paris",
-       rating: 7.0,
+       rating: 7.5,
        ratingText: "Pleasant",
        reviews: 1113,
        stars: 5,
        guests: 4,
        bedroom: 2,
        bath: 1,
-       bed: "1 King",
-       price: "$$",
+       bed: "2 Queen",
+       price: "€980 / 2 nights",
        image: parishotel5,
      },
      {
@@ -118,22 +118,22 @@ import parishotel30 from "../assets/images/parishotel30.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double",
-        price: "$$",
+        price: "€610 / 2 nights",
         image: parishotel6,
       },
       {
         id: 7,
         name: "George V Hotel",
         city: "Paris",
-        rating: 8.4,
-        ratingText: "Very Good",
+        rating: 9.4,
+        ratingText: "Excellent",
         reviews: 2171,
         stars: 5,
         guests: 2,
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$$$",
+        price: "€3,820 / 2 nights",
         image: parishotel7,
       },
       {
@@ -148,22 +148,22 @@ import parishotel30 from "../assets/images/parishotel30.jpg";
         bedroom: 1,
         bath: 1,
         bed: "2 Single",
-        price: "$",
+        price: "€300 / 2 nights",
         image: parishotel8,
       },
       {
         id: 9,
         name: "The Royal Hotel",
         city: "Paris",
-        rating: 8.2,
-        ratingText: "Very Good",
-        reviews: 899,
+        rating: 9.2,
+        ratingText: "Excellent",
+        reviews: 2899,
         stars: 5,
         guests: 2,
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$$$",
+        price: "€4,754 / 4 nights",
         image: parishotel9,
       },
       {
@@ -178,7 +178,7 @@ import parishotel30 from "../assets/images/parishotel30.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double-2 Single",
-        price: "$$",
+        price: "€700 / 2 nights",
         image: parishotel10,
       },
       {
@@ -193,7 +193,7 @@ import parishotel30 from "../assets/images/parishotel30.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$$$",
+        price: "€2,106 / 2 nights",
         image: parishotel11,
       },
       {
@@ -208,7 +208,7 @@ import parishotel30 from "../assets/images/parishotel30.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double",
-        price: "$$",
+        price: "€736 / 2 nights",
         image: parishotel12,
       },
       {
@@ -223,7 +223,7 @@ import parishotel30 from "../assets/images/parishotel30.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Queen",
-        price: "$$",
+        price: "€900 / 2 nights",
         image: parishotel13,
       },
       {
@@ -238,7 +238,7 @@ import parishotel30 from "../assets/images/parishotel30.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double",
-        price: "$$",
+        price: "€877 / 2 nights",
         image: parishotel14,
       },
       {
@@ -253,7 +253,7 @@ import parishotel30 from "../assets/images/parishotel30.jpg";
         bedroom: 1,
         bath: 1,
         bed: "2 Double",
-        price: "$",
+        price: "€757 / 2 nights",
         image: parishotel15,
       },
       {
@@ -268,7 +268,7 @@ import parishotel30 from "../assets/images/parishotel30.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double-1 Single",
-        price: "$",
+        price: "€698 / 3 nights",
         image: parishotel16,
       },
       {
@@ -283,7 +283,7 @@ import parishotel30 from "../assets/images/parishotel30.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$$$",
+        price: "€3,120 / 2 nights",
         image: parishotel17,
       },
       {
@@ -298,7 +298,7 @@ import parishotel30 from "../assets/images/parishotel30.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$$",
+        price: "€920 / 2 nights",
         image: parishotel18,
       },
       {
@@ -313,7 +313,7 @@ import parishotel30 from "../assets/images/parishotel30.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double",
-        price: "$$",
+        price: "€820 / 2 nights",
         image: parishotel22,
       },
       {
@@ -328,7 +328,7 @@ import parishotel30 from "../assets/images/parishotel30.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$$",
+        price: "€762 / 2 nights",
         image: parishotel20,
       },
       {
@@ -343,7 +343,7 @@ import parishotel30 from "../assets/images/parishotel30.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double",
-        price: "$$",
+        price: "€720 / 3 nights",
         image: parishotel21,
       },
       {
@@ -358,7 +358,7 @@ import parishotel30 from "../assets/images/parishotel30.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double",
-        price: "$",
+        price: "€520 / 2 nights",
         image: parishotel19,
       },
       {
@@ -373,7 +373,7 @@ import parishotel30 from "../assets/images/parishotel30.jpg";
         bedroom: 1,
         bath: 1,
         bed: "2 Double",
-        price: "$",
+        price: "€642 / 2 nights",
         image: parishotel23,
       },
       {
@@ -388,7 +388,7 @@ import parishotel30 from "../assets/images/parishotel30.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$$$",
+        price: "€2,003 / 2 nights",
         image: parishotel24,
       },
       {
@@ -403,7 +403,7 @@ import parishotel30 from "../assets/images/parishotel30.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$$$",
+        price: "€1,991 / 2 nights",
         image: parishotel25,
       },
       {
@@ -418,7 +418,7 @@ import parishotel30 from "../assets/images/parishotel30.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$$$",
+        price: "€2,120 / 2 nights",
         image: parishotel26,
       },
      {
@@ -429,11 +429,11 @@ import parishotel30 from "../assets/images/parishotel30.jpg";
         ratingText: "Good",
         reviews: 2991,
         stars: 5,
-        guests: 2,
+        guests: 3,
         bedroom: 1,
         bath: 1,
         bed: "1 Double",
-        price: "$$",
+        price: "€1,000 / 2 nights",
         image: parishotel27,
       }, {
         id: 28,
@@ -447,7 +447,7 @@ import parishotel30 from "../assets/images/parishotel30.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double",
-        price: "$$$",
+        price: "€1,625 / 2 nights",
         image: parishotel28,
       },
       {
@@ -462,7 +462,7 @@ import parishotel30 from "../assets/images/parishotel30.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double",
-        price: "$",
+        price: "€601 / 2 nights",
         image: parishotel29,
       },
       {
@@ -477,7 +477,7 @@ import parishotel30 from "../assets/images/parishotel30.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double",
-        price: "$",
+        price: "€720 / 2 nights",
         image: parishotel30,
       },
       
@@ -515,10 +515,19 @@ const HotelCards = () => {
                   <p>{hotel.guests} guests · {hotel.bedroom} bedroom · {hotel.bath} bath</p>
                   <p className="font-medium">{hotel.bed}</p>
                 </div>
+
                 <div className="flex items-center justify-between pt-2">
-                  <span className="text-blue-600 font-semibold">{hotel.price}</span>
-                  <span className="text-sm text-gray-600">{hotel.source}</span>
-                </div>
+  <span className="text-blue-600 font-semibold">{hotel.price}</span>
+</div>
+<form onSubmit={(e) => e.preventDefault()} className="pt-2">
+  <button
+    type="submit"
+    className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-2 px-4 rounded-xl transition"
+  >
+    Book
+  </button>
+</form>
+
               </div>
             </div>
           ))}
