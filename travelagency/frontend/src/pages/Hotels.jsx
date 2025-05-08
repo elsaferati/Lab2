@@ -7,7 +7,6 @@ import "slick-carousel/slick/slick-theme.css";
 import milanoImg from "../assets/images/milano.jpg";
 import parisImg from "../assets/images/paris.webp";
 import budapestImg from "../assets/images/budapest.webp";
-import berlinImg from "../assets/images/berlin.jpg";
 import viennaImg from "../assets/images/vienna.jpeg";
 import hotelImg from "../assets/images/hotels.webp";
 import apartmentImg from "../assets/images/apartments.jpg";
@@ -177,7 +176,7 @@ export default function Hotels() {
       { name: "Milano", img: milanoImg, path: "/milanohotels" },
       { name: "Paris", img: parisImg,path: "/parishotels" },
       { name: "Budapest", img: budapestImg,path: "/budapesthotels" },
-      { name: "Berlin", img: berlinImg },
+      { name: "London", img: dealLondonImg,path: "/londonhotels" },
       { name: "Vienna", img: viennaImg },
     ].map((city) => (
       <div

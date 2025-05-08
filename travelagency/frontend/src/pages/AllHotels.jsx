@@ -72,7 +72,7 @@ const hotels = [
     bedroom: 2,
     bath: 1,
     bed: "1 King - 1 Queen",
-    price: "$$$$",
+    price: "$$$",
     image: dealViennaImg,
   },
   {
@@ -87,7 +87,7 @@ const hotels = [
     bedroom: 1,
     bath: 1,
     bed: "1 King",
-    price: "$$$",
+    price: "$$",
     image: dealBerlinImg,
   },
   {
@@ -102,7 +102,7 @@ const hotels = [
     bedroom: 1,
     bath: 1,
     bed: "1 King",
-    price: "$$$$",
+    price: "$$$",
     image: dealLondonImg,
   },
   {
@@ -406,7 +406,7 @@ const hotels = [
     bedroom: 2,
     bath: 1,
     bed: "2 Double",
-    price: "$$$",
+    price: "$$",
     image: londonhotel4,
   },
   {

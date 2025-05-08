@@ -1,97 +1,98 @@
 import React from "react";
-import milanohotel from "../assets/images/milanohotel.jpg";
-import milanohotel2 from "../assets/images/milanohotel2.webp";
-import milanohotel3 from "../assets/images/milanohotel3.avif";
-import milanohotel4 from "../assets/images/milanohotel4.jpg";
-import milanohotel5 from "../assets/images/milanohotel5.jpg";
-import milanohotel6 from "../assets/images/milanohotel6.jpg";
-import milanohotel7 from "../assets/images/milanohotel7.jpg";
-import milanohotel8 from "../assets/images/milanohotel8.jpg";
-import milanohotel9 from "../assets/images/milanohotel9.jpg";
-import milanohotel10 from "../assets/images/milanohotel10.jpg";
-import milanohotel11 from "../assets/images/milanohotel11.jpg";
-import milanohotel12 from "../assets/images/milanohotel12.avif";
-import milanohotel13 from "../assets/images/milanohotel13.jpg";
-import milanohotel14 from "../assets/images/milanohotel14.webp";
-import milanohotel15 from "../assets/images/milanohotel15.avif";
-import milanohotel16 from "../assets/images/milanohotel16.webp";
-import milanohotel17 from "../assets/images/milanohotel17.jpg";
-import milanohotel18 from "../assets/images/milanohotel18.jpg";
-import milanohotel19 from "../assets/images/milanohotel19.webp";
-import milanohotel20 from "../assets/images/milanohotel20.jpg";
-import milanohotel21 from "../assets/images/milanohotel21.avif";
-import milanohotel22 from "../assets/images/milanohotel22.jpg";
-import milanohotel23 from "../assets/images/milanohotel23.webp";
-import milanohotel24 from "../assets/images/milanohotel24.jpg";
-import milanohotel25 from "../assets/images/milanohotel25.avif";
-import milanohotel26 from "../assets/images/milanohotel26.webp";
-import milanohotel27 from "../assets/images/milanohotel27.jpg";
+import dealLondonImg from "../assets/images/londonhotel.webp";
+import londonhotel2 from "../assets/images/londonhotel2.jpg";
+import londonhotel3 from "../assets/images/londonhotel3.jpg";
+import londonhotel4 from "../assets/images/londonhotel4.jpg";
+import londonhotel5 from "../assets/images/londonhotel5.jpg";
+import londonhotel6 from "../assets/images/londonhotel6.avif";
+import londonhotel7 from "../assets/images/londonhotel7.jpg";
+import londonhotel8 from "../assets/images/londonhotel8.jpeg";
+import londonhotel9 from "../assets/images/londonhotel9.jpg";
+import londonhotel10 from "../assets/images/londonhotel10.avif";
+import londonhotel11 from "../assets/images/londonhotel11.webp";
+import londonhotel12 from "../assets/images/londonhotel12.jpg";
+import londonhotel13 from "../assets/images/londonhotel13.avif";
+import londonhotel14 from "../assets/images/londonhotel14.avif";
+import londonhotel15 from "../assets/images/londonhotel15.jpg";
+import londonhotel16 from "../assets/images/londonhotel16.avif";
+import londonhotel17 from "../assets/images/londonhotel17.jpg";
+import londonhotel18 from "../assets/images/londonhotel18.webp";
+import londonhotel19 from "../assets/images/londonhotel19.jpg";
+import londonhotel20 from "../assets/images/londonhotel20.jpg";
+import londonhotel21 from "../assets/images/londonhotel21.webp";
+import londonhotel22 from "../assets/images/londonhotel22.webp";
+import londonhotel23 from "../assets/images/londonhotel23.jpg";
+import londonhotel24 from "../assets/images/londonhotel24.webp";
+import londonhotel25 from "../assets/images/londonhotel25.jpg";
+import londonhotel26 from "../assets/images/londonhotel26.avif";
+import londonhotel27 from "../assets/images/londonhotel27.jpg";
+
 
  const hotels = [
-  {
-      id: 1,
-      name: "Park Hyatt Hotel",
-      city: "Milano",
-      rating: 9.0,
-      ratingText: "Excellent",
-      reviews: 1711,
-      stars: 5,
-      guests: 2,
-      bedroom: 1,
-      bath: 1,
-      bed: "1 King",
-      price: "€3,601 / 2 nights",
-      image: milanohotel,
-    },
-  {
-    id: 2,
-    name: "Neo Hotel",
-    city: "Milano",
-    rating: 5.2,
-    ratingText: "Bad",
-    reviews: 700,
-    stars: 5,
+ {
+    id: 1,
+    name: "The Plaza Hotel",
+    city: "London",
+    rating: 9.3,
+    ratingText: "Excellent",
+    reviews: 799,
+    stars: 4,
     guests: 2,
     bedroom: 1,
     bath: 1,
-    bed: "1 Queen",
-    price: "€360 / 2 nights",
-    image: milanohotel2,
+    bed: "1 King",
+    price: "€3,996 / 2 nights",
+    image: dealLondonImg,
   },
    {
-       id: 3,
-       name: "Belmond Hotel",
-       city: "Milano",
-       rating: 6.8,
-       ratingText: "Pleasant",
-       reviews: 753,
-       stars: 5,
-       guests: 2,
-       bedroom: 1,
-       bath: 1,
-       bed: "1 Double",
-       price: "€615 / 2 nights",
-       image: milanohotel3,
-     },
-   {
+      id: 2,
+      name: "St George Hotel",
+      city: "London",
+      rating: 5.3,
+      ratingText: "Bad",
+      reviews: 901,
+      stars: 5,
+      guests: 4,
+      bedroom: 1,
+      bath: 1,
+      bed: "2 Queen",
+      price: "€796 / 2 nights",
+      image: londonhotel2,
+    },
+  {
+      id: 3,
+      name: "The Kensington Hotel",
+      city: "London",
+      rating: 9.1,
+      ratingText: "Excellent",
+      reviews: 1108,
+      stars: 5,
+      guests: 2,
+      bedroom: 2,
+      bath: 1,
+      bed: "1 King",
+      price: "€2,622 / 2 nights",
+      image: londonhotel3,
+    },
+    {
        id: 4,
-       name: "Four Seasons Hotel",
-       city: "Milano",
-       rating: 8.3,
-       ratingText: "Very Good",
-       reviews: 2700,
+       name: "Alexandra Hotel",
+       city: "London",
+       rating: 7.0,
+       ratingText: "Pleasant",
+       reviews: 741,
        stars: 5,
-       guests: 2,
-       bedroom: 1,
+       guests: 4,
+       bedroom: 2,
        bath: 1,
-       bed: "1 King",
-       price: "€1,286 / 2 nights",
-       image: milanohotel4,
+       bed: "2 Double",
+       price: "€896 / 2 nights",
+       image: londonhotel4,
      },
     {
        id: 5,
-       name: "Armani Hotel",
-       city: "Milano",
+       name: "The Savoy Hotel",
+       city: "London",
        rating: 8.9,
        ratingText: "Very Good",
        reviews: 1777,
@@ -101,12 +102,12 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
        bath: 1,
        bed: "1 King",
        price: "€2,996 / 2 nights",
-       image: milanohotel5,
+       image: londonhotel5,
      },
      {
         id: 6,
-        name: "Riverstone Hotel",
-        city: "Milano",
+        name: "Mayfair Hotel",
+        city: "London",
         rating: 7.2,
         ratingText: "Pleasant",
         reviews: 1501,
@@ -116,12 +117,12 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bath: 1,
         bed: "1 Double",
         price: "€732 / 2 nights",
-        image: milanohotel6,
+        image: londonhotel6,
       },
       {
         id: 7,
-        name: "D&G Hotel",
-        city: "Milano",
+        name: "The Ritz Hotel",
+        city: "London",
         rating: 8.4,
         ratingText: "Very Good",
         reviews: 2171,
@@ -131,42 +132,42 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bath: 1,
         bed: "1 King",
         price: "€1,961 / 2 nights",
-        image: milanohotel7,
+        image: londonhotel7,
       },
       {
         id: 8,
-        name: "Hilltop Hotel",
-        city: "Milano",
-        rating: 6.1,
+        name: "Saint Hotel",
+        city: "London",
+        rating: 6.6,
         ratingText: "Pleasant",
         reviews: 901,
         stars: 5,
         guests: 2,
         bedroom: 1,
         bath: 1,
-        bed: "2 Single",
-        price: "€542 / 2 nights",
-        image: milanohotel8,
+        bed: "1 Double",
+        price: "€642 / 2 nights",
+        image: londonhotel8,
       },
       {
         id: 9,
-        name: "Oak Tree Hotel",
-        city: "Milano",
+        name: "The Beaumont Hotel",
+        city: "London",
         rating: 8.2,
         ratingText: "Very Good",
-        reviews: 899,
+        reviews: 1899,
         stars: 5,
         guests: 3,
         bedroom: 1,
         bath: 1,
         bed: "1 Double-1 Single",
         price: "€1,006 / 2 nights",
-        image: milanohotel9,
+        image: londonhotel9,
       },
       {
         id: 10,
-        name: "Grand Hotel",
-        city: "Milano",
+        name: "The Marylebone Hotel",
+        city: "London",
         rating: 7.7,
         ratingText: "Good",
         reviews: 1007,
@@ -176,27 +177,27 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bath: 1,
         bed: "2 Double",
         price: "€886 / 2 nights",
-        image: milanohotel10,
+        image: londonhotel10,
       },
       {
         id: 11,
-        name: "Night Sky Hotel",
-        city: "Milano",
-        rating: 7.5,
-        ratingText: "Pleasant",
-        reviews: 648,
+        name: "St.James's Hotel",
+        city: "London",
+        rating: 8.5,
+        ratingText: "Very Good",
+        reviews: 1648,
         stars: 5,
         guests: 2,
         bedroom: 1,
         bath: 1,
         bed: "1 Double",
-        price: "€686 / 2 nights",
-        image: milanohotel11,
+        price: "€1,686 / 2 nights",
+        image: londonhotel11,
       },
       {
         id: 12,
-        name: "Anix Hotel",
-        city: "Milano",
+        name: "The Phoenix Hotel",
+        city: "London",
         rating: 7.5,
         ratingText: "Pleasant",
         reviews: 613,
@@ -206,12 +207,12 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bath: 1,
         bed: "2 Double",
         price: "€720 / 2 nights",
-        image: milanohotel12,
+        image: londonhotel12,
       },
       {
         id: 13,
-        name: "White Stone Hotel",
-        city: "Milano",
+        name: "The Byron Hotel",
+        city: "London",
         rating: 8.0,
         ratingText: "Good",
         reviews: 1691,
@@ -221,12 +222,12 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bath: 1,
         bed: "1 King",
         price: "€1,080 / 2 nights",
-        image: milanohotel13,
+        image: londonhotel13,
       },
       {
         id: 14,
-        name: "The Golden Hotel",
-        city: "Milano",
+        name: "St.Athans Hotel",
+        city: "London",
         rating: 7.9,
         ratingText: "Good",
         reviews: 1822,
@@ -236,12 +237,12 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bath: 1,
         bed: "1 Double",
         price: "€826 / 2 nights",
-        image: milanohotel14,
+        image: londonhotel14,
       },
       {
         id: 15,
-        name: "The Arlyn Hotel",
-        city: "Milano",
+        name: "Hampton Hotel",
+        city: "London",
         rating: 5.5,
         ratingText: "Bad",
         reviews: 1416,
@@ -250,13 +251,13 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "€263 / 2 nights",
-        image: milanohotel15,
+        price: "€563 / 2 nights",
+        image: londonhotel15,
       },
       {
         id: 16,
-        name: "Nova Hotel",
-        city: "Milano",
+        name: "Moonlight Hotel",
+        city: "London",
         rating: 5.2,
         ratingText: "Bad",
         reviews: 2438,
@@ -264,14 +265,14 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         guests: 3,
         bedroom: 1,
         bath: 1,
-        bed: "3 Single",
-        price: "€380 / 2 nights",
-        image: milanohotel16,
+        bed: "1 Double",
+        price: "€480 / 2 nights",
+        image: londonhotel16,
       },
       {
         id: 17,
-        name: "The Bulgari Hotel",
-        city: "Milano",
+        name: "Claridge’s Hotel",
+        city: "London",
         rating: 8.9,
         ratingText: "Very Good",
         reviews: 2217,
@@ -281,12 +282,12 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bath: 1,
         bed: "1 King",
         price: "€3,001 / 2 nights",
-        image: milanohotel17,
+        image: londonhotel17,
       },
       {
         id: 18,
-        name: "NYX Hotel",
-        city: "Milano",
+        name: "Brown’s Hotel",
+        city: "London",
         rating: 8.4,
         ratingText: "Good",
         reviews: 1711,
@@ -296,12 +297,12 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bath: 1,
         bed: "1 King",
         price: "€894 / 2 nights",
-        image: milanohotel18,
+        image: londonhotel18,
       },
       {
         id: 19,
-        name: "Cosmo Hotel",
-        city: "Milano",
+        name: "Adria Hotel",
+        city: "London",
         rating: 5.1,
         ratingText: "Bad",
         reviews: 2712,
@@ -310,13 +311,13 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "2 Double",
-        price: "406 / 2 nights",
-        image: milanohotel19,
+        price: "€506 / 2 nights",
+        image: londonhotel19,
       },
       {
         id: 20,
-        name: "B&B Hotel",
-        city: "Milano",
+        name: "The Franklin Hotel",
+        city: "London",
         rating: 7.6,
         ratingText: "Pleasant",
         reviews: 801,
@@ -325,13 +326,13 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "€656 / 2 nights",
-        image: milanohotel20,
+        price: "€856 / 2 nights",
+        image: londonhotel20,
       },
       {
         id: 21,
-        name: "The Heaven Hotel",
-        city: "Milano",
+        name: "Egerton Hotel",
+        city: "London",
         rating: 7.5,
         ratingText: "Pleasant",
         reviews: 921,
@@ -340,13 +341,13 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double",
-        price: "€600 / 2 nights",
-        image: milanohotel21,
+        price: "€680 / 2 nights",
+        image: londonhotel21,
       },
       {
         id: 22,
-        name: "The Loft Hotel",
-        city: "Milano",
+        name: "Wardonia Hotel",
+        city: "London",
         rating: 4.2,
         ratingText: "Disappointing",
         reviews: 1130,
@@ -355,13 +356,13 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double",
-        price: "€237 / 2 nights",
-        image: milanohotel22,
+        price: "€437 / 2 nights",
+        image: londonhotel22,
       },
       {
         id: 23,
-        name: "Zenith Hotel",
-        city: "Milano",
+        name: "Jade Hotel",
+        city: "London",
         rating: 5.5,
         ratingText: "Bad",
         reviews: 2101,
@@ -370,13 +371,13 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double",
-        price: "€290 / 2 nights",
-        image: milanohotel23,
+        price: "€490 / 2 nights",
+        image: londonhotel23,
       },
       {
         id: 24,
-        name: "Gucci Hotel",
-        city: "Milano",
+        name: "Charlotte Street Hotel",
+        city: "London",
         rating: 8.9,
         ratingText: "Very Good",
         reviews: 1511,
@@ -386,14 +387,14 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bath: 1,
         bed: "1 King",
         price: "€2,810 / 2 nights",
-        image: milanohotel24,
+        image: londonhotel24,
       },
       {
         id: 25,
-        name: "The Baglioni Hotel",
-        city: "Milano",
-        rating: 8.8,
-        ratingText: "Very Good",
+        name: "The Bentley Hotel",
+        city: "London",
+        rating: 9.3,
+        ratingText: "Excellent",
         reviews: 1711,
         stars: 5,
         guests: 2,
@@ -401,12 +402,12 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bath: 1,
         bed: "1 King",
         price: "€1,886 / 2 nights",
-        image: milanohotel25,
+        image: londonhotel25,
       },
       {
         id: 26,
-        name: "The Duomo Hotel",
-        city: "Milano",
+        name: "The Waldorf Hotel",
+        city: "London",
         rating: 8.9,
         ratingText: "Very Good",
         reviews: 2712,
@@ -416,22 +417,22 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bath: 1,
         bed: "1 King",
         price: "€3,256 / 2 nights",
-        image: milanohotel26,
+        image: londonhotel26,
       },
       {
         id: 27,
-        name: "Rio Hotel",
-        city: "Milano",
+        name: "Luna Hotel",
+        city: "London",
         rating: 5.9,
         ratingText: "Bad",
         reviews: 991,
         stars: 5,
-        guests: 2,
+        guests: 3,
         bedroom: 1,
         bath: 1,
-        bed: "1 Double",
-        price: "€286 / 2 nights",
-        image: milanohotel27,
+        bed: "2 Double-1 Single",
+        price: "€486 / 2 nights",
+        image: londonhotel27,
       },
 ];
 
@@ -439,7 +440,7 @@ const HotelCards = () => {
   return (
     <section className="py-10 bg-gray-50">
       <h2 className="text-3xl font-bold text-center mb-8">
-        Hotels in Milano
+        Hotels in London
       </h2>
       <div className="grid gap-6 px-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
         {hotels.map((hotel) => (
