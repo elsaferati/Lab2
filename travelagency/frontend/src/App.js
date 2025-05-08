@@ -20,7 +20,7 @@ import Partner from './pages/Partner';
 import ChangeBooking from './pages/faq/ChangeBooking';
 import BaggagePolicy from './pages/faq/BaggagePolicy';
 import RequestRefund from './pages/faq/RequestRefund';
-import Hotels from './components/Hotels.jsx';
+import Hotels from './pages/Hotels.jsx';
 import AboutUs from './pages/AboutUs';
 import TravelInfo from './pages/TravelInfo';
 import Allyoucanfly from './pages/allyoucanfly'; 
@@ -31,8 +31,9 @@ import WizzAccount from './pages/WizzAccount';
 import TermsAndConditions from './pages/TermsAndConditions';
 import LiveChat from "./components/LiveChat"; 
 import DiscountClub from './pages/DiscountClub.jsx';
-import AllHotels from "./components/AllHotels";
-import Milanohotels from "./components/Milanohotels.jsx";
+import AllHotels from "./pages/AllHotels.jsx";
+import Milanohotels from "./pages/Milanohotels.jsx";
+import Budapesthotels from "./pages/Budapesthotels.jsx";
 
 function App() {
   const [showSignUp, setShowSignUp] = useState(false);
@@ -75,6 +76,7 @@ function App() {
             <Route path="/discount-club" element={<DiscountClub />} />
             <Route path="/all-hotels" element={<AllHotels />} />
             <Route path="/milanohotels" element={<Milanohotels />} />
+            <Route path="/budapesthotels" element={<Budapesthotels />} />
           </Routes>
         </main>
         <Footer />
