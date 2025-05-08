@@ -175,7 +175,7 @@ export default function Hotels() {
   <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-8">
     {[
       { name: "Milano", img: milanoImg, path: "/milanohotels" },
-      { name: "Paris", img: parisImg },
+      { name: "Paris", img: parisImg,path: "/parishotels" },
       { name: "Budapest", img: budapestImg,path: "/budapesthotels" },
       { name: "Berlin", img: berlinImg },
       { name: "Vienna", img: viennaImg },

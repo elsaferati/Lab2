@@ -551,7 +551,7 @@ const hotels = [
     id: 5,
     name: "Sheraton Hotel",
     city: "Paris",
-    rating: 7.7,
+    rating: 8.0,
     ratingText: "Good",
     reviews: 828,
     stars: 5,
