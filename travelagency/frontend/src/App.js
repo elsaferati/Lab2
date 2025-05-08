@@ -34,6 +34,7 @@ import DiscountClub from './pages/DiscountClub.jsx';
 import AllHotels from "./pages/AllHotels.jsx";
 import Milanohotels from "./pages/Milanohotels.jsx";
 import Budapesthotels from "./pages/Budapesthotels.jsx";
+import Parishotels from "./pages/Parishotel.jsx";
 
 function App() {
   const [showSignUp, setShowSignUp] = useState(false);
@@ -77,6 +78,7 @@ function App() {
             <Route path="/all-hotels" element={<AllHotels />} />
             <Route path="/milanohotels" element={<Milanohotels />} />
             <Route path="/budapesthotels" element={<Budapesthotels />} />
+            <Route path="/parishotels" element={<Parishotels />} />
           </Routes>
         </main>
         <Footer />
