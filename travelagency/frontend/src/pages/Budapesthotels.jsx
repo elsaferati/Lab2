@@ -41,7 +41,7 @@ import budapesthotel28 from "../assets/images/budapesthotel28.jpg";
     bedroom: 1,
     bath: 1,
     bed: "1 King",
-    price: "$$",
+    price: "€501 / 2 nights",
     image: budapesthotel,
   },
  {
@@ -56,12 +56,12 @@ import budapesthotel28 from "../assets/images/budapesthotel28.jpg";
     bedroom: 2,
     bath: 1,
     bed: "2 King",
-    price: "$$$",
+    price: "€670 / 2 nights",
     image: budapesthotel2,
   },
     {
        id: 3,
-       name: "The Hilton Hotel",
+       name: "The Hillton Hotel",
        city: "Budapest",
        rating: 9.0,
        ratingText: "Excellent",
@@ -71,7 +71,7 @@ import budapesthotel28 from "../assets/images/budapesthotel28.jpg";
        bedroom: 1,
        bath: 1,
        bed: "1 King",
-       price: "$$$",
+       price: "€2,001 / 2 nights",
        image: budapesthotel3,
      },
    {
@@ -86,7 +86,7 @@ import budapesthotel28 from "../assets/images/budapesthotel28.jpg";
       bedroom: 2,
       bath: 1,
       bed: "2 Double",
-      price: "$$",
+      price: "€665 / 2 nights",
       image: budapesthotel4,
     },
       {
@@ -101,7 +101,7 @@ import budapesthotel28 from "../assets/images/budapesthotel28.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$$$",
+        price: "€1,951 / 2 nights",
         image: budapesthotel5,
       },
      {
@@ -116,7 +116,7 @@ import budapesthotel28 from "../assets/images/budapesthotel28.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double",
-        price: "$$",
+        price: "€811 / 2 nights",
         image: budapesthotel6,
       },
       {
@@ -131,7 +131,7 @@ import budapesthotel28 from "../assets/images/budapesthotel28.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$$$",
+        price: "€873 / 2 nights",
         image: budapesthotel7,
       },
       {
@@ -146,7 +146,7 @@ import budapesthotel28 from "../assets/images/budapesthotel28.jpg";
         bedroom: 1,
         bath: 1,
         bed: "2 Single",
-        price: "$",
+        price: "€401 / 2 nights",
         image: budapesthotel8,
       },
       {
@@ -161,7 +161,7 @@ import budapesthotel28 from "../assets/images/budapesthotel28.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double-1 Single",
-        price: "$$",
+        price: "€744 / 2 nights",
         image: budapesthotel9,
       },
       {
@@ -176,7 +176,7 @@ import budapesthotel28 from "../assets/images/budapesthotel28.jpg";
         bedroom: 1,
         bath: 1,
         bed: "2 Double",
-        price: "$$",
+        price: "€611 / 2 nights",
         image: budapesthotel10,
       },
       {
@@ -191,7 +191,7 @@ import budapesthotel28 from "../assets/images/budapesthotel28.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double",
-        price: "$$$",
+        price: "€3,601 / 2 nights",
         image: budapesthotel11,
       },
       {
@@ -206,7 +206,7 @@ import budapesthotel28 from "../assets/images/budapesthotel28.jpg";
         bedroom: 1,
         bath: 1,
         bed: "2 Double",
-        price: "$$",
+        price: "€601 / 2 nights",
         image: budapesthotel12,
       },
       {
@@ -221,7 +221,7 @@ import budapesthotel28 from "../assets/images/budapesthotel28.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$$",
+        price: "€860 / 2 nights",
         image: budapesthotel13,
       },
       {
@@ -236,7 +236,7 @@ import budapesthotel28 from "../assets/images/budapesthotel28.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double",
-        price: "$$",
+        price: "€686 / 2 nights",
         image: budapesthotel14,
       },
       {
@@ -251,7 +251,7 @@ import budapesthotel28 from "../assets/images/budapesthotel28.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$",
+        price: "€325 / 2 nights",
         image: budapesthotel15,
       },
       {
@@ -266,7 +266,7 @@ import budapesthotel28 from "../assets/images/budapesthotel28.jpg";
         bedroom: 1,
         bath: 1,
         bed: "3 Single",
-        price: "$",
+        price: "€371 / 2 nights",
         image: budapesthotel16,
       },
       {
@@ -281,22 +281,22 @@ import budapesthotel28 from "../assets/images/budapesthotel28.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$$$",
+        price: "€1,331 / 2 nights",
         image: budapesthotel17,
       },
       {
         id: 18,
         name: "Plaza Hotel",
         city: "Budapest",
-        rating: 8.4,
-        ratingText: "Good",
+        rating: 9.2,
+        ratingText: "Excellent",
         reviews: 1711,
         stars: 5,
         guests: 2,
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$$",
+        price: "€2,261 / 2 nights",
         image: budapesthotel18,
       },
       {
@@ -311,7 +311,7 @@ import budapesthotel28 from "../assets/images/budapesthotel28.jpg";
         bedroom: 1,
         bath: 1,
         bed: "2 Double",
-        price: "$",
+        price: "€300 / 2 nights",
         image: budapesthotel19,
       },
       {
@@ -326,7 +326,7 @@ import budapesthotel28 from "../assets/images/budapesthotel28.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$$",
+        price: "€521 / 2 nights",
         image: budapesthotel20,
       },
       {
@@ -341,7 +341,7 @@ import budapesthotel28 from "../assets/images/budapesthotel28.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double",
-        price: "$$",
+        price: "€612 / 2 nights",
         image: budapesthotel21,
       },
       {
@@ -356,7 +356,7 @@ import budapesthotel28 from "../assets/images/budapesthotel28.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double",
-        price: "$",
+        price: "€291 / 2 nights",
         image: budapesthotel22,
       },
       {
@@ -371,7 +371,7 @@ import budapesthotel28 from "../assets/images/budapesthotel28.jpg";
         bedroom: 1,
         bath: 1,
         bed: "2 Double",
-        price: "$",
+        price: "€333 / 2 nights",
         image: budapesthotel23,
       },
       {
@@ -386,14 +386,14 @@ import budapesthotel28 from "../assets/images/budapesthotel28.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$$$",
+        price: "€981 / 2 nights",
         image: budapesthotel24,
       },
       {
         id: 25,
         name: "Four Seasons Hotel",
         city: "Milano",
-        rating: 8.8,
+        rating: 8.9,
         ratingText: "Very Good",
         reviews: 1711,
         stars: 5,
@@ -401,7 +401,7 @@ import budapesthotel28 from "../assets/images/budapesthotel28.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$$$",
+        price: "€1,601 / 2 nights",
         image: budapesthotel25,
       },
       {
@@ -416,7 +416,7 @@ import budapesthotel28 from "../assets/images/budapesthotel28.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$$$",
+        price: "€2,003 / 2 nights",
         image: budapesthotel26,
       },
       {
@@ -431,7 +431,7 @@ import budapesthotel28 from "../assets/images/budapesthotel28.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double",
-        price: "$",
+        price: "€311 / 2 nights",
         image: budapesthotel27,
       },
       {
@@ -446,7 +446,7 @@ import budapesthotel28 from "../assets/images/budapesthotel28.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double",
-        price: "$$",
+        price: "€710 / 2 nights",
         image: budapesthotel28,
       },
 ];
@@ -484,9 +484,17 @@ const HotelCards = () => {
                   <p className="font-medium">{hotel.bed}</p>
                 </div>
                 <div className="flex items-center justify-between pt-2">
-                  <span className="text-blue-600 font-semibold">{hotel.price}</span>
-                  <span className="text-sm text-gray-600">{hotel.source}</span>
-                </div>
+  <span className="text-blue-600 font-semibold">{hotel.price}</span>
+</div>
+<form onSubmit={(e) => e.preventDefault()} className="pt-2">
+  <button
+    type="submit"
+    className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-2 px-4 rounded-xl transition"
+  >
+    Book
+  </button>
+</form>
+
               </div>
             </div>
           ))}
