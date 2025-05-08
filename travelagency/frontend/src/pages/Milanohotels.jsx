@@ -467,10 +467,14 @@ const HotelCards = () => {
                   <p>{hotel.guests} guests · {hotel.bedroom} bedroom · {hotel.bath} bath</p>
                   <p className="font-medium">{hotel.bed}</p>
                 </div>
-                <div className="flex items-center justify-between pt-2">
-                  <span className="text-blue-600 font-semibold">{hotel.price}</span>
-                  <span className="text-sm text-gray-600">{hotel.source}</span>
-                </div>
+                <form onSubmit={(e) => e.preventDefault()} className="pt-2">
+  <button
+    type="submit"
+    className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-2 px-4 rounded-xl transition"
+  >
+    Book
+  </button>
+</form>
               </div>
             </div>
           ))}
