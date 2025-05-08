@@ -40,7 +40,7 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
       bedroom: 1,
       bath: 1,
       bed: "1 King",
-      price: "$$$",
+      price: "€3,601 / 2 nights",
       image: milanohotel,
     },
   {
@@ -55,7 +55,7 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
     bedroom: 1,
     bath: 1,
     bed: "1 Queen",
-    price: "$",
+    price: "€360 / 2 nights",
     image: milanohotel2,
   },
    {
@@ -70,7 +70,7 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
        bedroom: 1,
        bath: 1,
        bed: "1 Double",
-       price: "$$",
+       price: "€615 / 2 nights",
        image: milanohotel3,
      },
    {
@@ -85,7 +85,7 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
        bedroom: 1,
        bath: 1,
        bed: "1 King",
-       price: "$$$",
+       price: "€1,286 / 2 nights",
        image: milanohotel4,
      },
     {
@@ -100,7 +100,7 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
        bedroom: 1,
        bath: 1,
        bed: "1 King",
-       price: "$$$",
+       price: "€2,996 / 2 nights",
        image: milanohotel5,
      },
      {
@@ -115,7 +115,7 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double",
-        price: "$$",
+        price: "€732 / 2 nights",
         image: milanohotel6,
       },
       {
@@ -130,7 +130,7 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$$$",
+        price: "€1,961 / 2 nights",
         image: milanohotel7,
       },
       {
@@ -145,7 +145,7 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "2 Single",
-        price: "$",
+        price: "€542 / 2 nights",
         image: milanohotel8,
       },
       {
@@ -160,7 +160,7 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double-1 Single",
-        price: "$$",
+        price: "€1,006 / 2 nights",
         image: milanohotel9,
       },
       {
@@ -175,7 +175,7 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "2 Double",
-        price: "$$",
+        price: "€886 / 2 nights",
         image: milanohotel10,
       },
       {
@@ -190,7 +190,7 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double",
-        price: "$",
+        price: "€686 / 2 nights",
         image: milanohotel11,
       },
       {
@@ -205,7 +205,7 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "2 Double",
-        price: "$",
+        price: "€720 / 2 nights",
         image: milanohotel12,
       },
       {
@@ -220,7 +220,7 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$$",
+        price: "€1,080 / 2 nights",
         image: milanohotel13,
       },
       {
@@ -235,7 +235,7 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double",
-        price: "$$",
+        price: "€826 / 2 nights",
         image: milanohotel14,
       },
       {
@@ -250,7 +250,7 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$",
+        price: "€263 / 2 nights",
         image: milanohotel15,
       },
       {
@@ -265,7 +265,7 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "3 Single",
-        price: "$",
+        price: "€380 / 2 nights",
         image: milanohotel16,
       },
       {
@@ -280,7 +280,7 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$$$",
+        price: "€3,001 / 2 nights",
         image: milanohotel17,
       },
       {
@@ -295,7 +295,7 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$$",
+        price: "€894 / 2 nights",
         image: milanohotel18,
       },
       {
@@ -310,7 +310,7 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "2 Double",
-        price: "$",
+        price: "406 / 2 nights",
         image: milanohotel19,
       },
       {
@@ -325,7 +325,7 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$$",
+        price: "€656 / 2 nights",
         image: milanohotel20,
       },
       {
@@ -340,7 +340,7 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double",
-        price: "$$",
+        price: "€600 / 2 nights",
         image: milanohotel21,
       },
       {
@@ -355,7 +355,7 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double",
-        price: "$",
+        price: "€237 / 2 nights",
         image: milanohotel22,
       },
       {
@@ -369,8 +369,8 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         guests: 2,
         bedroom: 1,
         bath: 1,
-        bed: "2 Double",
-        price: "$",
+        bed: "1 Double",
+        price: "€290 / 2 nights",
         image: milanohotel23,
       },
       {
@@ -385,7 +385,7 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$$$",
+        price: "€2,810 / 2 nights",
         image: milanohotel24,
       },
       {
@@ -400,7 +400,7 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$$$",
+        price: "€1,886 / 2 nights",
         image: milanohotel25,
       },
       {
@@ -415,7 +415,7 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 King",
-        price: "$$$",
+        price: "€3,256 / 2 nights",
         image: milanohotel26,
       },
       {
@@ -430,7 +430,7 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "1 Double",
-        price: "$",
+        price: "€286 / 2 nights",
         image: milanohotel27,
       },
 ];
