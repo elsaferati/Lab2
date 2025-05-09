@@ -177,7 +177,7 @@ export default function Hotels() {
       { name: "Paris", img: parisImg,path: "/parishotels" },
       { name: "Budapest", img: budapestImg,path: "/budapesthotels" },
       { name: "London", img: dealLondonImg,path: "/londonhotels" },
-      { name: "Vienna", img: viennaImg },
+      { name: "Vienna", img: viennaImg,path: "/viennahotels" },
     ].map((city) => (
       <div
         key={city.name}
@@ -221,7 +221,7 @@ export default function Hotels() {
       },
       {
         name: "Luxury Stay in Vienna",
-        price: "€350 (3 nights)",
+        price: "€1,350 (3 nights)",
         img: dealViennaImg,
       },
       {

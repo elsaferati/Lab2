@@ -287,7 +287,6 @@ const hotels = [
     price: "$$$",
     image: budapesthotel3,
   },
-
   {
     id: 5,
     name: "The Ritz Hotel",
@@ -302,7 +301,8 @@ const hotels = [
     bed: "1 Double",
     price: "$$$",
     image: viennahotel4,
-  },{
+  },
+  {
     id: 5,
     name: "Maison Hotel",
     city: "Paris",
@@ -424,7 +424,6 @@ const hotels = [
     price: "$$$",
     image: milanohotel5,
   },
-
   {
     id: 5,
     name: "Oval Hotel",
