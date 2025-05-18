@@ -14,7 +14,6 @@ import dealAthensImg from "../assets/images/athenshotel.jpg";
 import dealViennaImg from "../assets/images/viennahotel.jpg";
 import dealBerlinImg from "../assets/images/berlinhotel.jpg";
 import hotel1Img from '../assets/images/hotel1Img.jpg';
-import hotel2Img from '../assets/images/hotel2Img.jpg';
 import budapesthotel18 from "../assets/images/budapesthotel18.jpg";
 import londonhotel3 from "../assets/images/londonhotel3.jpg";
 import parishotel18 from "../assets/images/parishotel18.webp";
@@ -23,6 +22,7 @@ import milanohotel4 from "../assets/images/milanohotel4.jpg";
 import viennahotel6 from "../assets/images/viennahotel6.jpg";
 import berlinhotel30 from "../assets/images/berlinhotel30.jpg";
 import athenshotel9 from "../assets/images/athenshotel9.jpg";
+import berlinhotel18 from "../assets/images/berlinhotel18.webp";
 
 export default function Hotels() {
   const [location, setLocation] = useState("");
@@ -209,17 +209,17 @@ export default function Hotels() {
       },
       {
         name: "Hotel in London",
-        price: "€1068 (2 nights)",
+        price: "€3,996 (2 nights)",
         img: dealLondonImg,
       },
       {
         name: "Hotel in Athens",
-        price: "€466 (2 nights)",
+        price: "€1,811 (2 nights)",
         img: dealAthensImg,
       },
       {
         name: "Luxury Stay in Vienna",
-        price: "€1,350 (3 nights)",
+        price: "€3,961 (2 nights)",
         img: dealViennaImg,
       },
       {
@@ -229,7 +229,7 @@ export default function Hotels() {
       },
       {
         name: "Hotel in Berlin",
-        price: "€180 (2 nights)",
+        price: "€1,800 (2 nights)",
         img: dealBerlinImg,
       },
     ].map((deal, index) => (
@@ -265,7 +265,10 @@ export default function Hotels() {
           <div className="p-4">
             <h3 className="text-xl font-semibold">Luxury Beachfront Hotel</h3>
             <p className="text-gray-600">Experience the best of beachfront luxury with exceptional service and stunning ocean views.</p>
-            <button className="mt-4 text-blue-600 hover:underline">View Details</button>
+            <button
+            className="mt-4 text-blue-600 hover:underline"
+            onClick={() => navigate("/athenshotels")}
+          >View Details</button>
           </div>
         </div>
 
@@ -279,7 +282,10 @@ export default function Hotels() {
           <div className="p-4">
             <h3 className="text-xl font-semibold">Modern Hotel</h3>
             <p className="text-gray-600">Stay in the heart of the city with easy access to restaurants, shops, and local attractions.</p>
-            <button className="mt-4 text-blue-600 hover:underline">View Details</button>
+            <button
+            className="mt-4 text-blue-600 hover:underline"
+            onClick={() => navigate("/budapesthotels")}
+          >View More</button>
           </div>
         </div>
 
@@ -293,21 +299,27 @@ export default function Hotels() {
           <div className="p-4">
             <h3 className="text-xl font-semibold">Exclusive Luxury Hotel</h3>
             <p className="text-gray-600">Indulge in the luxury of one of the best hotels in London with an elegant decor and amazing atmosphere.</p>
-            <button className="mt-4 text-blue-600 hover:underline">View Details</button>
+            <button
+            className="mt-4 text-blue-600 hover:underline"
+            onClick={() => navigate("/londonhotels")}
+          >View More</button>
           </div>
         </div>
 
         {/* Hotel 4 */}
         <div className="max-w-sm bg-white shadow-xl rounded-lg overflow-hidden">
           <img
-            src={hotel2Img}
+            src={berlinhotel18}
             alt="Grand City Hotel"
             className="w-full h-48 object-cover"
           />
           <div className="p-4">
-            <h3 className="text-xl font-semibold">Grand City Hotel</h3>
-            <p className="text-gray-600">A sophisticated hotel offering the best city views, dining, and amenities.</p>
-            <button className="mt-4 text-blue-600 hover:underline">View Details</button>
+            <h3 className="text-xl font-semibold">Hotel with mountain views</h3>
+            <p className="text-gray-600">A sophisticated hotel offering the best views, dining, and amenities.</p>
+            <button
+            className="mt-4 text-blue-600 hover:underline"
+            onClick={() => navigate("/berlinhotels")}
+          >View More</button>
           </div>
         </div>
 
@@ -321,7 +333,10 @@ export default function Hotels() {
           <div className="p-4">
             <h3 className="text-xl font-semibold">Cozy City Center Hotel</h3>
             <p className="text-gray-600">A cozy hotel with all the essentials for a comfortable stay in the city.</p>
-            <button className="mt-4 text-blue-600 hover:underline">View Details</button>
+            <button
+            className="mt-4 text-blue-600 hover:underline"
+            onClick={() => navigate("/parishotels")}
+          >View More</button>
           </div>
         </div>
 
@@ -329,13 +344,16 @@ export default function Hotels() {
         <div className="max-w-sm bg-white shadow-xl rounded-lg overflow-hidden">
           <img
             src={viennahotel24}
-            alt="Modern Mountain Villa"
+            alt="Modern Mountain Hotel"
             className="w-full h-48 object-cover"
           />
           <div className="p-4">
             <h3 className="text-xl font-semibold">Modern City Hotel</h3>
             <p className="text-gray-600">A beautiful hotel with panoramic views, perfect for a luxurious getaway.</p>
-            <button className="mt-4 text-blue-600 hover:underline">View Details</button>
+            <button
+            className="mt-4 text-blue-600 hover:underline"
+            onClick={() => navigate("/viennahotels")}
+          >View More</button>
           </div>
         </div>
       </div>
