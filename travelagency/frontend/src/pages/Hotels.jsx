@@ -9,21 +9,19 @@ import parisImg from "../assets/images/paris.webp";
 import budapestImg from "../assets/images/budapest.webp";
 import viennaImg from "../assets/images/vienna.jpeg";
 import hotelImg from "../assets/images/hotels.webp";
-import apartmentImg from "../assets/images/apartments.jpg";
-import resortImg from "../assets/images/resorts.jpg";
-import villaImg from "../assets/images/villas.jpg"; 
-import dealBudapestImg from "../assets/images/budapestaprt.jpg";
 import dealLondonImg from "../assets/images/londonhotel.webp";
 import dealAthensImg from "../assets/images/athenshotel.jpg";
 import dealViennaImg from "../assets/images/viennahotel.jpg";
-import dealMilanoImg from "../assets/images/milanoaprt.avif";
 import dealBerlinImg from "../assets/images/berlinhotel.jpg";
 import hotel1Img from '../assets/images/hotel1Img.jpg';
-import apartment1Img from '../assets/images/apartment1Img.avif';
-import villa1Img from '../assets/images/villa1Img.webp';
 import hotel2Img from '../assets/images/hotel2Img.jpg';
-import apartment2Img from '../assets/images/apartment2Img.jpg';
-import villa2Img from '../assets/images/villa2Img.jpg';
+import budapesthotel18 from "../assets/images/budapesthotel18.jpg";
+import londonhotel3 from "../assets/images/londonhotel3.jpg";
+import parishotel18 from "../assets/images/parishotel18.webp";
+import viennahotel24 from "../assets/images/viennahotel24.jpeg";
+import milanohotel4 from "../assets/images/milanohotel4.jpg";
+import viennahotel6 from "../assets/images/viennahotel6.jpg";
+import berlinhotel30 from "../assets/images/berlinhotel30.jpg";
 
 export default function Hotels() {
   const [location, setLocation] = useState("");
@@ -129,13 +127,10 @@ export default function Hotels() {
 
      {/* 🏠 Property Types */}
      <section className="mb-10">
-  <h2 className="text-2xl font-bold mb-4">Browse by property type</h2>
+  <h2 className="text-2xl font-bold mb-4">Discover Hotels</h2>
   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
     {[
-      { name: "Hotels", img: hotelImg, path: "/all-hotels" },
-      { name: "Apartments", img: apartmentImg },
-      { name: "Resorts", img: resortImg },
-      { name: "Villas", img: villaImg },
+      { name: "Hotels", img: hotelImg, path: "/all-hotels" }
     ].map((type) => (
       <div
         key={type.name}
@@ -178,6 +173,8 @@ export default function Hotels() {
       { name: "Budapest", img: budapestImg,path: "/budapesthotels" },
       { name: "London", img: dealLondonImg,path: "/londonhotels" },
       { name: "Vienna", img: viennaImg,path: "/viennahotels" },
+      { name: "Berlin", img: berlinhotel30,path: "/berlinhotels" },
+      { name: "Athens", img: dealAthensImg,path: "/viennahotels" },
     ].map((city) => (
       <div
         key={city.name}
@@ -205,9 +202,9 @@ export default function Hotels() {
   <Slider {...sliderSettings}className="h-[380px] w-[70%] mx-auto">
     {[
       {
-        name: " Apartment in Budapest",
-        price: "€289 (2 nights)",
-        img: dealBudapestImg,
+        name: " Hotel in Vienna",
+        price: "€732 (2 nights)",
+        img: viennahotel6,
       },
       {
         name: "Hotel in London",
@@ -225,9 +222,9 @@ export default function Hotels() {
         img: dealViennaImg,
       },
       {
-        name: "Modern Apartment in Milan",
-        price: "€210 (2 nights)",
-        img: dealMilanoImg,
+        name: "Modern Hotel in Milan",
+        price: "€1,286 (2 nights)",
+        img: milanohotel4,
       },
       {
         name: "Hotel in Berlin",
@@ -271,35 +268,35 @@ export default function Hotels() {
           </div>
         </div>
 
-        {/* Apartment 1 */}
+        {/* Hotel 2 */}
         <div className="max-w-sm bg-white shadow-xl rounded-lg overflow-hidden">
           <img
-            src={apartment1Img}
-            alt="Downtown Modern Apartment"
+           src={budapesthotel18}
+            alt="Modern Hotel"
             className="w-full h-48 object-cover"
           />
           <div className="p-4">
-            <h3 className="text-xl font-semibold">Downtown Modern Apartment</h3>
+            <h3 className="text-xl font-semibold">Modern Hotel</h3>
             <p className="text-gray-600">Stay in the heart of the city with easy access to restaurants, shops, and local attractions.</p>
             <button className="mt-4 text-blue-600 hover:underline">View Details</button>
           </div>
         </div>
 
-        {/* Villa 1 */}
+        {/* Hotel 3 */}
         <div className="max-w-sm bg-white shadow-xl rounded-lg overflow-hidden">
           <img
-            src={villa1Img}
+            src={londonhotel3}
             alt="Exclusive Private Villa"
             className="w-full h-48 object-cover"
           />
           <div className="p-4">
-            <h3 className="text-xl font-semibold">Exclusive Private Villa</h3>
-            <p className="text-gray-600">Indulge in the luxury of a private villa with breathtaking mountain views and a personal chef.</p>
+            <h3 className="text-xl font-semibold">Exclusive Luxury Hotel</h3>
+            <p className="text-gray-600">Indulge in the luxury of one of the best hotels in London with an elegant decor and amazing atmosphere.</p>
             <button className="mt-4 text-blue-600 hover:underline">View Details</button>
           </div>
         </div>
 
-        {/* Hotel 2 */}
+        {/* Hotel 4 */}
         <div className="max-w-sm bg-white shadow-xl rounded-lg overflow-hidden">
           <img
             src={hotel2Img}
@@ -313,16 +310,16 @@ export default function Hotels() {
           </div>
         </div>
 
-        {/* Apartment 2 */}
+        {/* Hotel 5 */}
         <div className="max-w-sm bg-white shadow-xl rounded-lg overflow-hidden">
           <img
-            src={apartment2Img}
-            alt="Cozy City Center Apartment"
+          src={parishotel18}
+            alt="Cozy City Center Hotel"
             className="w-full h-48 object-cover"
           />
           <div className="p-4">
-            <h3 className="text-xl font-semibold">Cozy City Center Apartment</h3>
-            <p className="text-gray-600">A cozy apartment with all the essentials for a comfortable stay in the city.</p>
+            <h3 className="text-xl font-semibold">Cozy City Center Hotel</h3>
+            <p className="text-gray-600">A cozy hotel with all the essentials for a comfortable stay in the city.</p>
             <button className="mt-4 text-blue-600 hover:underline">View Details</button>
           </div>
         </div>
@@ -330,13 +327,13 @@ export default function Hotels() {
         {/* Villa 2 */}
         <div className="max-w-sm bg-white shadow-xl rounded-lg overflow-hidden">
           <img
-            src={villa2Img}
+            src={viennahotel24}
             alt="Modern Mountain Villa"
             className="w-full h-48 object-cover"
           />
           <div className="p-4">
-            <h3 className="text-xl font-semibold">Modern Mountain Villa</h3>
-            <p className="text-gray-600">A beautiful villa with panoramic mountain views, perfect for a luxurious getaway.</p>
+            <h3 className="text-xl font-semibold">Modern City Hotel</h3>
+            <p className="text-gray-600">A beautiful hotel with panoramic views, perfect for a luxurious getaway.</p>
             <button className="mt-4 text-blue-600 hover:underline">View Details</button>
           </div>
         </div>
