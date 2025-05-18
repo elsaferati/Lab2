@@ -22,6 +22,7 @@ import viennahotel24 from "../assets/images/viennahotel24.jpeg";
 import milanohotel4 from "../assets/images/milanohotel4.jpg";
 import viennahotel6 from "../assets/images/viennahotel6.jpg";
 import berlinhotel30 from "../assets/images/berlinhotel30.jpg";
+import athenshotel9 from "../assets/images/athenshotel9.jpg";
 
 export default function Hotels() {
   const [location, setLocation] = useState("");
@@ -174,7 +175,7 @@ export default function Hotels() {
       { name: "London", img: dealLondonImg,path: "/londonhotels" },
       { name: "Vienna", img: viennaImg,path: "/viennahotels" },
       { name: "Berlin", img: berlinhotel30,path: "/berlinhotels" },
-      { name: "Athens", img: dealAthensImg,path: "/viennahotels" },
+      { name: "Athens", img: athenshotel9,path: "/athenshotels" },
     ].map((city) => (
       <div
         key={city.name}
