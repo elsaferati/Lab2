@@ -87,7 +87,7 @@ const hotels = [
     bedroom: 1,
     bath: 1,
     bed: "1 King",
-    price: "$$",
+    price: "$$$",
     image: dealBerlinImg,
   },
   {

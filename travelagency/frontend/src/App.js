@@ -37,6 +37,7 @@ import Budapesthotels from "./pages/Budapesthotels.jsx";
 import Parishotels from "./pages/Parishotels.jsx";
 import Londonhotels from "./pages/Londonhotels.jsx";
 import Viennahotels from "./pages/Viennahotels.jsx";
+import Berlinhotels from "./pages/Berlinhotels.jsx";
 
 function App() {
   const [showSignUp, setShowSignUp] = useState(false);
@@ -83,7 +84,7 @@ function App() {
             <Route path="/parishotels" element={<Parishotels />} />
             <Route path="/londonhotels" element={<Londonhotels />} />
             <Route path="/viennahotels" element={<Viennahotels />} />
-
+            <Route path="/berlinhotels" element={<Berlinhotels />} />
           </Routes>
         </main>
         <Footer />
