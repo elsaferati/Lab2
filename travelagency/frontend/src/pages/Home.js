@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import React, { useState } from "react";
 import FlightDeals from '../pages/FlightDeals';
 import TravelPerks from '../pages/TravelPerks';
@@ -8,6 +9,8 @@ import WizzBenefits from '../pages/WizzBenefits';
 export default function FlightBooking() {
   const [tripType, setTripType] = useState("return");
   const [selectedTab, setSelectedTab] = useState("flights");
+  const navigate = useNavigate();
+
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-pink-600 to-purple-700 text-white">
@@ -148,9 +151,13 @@ export default function FlightBooking() {
           <p className="mt-4 text-lg">
             Go crazy with up to 20% off selected flights in May!
           </p>
-          <button className="mt-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg">
+          <button
+          className="mt-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg"
+          onClick={() => navigate('/may-mania-booking')}
+            >
             Book now!
           </button>
+
           <p className="mt-4 text-sm text-gray-200">
             Restrictions apply, for further information read the Terms and Conditions.
           </p>
