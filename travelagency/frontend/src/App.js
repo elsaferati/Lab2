@@ -39,6 +39,8 @@ import Londonhotels from "./pages/Londonhotels.jsx";
 import Viennahotels from "./pages/Viennahotels.jsx";
 import Berlinhotels from "./pages/Berlinhotels.jsx";
 import Athenshotels from "./pages/Athenshotels.jsx";
+import MayManiaBooking from './pages/MayManiaBooking';
+
 
 function App() {
   const [showSignUp, setShowSignUp] = useState(false);
@@ -87,6 +89,8 @@ function App() {
             <Route path="/viennahotels" element={<Viennahotels />} />
             <Route path="/berlinhotels" element={<Berlinhotels />} />
             <Route path="/athenshotels" element={<Athenshotels />} />
+            <Route path="/may-mania-booking" element={<MayManiaBooking />} />
+
           </Routes>
         </main>
         <Footer />
