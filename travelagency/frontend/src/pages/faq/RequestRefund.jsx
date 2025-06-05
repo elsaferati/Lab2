@@ -2,23 +2,49 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const RequestRefund = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        reason: '',
-    });
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    reason: '',
+  });
 
-    const navigate = useNavigate();  // Hook to navigate between pages
+  const navigate = useNavigate();
 
-    const handleBackClick = () => {
-        navigate(-1);  // Go back to the previous page
-    };
+  const handleBackClick = () => {
+    navigate(-1);
+  };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Handle refund request submission here
-        alert('Refund request submitted!');
-    };
+  // Replace this old one:
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   alert('Refund request submitted!');
+  // };
+
+  // With this new async function:
+const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+        const response = await fetch('http://localhost/api/submit_refund.php', {  // <-- Correct URL here
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+            alert(result.success);
+            setFormData({ name: '', email: '', reason: '' });
+        } else {
+            alert(result.error || 'Something went wrong');
+        }
+    } catch (error) {
+        alert('Network error. Please try again later.');
+    }
+};
 
     return (
         <div className="min-h-screen bg-white text-black py-10 px-4 max-w-4xl mx-auto">
