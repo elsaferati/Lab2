@@ -310,7 +310,7 @@ import milanohotel27 from "../assets/images/milanohotel27.jpg";
         bedroom: 1,
         bath: 1,
         bed: "2 Double",
-        price: "406 / 2 nights",
+        price: "€406 / 2 nights",
         image: milanohotel19,
       },
       {
@@ -489,3 +489,4 @@ const HotelCards = () => {
 };
 
 export default HotelCards;
+
