@@ -97,9 +97,27 @@ export default function WizzBenefits() {
                 {card}
               </Link>
             );
+          }else if (benefit.title === "WIZZ All you can fly") {
+            return (
+              <Link to="/allyoucanfly" key={index} className="block">
+                {card}
+              </Link>
+            );
+          }else if (benefit.title === "WIZZ Discount Club") {
+            return (
+              <Link to="/discount-club" key={index} className="block">
+                {card}
+              </Link>
+            );
           }else if (benefit.title === "WIZZ Bundle") {
             return (
               <Link to="/bundles" key={index} className="block">
+                {card}
+              </Link>
+            );
+          }else if (benefit.title === "Gift voucher") {
+            return (
+              <Link to="/voucher" key={index} className="block">
                 {card}
               </Link>
             );
