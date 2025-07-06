@@ -6,27 +6,7 @@ const TravelInsurance = () => {
       <h1 className="text-4xl font-bold text-blue-800 mb-6">Information & Services</h1>
       
       <div className="flex flex-col md:flex-row">
-        {/* Sidebar */}
-        <div className="w-full md:w-1/4 mb-10 md:mb-0">
-          <ul className="text-pink-600 font-semibold space-y-3">
-            <li>Travel information</li>
-            <li>Prices & discounts</li>
-            <li>WIZZ Memberships</li>
-            <li>WIZZ Services</li>
-            <li className="font-bold text-blue-800">Partner services Terms & Conditions</li>
-            <li className="ml-4">Hotels</li>
-            <li className="ml-4">Car rental</li>
-            <li className="ml-4">Airport parking</li>
-            <li className="ml-4">Airport transfer</li>
-            <li className="ml-4">WIZZ Credit Card</li>
-            <li className="font-bold text-blue-800">Travel Insurance</li>
-            <li>About eSIM data roaming</li>
-            <li>Delayed Baggage Protection</li>
-            <li>WIZZ Experiences</li>
-            <li>WIZZ Shop & Fly</li>
-          </ul>
-        </div>
-
+       
         {/* Content */}
         <div className="w-full md:w-3/4 space-y-8">
           <section>
