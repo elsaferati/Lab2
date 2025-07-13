@@ -9,6 +9,12 @@ import WizzBenefits from '../pages/WizzBenefits';
 export default function FlightBooking() {
   const [tripType, setTripType] = useState("return");
   const [selectedTab, setSelectedTab] = useState("flights");
+  const [origin, setOrigin] = useState("");
+const [destination, setDestination] = useState("");
+const [departureDate, setDepartureDate] = useState("");
+const [returnDate, setReturnDate] = useState("");
+const [passengers, setPassengers] = useState(1);
+
   const navigate = useNavigate();
 
 
@@ -46,64 +52,105 @@ export default function FlightBooking() {
 
         {/* Flights Search Box */}
         {selectedTab === "flights" && (
-          <div className="bg-white rounded-b-2xl p-6 shadow-lg text-black">
-            <div className="flex flex-col md:flex-row gap-4">
-              <div className="flex gap-2 items-center">
-                <input
-                  type="radio"
-                  name="trip"
-                  checked={tripType === "return"}
-                  onChange={() => setTripType("return")}
-                />
-                <label>Return</label>
-                <input
-                  type="radio"
-                  name="trip"
-                  checked={tripType === "one-way"}
-                  onChange={() => setTripType("one-way")}
-                />
-                <label>One way</label>
-              </div>
-            </div>
+  <div className="bg-white rounded-b-2xl p-6 shadow-lg text-black">
+    <div className="flex flex-col md:flex-row gap-4">
+      <div className="flex gap-4 items-center">
+        <label className="flex items-center gap-2">
+          <input
+            type="radio"
+            name="trip"
+            checked={tripType === "return"}
+            onChange={() => setTripType("return")}
+          />
+          Return
+        </label>
+        <label className="flex items-center gap-2">
+          <input
+            type="radio"
+            name="trip"
+            checked={tripType === "one-way"}
+            onChange={() => setTripType("one-way")}
+          />
+          One way
+        </label>
+      </div>
+    </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mt-4">
-              <input
-                type="text"
-                placeholder="Origin"
-                className="border border-gray-300 p-2 rounded-lg col-span-1"
-              />
-              <input
-                type="text"
-                placeholder="Destination"
-                className="border border-gray-300 p-2 rounded-lg col-span-1"
-              />
-              <input
-                type="date"
-                className="border border-gray-300 p-2 rounded-lg col-span-1"
-                defaultValue="2025-04-10"
-              />
-              {tripType === "return" && (
-                <input
-                  type="date"
-                  className="border border-gray-300 p-2 rounded-lg col-span-1"
-                />
-              )}
-              <input
-                type="number"
-                min="1"
-                defaultValue="1"
-                placeholder="Passengers"
-                className="border border-gray-300 p-2 rounded-lg col-span-1"
-              />
-            </div>
+    <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mt-4">
+    <select
+  value={origin}
+  onChange={(e) => setOrigin(e.target.value)}
+  className="border border-gray-300 p-2 rounded-lg col-span-1"
+>
+  <option value="">Select Origin</option>
+  <option value="Pristina">Pristina</option>
+</select>
 
-            <div className="mt-4 text-right">
-              <button className="bg-pink-600 hover:bg-pink-700 text-white font-semibold px-6 py-2 rounded-lg">
-                Search
-              </button>
-            </div>
-          </div>
-        )}
+<select
+  value={destination}
+  onChange={(e) => setDestination(e.target.value)}
+  className="border border-gray-300 p-2 rounded-lg col-span-1"
+>
+  <option value="">Select Destination</option>
+  <option value="Milano">Milano</option>
+  <option value="Paris">Paris</option>
+  <option value="Budapest">Budapest</option>
+  <option value="London">London</option>
+  <option value="Vienna">Vienna</option>
+  <option value="Berlin">Berlin</option>
+  <option value="Athens">Athens</option>
+</select>
+
+      <input
+        type="date"
+        value={departureDate}
+        onChange={(e) => setDepartureDate(e.target.value)}
+        className="border border-gray-300 p-2 rounded-lg col-span-1"
+      />
+      {tripType === "return" && (
+        <input
+          type="date"
+          value={returnDate}
+          onChange={(e) => setReturnDate(e.target.value)}
+          className="border border-gray-300 p-2 rounded-lg col-span-1"
+        />
+      )}
+      <input
+        type="number"
+        min="1"
+        value={passengers}
+        onChange={(e) => setPassengers(e.target.value)}
+        className="border border-gray-300 p-2 rounded-lg col-span-1"
+      />
+    </div>
+
+    <div className="mt-4 text-right">
+      <button
+  className="bg-pink-600 hover:bg-pink-700 text-white font-semibold px-6 py-2 rounded-lg"
+  onClick={() => {
+    if (!origin || !destination || !departureDate || (tripType === "return" && !returnDate)) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
+    const queryParams = new URLSearchParams({
+      origin,
+      destination,
+      departureDate,
+      returnDate: tripType === "return" ? returnDate : "",
+      passengers,
+    });
+
+    navigate(`/offers?${queryParams.toString()}`);
+  }}
+>
+  Search
+</button>
+
+    </div>
+  </div>
+)}
+
 
         {/* Hotels Search Box */}
         {selectedTab === "hotels" && (
