@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+// Set API base URL for your backend
+const API_BASE = "http://localhost:8008/checkin_api/"; // update port if needed
+
 const CheckInBooking = () => {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
@@ -15,11 +18,26 @@ const CheckInBooking = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // You can add logic to handle submission (e.g., API call)
-        alert('Booking submitted!');
-        navigate('/confirmation'); // Navigate to a confirmation page after successful booking
+        try {
+            const res = await fetch(`${API_BASE}create_booking.php`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            });
+            const json = await res.json();
+
+            if (json.success) {
+                alert("Booking submitted!");
+                navigate("/confirmation");
+            } else {
+                alert(json.message || "Failed to submit");
+            }
+        } catch (err) {
+            console.error(err);
+            alert("Network error");
+        }
     };
 
     const handleBackClick = () => {
