@@ -41,6 +41,7 @@ import Berlinhotels from "./pages/Berlinhotels.jsx";
 import Athenshotels from "./pages/Athenshotels.jsx";
 import MayManiaBooking from './pages/MayManiaBooking';
 import VoucherPage  from './pages/Voucher.jsx';
+import CheckinBookingDash from "./pages/CheckinBookingDash";
 
 
 function App() {
@@ -92,6 +93,7 @@ function App() {
             <Route path="/athenshotels" element={<Athenshotels />} />
             <Route path="/may-mania-booking" element={<MayManiaBooking />} />
             <Route path="/voucher" element={<VoucherPage />} />
+            <Route path="/dashboard" element={<CheckinBookingDash />} />
           </Routes>
         </main>
         <Footer />
