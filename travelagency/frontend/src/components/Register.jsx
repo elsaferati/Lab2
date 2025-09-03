@@ -29,13 +29,13 @@ const Register = ({ onClose }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Register Data:", formData);
-    // TODO: Add API call -> fetch("/api/register", { method: "POST", body: JSON.stringify(formData) })
+    // TODO: API call -> fetch("/api/register", { method: "POST", body: JSON.stringify(formData) })
   };
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-white w-full max-w-xl p-8 rounded shadow-lg relative overflow-y-auto max-h-[90vh]">
-        {/* Close */}
+        {/* Close button */}
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-gray-500 hover:text-red-500 text-xl font-bold"
@@ -46,7 +46,7 @@ const Register = ({ onClose }) => {
         <h2 className="text-2xl font-semibold mb-6 text-center">Register</h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Name */}
+          {/* First / Last Name */}
           <div className="flex gap-2">
             <input
               name="firstName"
@@ -194,7 +194,7 @@ const Register = ({ onClose }) => {
               onChange={handleChange}
               required
             />
-            I'm not a robot
+            I&apos;m not a robot
           </label>
 
           {/* Buttons */}
@@ -222,3 +222,4 @@ Register.propTypes = {
 };
 
 export default Register;
+
