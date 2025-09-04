@@ -4,14 +4,13 @@ require_once __DIR__.'/../../utils/response.php';
 require_once __DIR__.'/../../db.php';
 require_once __DIR__.'/../../models/UserModel.php';
 
-handle_preflight(); send_cors_headers();
-if ($_SERVER['REQUEST_METHOD'] !== 'GET') err(405,'Method not allowed');
+if ($_SERVER['REQUEST_METHOD'] !== 'GET') json_error_user('Method not allowed', 405);
 
 $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
-if($id<=0) err(400,'Missing id');
+if($id<=0) json_error_user('Missing id', 400);
 
 $users = new UserModel($mysqli);
 $u = $users->getById($id);
-if(!$u) err(404,'Not found');
+if(!$u) json_error_user('Not found', 404);
 
-ok(['user'=>$u]);
+json_ok_user(['user'=>$u]);

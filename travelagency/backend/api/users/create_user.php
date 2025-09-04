@@ -1,12 +1,10 @@
 <?php
 require_once __DIR__.'/../../helpers/cors_user.php';
-require_once __DIR__.'/../../utils/response.php';
 require_once __DIR__.'/../../utils/validators.php';
 require_once __DIR__.'/../../db.php';
 require_once __DIR__.'/../../models/UserModel.php';
 
-handle_preflight(); send_cors_headers();
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') err(405,'Method not allowed');
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') json_error_user('Method not allowed', 405);
 
 $in = json_decode(file_get_contents('php://input'), true) ?? [];
 
@@ -21,18 +19,19 @@ $phone = clean($in['phone'] ?? '');
 $nat   = clean($in['nationality'] ?? '');
 $mk    = !empty($in['marketing_opt_in']) ? 1 : 0;
 
-if($first===''||$last===''||$email===''||$pass===''||$dob===''||$cc===''||$phone===''||$nat==='') err(400,'Missing fields');
-if(!is_valid_email($email)) err(400,'Invalid email');
-if(!is_strong_password($pass)) err(400,'Weak password (min8/upper/lower/digit)');
+if($first===''||$last===''||$email===''||$pass===''||$dob===''||$cc===''||$phone===''||$nat==='') 
+    json_error_user('Missing fields', 400);
+if(!is_valid_email($email)) json_error_user('Invalid email', 400);
+if(!is_strong_password($pass)) json_error_user('Weak password (min8/upper/lower/digit)', 400);
 
 $users = new UserModel($mysqli);
-if($users->emailExists($email)) err(409,'Email already exists');
+if($users->emailExists($email)) json_error_user('Email already exists', 409);
 
 $hash = password_hash($pass, PASSWORD_DEFAULT);
 $id = $users->create([
   'first'=>$first,'last'=>$last,'email'=>$email,'pass'=>$hash,
   'dob'=>$dob,'gender'=>$gender,'cc'=>$cc,'phone'=>$phone,'nat'=>$nat,'mk'=>$mk
 ]);
-if($id<=0) err(500,'Create failed');
+if($id<=0) json_error_user('Create failed', 500);
 
-ok(['id'=>$id]);
+json_ok_user(['id'=>$id]);

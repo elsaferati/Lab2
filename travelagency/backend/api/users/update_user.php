@@ -5,11 +5,10 @@ require_once __DIR__.'/../../utils/validators.php';
 require_once __DIR__.'/../../db.php';
 require_once __DIR__.'/../../models/UserModel.php';
 
-handle_preflight(); send_cors_headers();
-if (!in_array($_SERVER['REQUEST_METHOD'], ['PUT','PATCH'])) err(405,'Method not allowed');
+if (!in_array($_SERVER['REQUEST_METHOD'], ['PUT','PATCH'])) json_error_user('Method not allowed', 405);
 
 $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
-if($id<=0) err(400,'Missing id');
+if($id<=0) json_error_user('Missing id', 400);
 
 $raw = file_get_contents('php://input');
 $in = json_decode($raw, true) ?? [];
@@ -17,12 +16,12 @@ $in = json_decode($raw, true) ?? [];
 $users = new UserModel($mysqli);
 
 if(isset($_GET['pwd'])) {
-  // ndrysho vetëm password-in
+  // update password
   $pass = (string)($in['password'] ?? '');
-  if(!is_strong_password($pass)) err(400,'Weak password');
+  if(!is_strong_password($pass)) json_error_user('Weak password', 400);
   $hash = password_hash($pass, PASSWORD_DEFAULT);
-  if(!$users->updatePassword($id,$hash)) err(500,'Update failed');
-  ok();
+  if(!$users->updatePassword($id,$hash)) json_error_user('Update failed', 500);
+  json_ok_user(['message'=>'Password updated']);
 } else {
   // update profile
   $first = clean($in['first_name'] ?? '');
@@ -34,12 +33,14 @@ if(isset($_GET['pwd'])) {
   $nat   = clean($in['nationality'] ?? '');
   $mk    = !empty($in['marketing_opt_in']) ? 1 : 0;
 
-  if($first===''||$last===''||$dob===''||$cc===''||$phone===''||$nat==='') err(400,'Missing fields');
+  if($first===''||$last===''||$dob===''||$cc===''||$phone===''||$nat==='') 
+      json_error_user('Missing fields', 400);
 
   $ok = $users->updateProfile($id,[
     'first'=>$first,'last'=>$last,'dob'=>$dob,'gender'=>$gender,
     'cc'=>$cc,'phone'=>$phone,'nat'=>$nat,'mk'=>$mk
   ]);
-  if(!$ok) err(500,'Update failed');
-  ok();
+  if(!$ok) json_error_user('Update failed', 500);
+
+  json_ok_user(['message'=>'Profile updated']);
 }
