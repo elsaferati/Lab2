@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__.'/../../utils/cors.php';
+require_once __DIR__.'/../../helpers/cors_user.php';
 require_once __DIR__.'/../../utils/response.php';
 require_once __DIR__.'/../../db.php';
 require_once __DIR__.'/../../models/UserModel.php';
