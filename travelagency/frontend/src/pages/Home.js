@@ -20,23 +20,34 @@ export default function FlightBooking() {
   const navigate = useNavigate();
 
   const handleSearch = async () => {
-    if (!origin || !destination || !departureDate || (tripType === "return" && !returnDate)) {
-      alert("Please fill in all required fields.");
-      return;
-    }
+  console.log("Search clicked", { origin, destination, departureDate, returnDate, tripType });
 
-    try {
-      const response = await fetch(
-        `http://localhost:8008/Lab2/travelagency/backend/api/offers.php?origin=${origin}&destination=${destination}&departureDate=${departureDate}&returnDate=${tripType === "return" ? returnDate : ""}`
-      );
-      const data = await response.json();
-      console.log("Fetched offers:", data); // debug
+  if (!origin || !destination || !departureDate || (tripType === "return" && !returnDate)) {
+    alert("Please fill in all required fields.");
+    return;
+  }
+
+  try {
+    const url = `http://localhost:8008/Lab2/travelagency/backend/api/offers.php?origin=${origin}&destination=${destination}&departureDate=${departureDate}&returnDate=${tripType === "return" ? returnDate : ""}`;
+    console.log("Fetching:", url);
+
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log("Fetched offers:", data);
+
+    if (data.success === false) {
+      alert(data.message);
+      console.warn("API Debug:", data.params);
+      setOffers([]);
+    } else {
       setOffers(data);
-    } catch (err) {
-      console.error("Error fetching offers:", err);
-      alert("Failed to fetch offers. Check console for details.");
     }
-  };
+  } catch (err) {
+    console.error("Error fetching offers:", err);
+    alert("Failed to fetch offers. Check console for details.");
+  }
+};
+
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-pink-600 to-purple-700 text-white">
