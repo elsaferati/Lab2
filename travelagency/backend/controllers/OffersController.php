@@ -7,7 +7,7 @@ class OffersController
 
     public function __construct()
     {
-        $this->offersModel = new Offers();
+        $this->offersModel = new Offers(); // fixed
     }
 
     public function getOffers($params)
