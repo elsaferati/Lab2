@@ -41,7 +41,7 @@ import Berlinhotels from "./pages/Berlinhotels.jsx";
 import Athenshotels from "./pages/Athenshotels.jsx";
 import MayManiaBooking from './pages/MayManiaBooking';
 import VoucherPage  from './pages/Voucher.jsx';
-
+import HotelTable from "./pages/HotelTable";
 
 function App() {
   const [showSignUp, setShowSignUp] = useState(false);
@@ -92,6 +92,8 @@ function App() {
             <Route path="/athenshotels" element={<Athenshotels />} />
             <Route path="/may-mania-booking" element={<MayManiaBooking />} />
             <Route path="/voucher" element={<VoucherPage />} />
+            <Route path="/hoteltable" element={<HotelTable />} />
+
           </Routes>
         </main>
         <Footer />

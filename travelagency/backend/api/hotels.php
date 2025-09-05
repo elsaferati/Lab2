@@ -1,36 +1,67 @@
 <?php
-header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') exit;
 
-require_once "../controllers/HotelController.php"; 
-$controller = new HotelController();
+header("Content-Type: application/json");
 
-$method = $_SERVER["REQUEST_METHOD"];
+try {
+    $pdo = new PDO("mysql:host=localhost;dbname=hotels;charset=utf8mb4", "root", "");
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-switch ($method) {
-    case "GET":
-        if (isset($_GET["id"])) {
-            echo json_encode($controller->getById($_GET["id"]));
-        } else {
-            echo json_encode($controller->getAll());
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+        // Merr të dhënat nga FormData
+        $name = $_POST['name'] ?? '';
+        $city = $_POST['city'] ?? '';
+        $rating = $_POST['rating'] ?? 0;
+        $ratingText = $_POST['ratingText'] ?? '';
+        $reviews = $_POST['reviews'] ?? 0;
+        $guests = $_POST['guests'] ?? 0;
+        $bedroom = $_POST['bedroom'] ?? 0;
+        $bath = $_POST['bath'] ?? 0;
+        $bed = $_POST['bed'] ?? '';
+        $price = $_POST['price'] ?? 0;
+
+        $filename = '';
+        if(isset($_FILES['image'])) {
+            $filename = $_FILES['image']['name']; // ruan emrin origjinal
+            $targetDir = "../uploads/"; // sigurohu që folderi ekziston
+            if(!is_dir($targetDir)) mkdir($targetDir, 0755, true);
+            move_uploaded_file($_FILES['image']['tmp_name'], $targetDir . $filename);
         }
-        break;
 
-    case "POST":
-        $data = json_decode(file_get_contents("php://input"), true);
-        echo json_encode(["success" => $controller->create($data)]);
-        break;
+        $stmt = $pdo->prepare("
+            INSERT INTO hotels 
+            (name, city, rating, ratingText, reviews, guests, bedroom, bath, bed, price, image)
+            VALUES (:name, :city, :rating, :ratingText, :reviews, :guests, :bedroom, :bath, :bed, :price, :image)
+        ");
 
-    case "PUT":
-        $data = json_decode(file_get_contents("php://input"), true);
-        echo json_encode(["success" => $controller->update($data["id"], $data)]);
-        break;
+        $stmt->execute([
+            ':name' => $name,
+            ':city' => $city,
+            ':rating' => $rating,
+            ':ratingText' => $ratingText,
+            ':reviews' => $reviews,
+            ':guests' => $guests,
+            ':bedroom' => $bedroom,
+            ':bath' => $bath,
+            ':bed' => $bed,
+            ':price' => $price,
+            ':image' => $filename
+        ]);
 
-    case "DELETE":
-        parse_str($_SERVER["QUERY_STRING"], $query);
-        echo json_encode(["success" => $controller->delete($query["id"])]);
-        break;
+        echo json_encode(["success" => true, "id" => $pdo->lastInsertId(), "image" => $filename]);
+
+    } else {
+        // GET: kthen të dhënat nga tabela
+        $stmt = $pdo->query("SELECT * FROM hotels ORDER BY id DESC");
+        $hotels = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        echo json_encode($hotels);
+    }
+
+} catch (PDOException $e) {
+    echo json_encode(["success" => false, "error" => $e->getMessage()]);
 }
 ?>
