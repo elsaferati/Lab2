@@ -59,42 +59,41 @@ const hotels = [
   { id: 28, name: "Kozmo Hotel", city: "Budapest", rating: 8.0, ratingText: "Good", reviews: 2991, stars: 5, guests: 2, bedroom: 1, bath: 1, bed: "1 Double", price: "€710 / 2 nights", image: budapesthotel28 },
 ];
 const HotelCards = () => {
-
   const bookHotel = async (hotel) => { 
     try {
-      const formData = new FormData();
-      formData.append("name", hotel.name || "No Name");
-      formData.append("city", hotel.city || "Unknown");
-      formData.append("rating", hotel.rating || 0);
-      formData.append("ratingText", hotel.ratingText || "");
-      formData.append("reviews", hotel.reviews || 0);
-      formData.append("guests", hotel.guests || 0);
-      formData.append("bedroom", hotel.bedroom || 0);
-      formData.append("bath", hotel.bath || 0);
-      formData.append("bed", hotel.bed || "");
-      formData.append("price", Number(hotel.price.toString().replace(/[^0-9.]/g, "")) || 0);
-
       const response = await fetch(
-        "http://localhost:8080/Lab/Lab2/travelagency/backend/api/hotels.php",
+        `http://localhost:8080/Lab/Lab2/travelagency/backend/api/hotels.php?id=${hotel.id}`,
         {
           method: "POST",
-          body: formData
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: hotel.name || "No Name",
+            city: hotel.city || "Unknown",
+            rating: hotel.rating || 0,
+            ratingText: hotel.ratingText || "",
+            reviews: hotel.reviews || 0,
+            guests: hotel.guests || 0,
+            bedroom: hotel.bedroom || 0,
+            bath: hotel.bath || 0,
+            bed: hotel.bed || "",
+            price: Number(hotel.price.toString().replace(/[^0-9.]/g, "")) || 0
+          })
         }
       );
-
+  
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-
+  
       const data = await response.json();
       console.log("📥 Response from PHP:", data);
       alert(data.success ? "Hotel booked!" : "Booking failed: " + (data.error || ""));
-
     } catch (error) {
       console.error("❌ Fetch error:", error);
       alert("Error booking hotel! " + error.message);
     }
   };
+  
 
   return (
     <section className="py-10 bg-gray-50">

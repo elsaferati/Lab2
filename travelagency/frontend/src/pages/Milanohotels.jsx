@@ -27,439 +27,87 @@ import milanohotel25 from "../assets/images/milanohotel25.avif";
 import milanohotel26 from "../assets/images/milanohotel26.webp";
 import milanohotel27 from "../assets/images/milanohotel27.jpg";
 
- const hotels = [
-  {
-      id: 1,
-      name: "Park Hyatt Hotel",
-      city: "Milano",
-      rating: 9.0,
-      ratingText: "Excellent",
-      reviews: 1711,
-      stars: 5,
-      guests: 2,
-      bedroom: 1,
-      bath: 1,
-      bed: "1 King",
-      price: "€3,601 / 2 nights",
-      image: milanohotel,
-    },
-  {
-    id: 2,
-    name: "Neo Hotel",
-    city: "Milano",
-    rating: 5.2,
-    ratingText: "Bad",
-    reviews: 700,
-    stars: 5,
-    guests: 2,
-    bedroom: 1,
-    bath: 1,
-    bed: "1 Queen",
-    price: "€360 / 2 nights",
-    image: milanohotel2,
-  },
-   {
-       id: 3,
-       name: "Belmond Hotel",
-       city: "Milano",
-       rating: 6.8,
-       ratingText: "Pleasant",
-       reviews: 753,
-       stars: 5,
-       guests: 2,
-       bedroom: 1,
-       bath: 1,
-       bed: "1 Double",
-       price: "€615 / 2 nights",
-       image: milanohotel3,
-     },
-   {
-       id: 4,
-       name: "Four Seasons Hotel",
-       city: "Milano",
-       rating: 8.3,
-       ratingText: "Very Good",
-       reviews: 2700,
-       stars: 5,
-       guests: 2,
-       bedroom: 1,
-       bath: 1,
-       bed: "1 King",
-       price: "€1,286 / 2 nights",
-       image: milanohotel4,
-     },
-    {
-       id: 5,
-       name: "Armani Hotel",
-       city: "Milano",
-       rating: 8.9,
-       ratingText: "Very Good",
-       reviews: 1777,
-       stars: 5,
-       guests: 2,
-       bedroom: 1,
-       bath: 1,
-       bed: "1 King",
-       price: "€2,996 / 2 nights",
-       image: milanohotel5,
-     },
-     {
-        id: 6,
-        name: "Riverstone Hotel",
-        city: "Milano",
-        rating: 7.2,
-        ratingText: "Pleasant",
-        reviews: 1501,
-        stars: 5,
-        guests: 2,
-        bedroom: 1,
-        bath: 1,
-        bed: "1 Double",
-        price: "€732 / 2 nights",
-        image: milanohotel6,
-      },
-      {
-        id: 7,
-        name: "D&G Hotel",
-        city: "Milano",
-        rating: 8.4,
-        ratingText: "Very Good",
-        reviews: 2171,
-        stars: 5,
-        guests: 2,
-        bedroom: 1,
-        bath: 1,
-        bed: "1 King",
-        price: "€1,961 / 2 nights",
-        image: milanohotel7,
-      },
-      {
-        id: 8,
-        name: "Hilltop Hotel",
-        city: "Milano",
-        rating: 6.1,
-        ratingText: "Pleasant",
-        reviews: 901,
-        stars: 5,
-        guests: 2,
-        bedroom: 1,
-        bath: 1,
-        bed: "2 Single",
-        price: "€542 / 2 nights",
-        image: milanohotel8,
-      },
-      {
-        id: 9,
-        name: "Oak Tree Hotel",
-        city: "Milano",
-        rating: 8.2,
-        ratingText: "Very Good",
-        reviews: 899,
-        stars: 5,
-        guests: 3,
-        bedroom: 1,
-        bath: 1,
-        bed: "1 Double-1 Single",
-        price: "€1,006 / 2 nights",
-        image: milanohotel9,
-      },
-      {
-        id: 10,
-        name: "Grand Hotel",
-        city: "Milano",
-        rating: 7.7,
-        ratingText: "Good",
-        reviews: 1007,
-        stars: 5,
-        guests: 4,
-        bedroom: 1,
-        bath: 1,
-        bed: "2 Double",
-        price: "€886 / 2 nights",
-        image: milanohotel10,
-      },
-      {
-        id: 11,
-        name: "Night Sky Hotel",
-        city: "Milano",
-        rating: 7.5,
-        ratingText: "Pleasant",
-        reviews: 648,
-        stars: 5,
-        guests: 2,
-        bedroom: 1,
-        bath: 1,
-        bed: "1 Double",
-        price: "€686 / 2 nights",
-        image: milanohotel11,
-      },
-      {
-        id: 12,
-        name: "Anix Hotel",
-        city: "Milano",
-        rating: 7.5,
-        ratingText: "Pleasant",
-        reviews: 613,
-        stars: 5,
-        guests: 4,
-        bedroom: 1,
-        bath: 1,
-        bed: "2 Double",
-        price: "€720 / 2 nights",
-        image: milanohotel12,
-      },
-      {
-        id: 13,
-        name: "White Stone Hotel",
-        city: "Milano",
-        rating: 8.0,
-        ratingText: "Good",
-        reviews: 1691,
-        stars: 5,
-        guests: 2,
-        bedroom: 1,
-        bath: 1,
-        bed: "1 King",
-        price: "€1,080 / 2 nights",
-        image: milanohotel13,
-      },
-      {
-        id: 14,
-        name: "The Golden Hotel",
-        city: "Milano",
-        rating: 7.9,
-        ratingText: "Good",
-        reviews: 1822,
-        stars: 5,
-        guests: 2,
-        bedroom: 1,
-        bath: 1,
-        bed: "1 Double",
-        price: "€826 / 2 nights",
-        image: milanohotel14,
-      },
-      {
-        id: 15,
-        name: "The Arlyn Hotel",
-        city: "Milano",
-        rating: 5.5,
-        ratingText: "Bad",
-        reviews: 1416,
-        stars: 5,
-        guests: 2,
-        bedroom: 1,
-        bath: 1,
-        bed: "1 King",
-        price: "€263 / 2 nights",
-        image: milanohotel15,
-      },
-      {
-        id: 16,
-        name: "Nova Hotel",
-        city: "Milano",
-        rating: 5.2,
-        ratingText: "Bad",
-        reviews: 2438,
-        stars: 5,
-        guests: 3,
-        bedroom: 1,
-        bath: 1,
-        bed: "3 Single",
-        price: "€380 / 2 nights",
-        image: milanohotel16,
-      },
-      {
-        id: 17,
-        name: "The Bulgari Hotel",
-        city: "Milano",
-        rating: 8.9,
-        ratingText: "Very Good",
-        reviews: 2217,
-        stars: 5,
-        guests: 2,
-        bedroom: 1,
-        bath: 1,
-        bed: "1 King",
-        price: "€3,001 / 2 nights",
-        image: milanohotel17,
-      },
-      {
-        id: 18,
-        name: "NYX Hotel",
-        city: "Milano",
-        rating: 8.4,
-        ratingText: "Good",
-        reviews: 1711,
-        stars: 5,
-        guests: 2,
-        bedroom: 1,
-        bath: 1,
-        bed: "1 King",
-        price: "€894 / 2 nights",
-        image: milanohotel18,
-      },
-      {
-        id: 19,
-        name: "Cosmo Hotel",
-        city: "Milano",
-        rating: 5.1,
-        ratingText: "Bad",
-        reviews: 2712,
-        stars: 5,
-        guests: 4,
-        bedroom: 1,
-        bath: 1,
-        bed: "2 Double",
-        price: "€406 / 2 nights",
-        image: milanohotel19,
-      },
-      {
-        id: 20,
-        name: "B&B Hotel",
-        city: "Milano",
-        rating: 7.6,
-        ratingText: "Pleasant",
-        reviews: 801,
-        stars: 5,
-        guests: 2,
-        bedroom: 1,
-        bath: 1,
-        bed: "1 King",
-        price: "€656 / 2 nights",
-        image: milanohotel20,
-      },
-      {
-        id: 21,
-        name: "The Heaven Hotel",
-        city: "Milano",
-        rating: 7.5,
-        ratingText: "Pleasant",
-        reviews: 921,
-        stars: 5,
-        guests: 2,
-        bedroom: 1,
-        bath: 1,
-        bed: "1 Double",
-        price: "€600 / 2 nights",
-        image: milanohotel21,
-      },
-      {
-        id: 22,
-        name: "The Loft Hotel",
-        city: "Milano",
-        rating: 4.2,
-        ratingText: "Disappointing",
-        reviews: 1130,
-        stars: 5,
-        guests: 2,
-        bedroom: 1,
-        bath: 1,
-        bed: "1 Double",
-        price: "€237 / 2 nights",
-        image: milanohotel22,
-      },
-      {
-        id: 23,
-        name: "Zenith Hotel",
-        city: "Milano",
-        rating: 5.5,
-        ratingText: "Bad",
-        reviews: 2101,
-        stars: 5,
-        guests: 2,
-        bedroom: 1,
-        bath: 1,
-        bed: "1 Double",
-        price: "€290 / 2 nights",
-        image: milanohotel23,
-      },
-      {
-        id: 24,
-        name: "Gucci Hotel",
-        city: "Milano",
-        rating: 8.9,
-        ratingText: "Very Good",
-        reviews: 1511,
-        stars: 5,
-        guests: 2,
-        bedroom: 1,
-        bath: 1,
-        bed: "1 King",
-        price: "€2,810 / 2 nights",
-        image: milanohotel24,
-      },
-      {
-        id: 25,
-        name: "The Baglioni Hotel",
-        city: "Milano",
-        rating: 8.8,
-        ratingText: "Very Good",
-        reviews: 1711,
-        stars: 5,
-        guests: 2,
-        bedroom: 1,
-        bath: 1,
-        bed: "1 King",
-        price: "€1,886 / 2 nights",
-        image: milanohotel25,
-      },
-      {
-        id: 26,
-        name: "The Duomo Hotel",
-        city: "Milano",
-        rating: 8.9,
-        ratingText: "Very Good",
-        reviews: 2712,
-        stars: 5,
-        guests: 2,
-        bedroom: 1,
-        bath: 1,
-        bed: "1 King",
-        price: "€3,256 / 2 nights",
-        image: milanohotel26,
-      },
-      {
-        id: 27,
-        name: "Rio Hotel",
-        city: "Milano",
-        rating: 5.9,
-        ratingText: "Bad",
-        reviews: 991,
-        stars: 5,
-        guests: 2,
-        bedroom: 1,
-        bath: 1,
-        bed: "1 Double",
-        price: "€286 / 2 nights",
-        image: milanohotel27,
-      },
+const hotels = [
+  { id: 1, name: "Park Hyatt Hotel", city: "Milano", rating: 9.0, ratingText: "Excellent", reviews: 1711, stars: 5, guests: 2, bedroom: 1, bath: 1, bed: "1 King", price: "€3,601 / 2 nights", image: milanohotel },
+  { id: 2, name: "Neo Hotel", city: "Milano", rating: 5.2, ratingText: "Bad", reviews: 700, stars: 5, guests: 2, bedroom: 1, bath: 1, bed: "1 Queen", price: "€360 / 2 nights", image: milanohotel2 },
+  { id: 3, name: "Belmond Hotel", city: "Milano", rating: 6.8, ratingText: "Pleasant", reviews: 753, stars: 5, guests: 2, bedroom: 1, bath: 1, bed: "1 Double", price: "€615 / 2 nights", image: milanohotel3 },
+  { id: 4, name: "Four Seasons Hotel", city: "Milano", rating: 8.3, ratingText: "Very Good", reviews: 2700, stars: 5, guests: 2, bedroom: 1, bath: 1, bed: "1 King", price: "€1,286 / 2 nights", image: milanohotel4 },
+  { id: 5, name: "Armani Hotel", city: "Milano", rating: 8.9, ratingText: "Very Good", reviews: 1777, stars: 5, guests: 2, bedroom: 1, bath: 1, bed: "1 King", price: "€2,996 / 2 nights", image: milanohotel5 },
+  { id: 6, name: "Riverstone Hotel", city: "Milano", rating: 7.2, ratingText: "Pleasant", reviews: 1501, stars: 5, guests: 2, bedroom: 1, bath: 1, bed: "1 Double", price: "€732 / 2 nights", image: milanohotel6 },
+  { id: 7, name: "D&G Hotel", city: "Milano", rating: 8.4, ratingText: "Very Good", reviews: 2171, stars: 5, guests: 2, bedroom: 1, bath: 1, bed: "1 King", price: "€1,961 / 2 nights", image: milanohotel7 },
+  { id: 8, name: "Hilltop Hotel", city: "Milano", rating: 6.1, ratingText: "Pleasant", reviews: 901, stars: 5, guests: 2, bedroom: 1, bath: 1, bed: "2 Single", price: "€542 / 2 nights", image: milanohotel8 },
+  { id: 9, name: "Oak Tree Hotel", city: "Milano", rating: 8.2, ratingText: "Very Good", reviews: 899, stars: 5, guests: 3, bedroom: 1, bath: 1, bed: "1 Double-1 Single", price: "€1,006 / 2 nights", image: milanohotel9 },
+  { id: 10, name: "Grand Hotel", city: "Milano", rating: 7.7, ratingText: "Good", reviews: 1007, stars: 5, guests: 4, bedroom: 1, bath: 1, bed: "2 Double", price: "€886 / 2 nights", image: milanohotel10 },
+  { id: 11, name: "Night Sky Hotel", city: "Milano", rating: 7.5, ratingText: "Pleasant", reviews: 648, stars: 5, guests: 2, bedroom: 1, bath: 1, bed: "1 Double", price: "€686 / 2 nights", image: milanohotel11 },
+  { id: 12, name: "Anix Hotel", city: "Milano", rating: 7.5, ratingText: "Pleasant", reviews: 613, stars: 5, guests: 4, bedroom: 1, bath: 1, bed: "2 Double", price: "€720 / 2 nights", image: milanohotel12 },
+  { id: 13, name: "White Stone Hotel", city: "Milano", rating: 8.0, ratingText: "Good", reviews: 1691, stars: 5, guests: 2, bedroom: 1, bath: 1, bed: "1 King", price: "€1,080 / 2 nights", image: milanohotel13 },
+  { id: 14, name: "The Golden Hotel", city: "Milano", rating: 7.9, ratingText: "Good", reviews: 1822, stars: 5, guests: 2, bedroom: 1, bath: 1, bed: "1 Double", price: "€826 / 2 nights", image: milanohotel14 },
+  { id: 15, name: "The Arlyn Hotel", city: "Milano", rating: 5.5, ratingText: "Bad", reviews: 1416, stars: 5, guests: 2, bedroom: 1, bath: 1, bed: "1 King", price: "€263 / 2 nights", image: milanohotel15 },
+  { id: 16, name: "Nova Hotel", city: "Milano", rating: 5.2, ratingText: "Bad", reviews: 2438, stars: 5, guests: 3, bedroom: 1, bath: 1, bed: "3 Single", price: "€380 / 2 nights", image: milanohotel16 },
+  { id: 17, name: "The Bulgari Hotel", city: "Milano", rating: 8.9, ratingText: "Very Good", reviews: 2217, stars: 5, guests: 2, bedroom: 1, bath: 1, bed: "1 King", price: "€3,001 / 2 nights", image: milanohotel17 },
+  { id: 18, name: "NYX Hotel", city: "Milano", rating: 8.4, ratingText: "Good", reviews: 1711, stars: 5, guests: 2, bedroom: 1, bath: 1, bed: "1 King", price: "€894 / 2 nights", image: milanohotel18 },
+  { id: 19, name: "Cosmo Hotel", city: "Milano", rating: 5.1, ratingText: "Bad", reviews: 2712, stars: 5, guests: 4, bedroom: 1, bath: 1, bed: "2 Double", price: "€406 / 2 nights", image: milanohotel19 },
+  { id: 20, name: "B&B Hotel", city: "Milano", rating: 7.6, ratingText: "Pleasant", reviews: 801, stars: 5, guests: 2, bedroom: 1, bath: 1, bed: "1 King", price: "€656 / 2 nights", image: milanohotel20 },
+  { id: 21, name: "The Heaven Hotel", city: "Milano", rating: 7.5, ratingText: "Pleasant", reviews: 921, stars: 5, guests: 2, bedroom: 1, bath: 1, bed: "1 Double", price: "€600 / 2 nights", image: milanohotel21 },
+  { id: 22, name: "The Loft Hotel", city: "Milano", rating: 4.2, ratingText: "Disappointing", reviews: 1130, stars: 5, guests: 2, bedroom: 1, bath: 1, bed: "1 Double", price: "€237 / 2 nights", image: milanohotel22 },
+  { id: 23, name: "Zenith Hotel", city: "Milano", rating: 5.5, ratingText: "Bad", reviews: 2101, stars: 5, guests: 2, bedroom: 1, bath: 1, bed: "1 Double", price: "€290 / 2 nights", image: milanohotel23 },
+  { id: 24, name: "Gucci Hotel", city: "Milano", rating: 8.9, ratingText: "Very Good", reviews: 1511, stars: 5, guests: 2, bedroom: 1, bath: 1, bed: "1 King", price: "€2,810 / 2 nights", image: milanohotel24 },
+  { id: 25, name: "The Baglioni Hotel", city: "Milano", rating: 8.8, ratingText: "Very Good", reviews: 1711, stars: 5, guests: 2, bedroom: 1, bath: 1, bed: "1 King", price: "€1,886 / 2 nights", image: milanohotel25 },
+  { id: 26, name: "The Duomo Hotel", city: "Milano", rating: 8.9, ratingText: "Very Good", reviews: 2712, stars: 5, guests: 2, bedroom: 1, bath: 1, bed: "1 King", price: "€3,256 / 2 nights", image: milanohotel26 },
+  { id: 27, name: "Rio Hotel", city: "Milano", rating: 5.9, ratingText: "Bad", reviews: 991, stars: 5, guests: 2, bedroom: 1, bath: 1, bed: "1 Double", price: "€286 / 2 nights", image: milanohotel27 },
 ];
 
+
 const HotelCards = () => {
+  const bookHotel = async (hotel) => { 
+    try {
+      const response = await fetch(
+        `http://localhost:8080/Lab/Lab2/travelagency/backend/api/hotels.php?id=${hotel.id}`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: hotel.name || "No Name",
+            city: hotel.city || "Unknown",
+            rating: hotel.rating || 0,
+            ratingText: hotel.ratingText || "",
+            reviews: hotel.reviews || 0,
+            guests: hotel.guests || 0,
+            bedroom: hotel.bedroom || 0,
+            bath: hotel.bath || 0,
+            bed: hotel.bed || "",
+            price: Number(hotel.price.toString().replace(/[^0-9.]/g, "")) || 0
+          })
+        }
+      );
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+  
+      const data = await response.json();
+      console.log("📥 Response from PHP:", data);
+      alert(data.success ? "Hotel booked!" : "Booking failed: " + (data.error || ""));
+    } catch (error) {
+      console.error("❌ Fetch error:", error);
+      alert("Error booking hotel! " + error.message);
+    }
+  };
+  
+
   return (
     <section className="py-10 bg-gray-50">
-      <h2 className="text-3xl font-bold text-center mb-8">
-        Hotels in Milano
-      </h2>
+      <h2 className="text-3xl font-bold text-center mb-8">Hotels in Milano</h2>
       <div className="grid gap-6 px-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
         {hotels.map((hotel) => (
-          <div
-            key={hotel.id}
-            className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
-          >
-            <img
-              src={hotel.image}
-              alt={hotel.name}
-              className="h-[200px] w-full object-cover"
-            />
+          <div key={hotel.id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+            <img src={hotel.image} alt={hotel.name} className="h-[200px] w-full object-cover" />
             <div className="p-4 space-y-2">
               <div className="flex items-center justify-between">
                 <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">
                   {hotel.rating} / 10.0 {hotel.ratingText}
                 </span>
-                <span className="text-sm text-gray-500">
-                  ({hotel.reviews} Ratings)
-                </span>
+                <span className="text-sm text-gray-500">({hotel.reviews} Ratings)</span>
               </div>
               <h3 className="font-bold text-lg">{hotel.name}</h3>
               <div className="text-sm text-gray-700">
@@ -467,19 +115,16 @@ const HotelCards = () => {
                 <p>{hotel.guests} guests · {hotel.bedroom} bedroom · {hotel.bath} bath</p>
                 <p className="font-medium">{hotel.bed}</p>
               </div>
-
               <div className="flex items-center justify-between pt-2">
-<span className="text-blue-600 font-semibold">{hotel.price}</span>
-</div>
-<form onSubmit={(e) => e.preventDefault()} className="pt-2">
-<button
-  type="submit"
-  className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-2 px-4 rounded-xl transition"
->
-  Book
-</button>
-</form>
-
+                <span className="text-blue-600 font-semibold">{hotel.price}</span>
+              </div>
+             
+              <button
+                onClick={() => bookHotel(hotel)}
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-2 px-4 rounded-xl transition mt-2"
+              >
+                Book
+              </button>
             </div>
           </div>
         ))}
@@ -489,4 +134,3 @@ const HotelCards = () => {
 };
 
 export default HotelCards;
-

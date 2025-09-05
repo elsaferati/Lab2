@@ -35,9 +35,21 @@ const HotelTable = () => {
   // DELETE
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this hotel?")) return;
-    await fetch(`http://localhost:8080/Lab/Lab2/travelagency/backend/api/hotels.php?id=${id}`, { method: "DELETE" });
-    fetchHotels();
+    try {
+      const res = await fetch(`http://localhost:8080/Lab/Lab2/travelagency/backend/api/hotels.php?id=${id}`, { method: "DELETE" });
+      const data = await res.json();
+      if (data.success) {
+        alert("Hotel deleted!");
+        fetchHotels();
+      } else {
+        alert("Delete failed: " + (data.error || ""));
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Error deleting hotel!");
+    }
   };
+  
 
   // EDIT
   const handleEdit = (hotel) => {
@@ -52,16 +64,16 @@ const HotelTable = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!editingHotel) return;
-
-    await fetch(`http://localhost:8080/Lab/Lab2/travelagency/backend/api/hotels.php?id=${editingHotel.id}`, {
+  
+    await fetch(`http://localhost:8080/Lab/Lab2/travelagency/backend/api/hotels.php`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData)
+      body: JSON.stringify({ ...formData, id: editingHotel.id }) // include id
     });
-
+  
     setEditingHotel(null);
     fetchHotels();
-  };
+  };  
 
   if (loading) return <p>Loading...</p>;
 
