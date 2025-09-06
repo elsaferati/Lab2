@@ -1,11 +1,13 @@
 import { useNavigate } from 'react-router-dom';
 import React, { useState } from "react";
+
+// Pages/Extras
 import FlightDeals from '../pages/FlightDeals';
 import TravelPerks from '../pages/TravelPerks';
 import NewsletterSignup from '../pages/NewsletterSignup';
 import WizzBenefits from '../pages/WizzBenefits';
 
-// ✅ Import your FlightCard component
+// Components
 import FlightCard from '../components/FlightCard';
 
 export default function FlightBooking() {
@@ -17,42 +19,78 @@ export default function FlightBooking() {
   const [returnDate, setReturnDate] = useState("");
   const [passengers, setPassengers] = useState(1);
   const [offers, setOffers] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
 
   const handleSearch = async () => {
-    console.log("Search clicked", { origin, destination, departureDate, returnDate, tripType });
-
+    // 1️⃣ Validate fields
     if (!origin || !destination || !departureDate || (tripType === "return" && !returnDate)) {
-      alert("Please fill in all required fields.");
+      alert(`Please fill in all required fields:
+Origin: ${origin || "❌"}
+Destination: ${destination || "❌"}
+Departure Date: ${departureDate || "❌"}
+Return Date: ${tripType === "return" ? (returnDate || "❌") : "N/A"}`);
       return;
     }
 
+    setLoading(true);
+
     try {
-      const url = `http://localhost:8008/Lab2/travelagency/backend/api/offers.php?origin=${origin}&destination=${destination}&departureDate=${departureDate}&returnDate=${tripType === "return" ? returnDate : ""}`;
-      console.log("Fetching:", url);
+      const url = `http://localhost:8008/Lab2/travelagency/backend/helpers/searchFlights.php` +
+        `?origin=${encodeURIComponent(origin)}` +
+        `&destination=${encodeURIComponent(destination)}` +
+        `&departureDate=${encodeURIComponent(departureDate)}` +
+        (tripType === "return" ? `&returnDate=${encodeURIComponent(returnDate)}` : "");
+
+      console.log("Fetching URL:", url);
 
       const response = await fetch(url);
-      const data = await response.json();
-      console.log("Fetched offers:", data);
 
-      if (data.success === false) {
-        alert(data.message);
-        console.warn("API Debug:", data.params);
-        setOffers([]);
-      } else {
-        setOffers(data);
+      if (!response.ok) {
+        const text = await response.text();
+        console.error("Backend fetch failed:", text);
+        alert("Backend request failed. Check console for details.");
+        setLoading(false);
+        return;
       }
+
+      const data = await response.json();
+      console.log("Backend response:", data);
+
+      if (data.error) {
+        alert(`Backend error: ${data.error}`);
+        setOffers([]);
+        setLoading(false);
+        return;
+      }
+
+      const mappedOffers = (data.flights || data.results || []).map((f, index) => ({
+        id: f.id || index,
+        origin: f.origin || "N/A",
+        destination: f.destination || "N/A",
+        departure: f.departure || f.departureDate || new Date().toISOString(),
+        arrival: f.arrival || f.arrivalDate || new Date().toISOString(),
+        duration: f.duration || "N/A",
+        airline: f.airline || "Unknown",
+        flightNumber: f.flightNumber || "—",
+        price: f.price || "N/A",
+      }));
+
+      setOffers(mappedOffers);
+      setLoading(false);
+
     } catch (err) {
-      console.error("Error fetching offers:", err);
+      console.error("Fetch error:", err);
       alert("Failed to fetch offers. Check console for details.");
+      setLoading(false);
     }
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-pink-600 to-purple-700 text-white">
       <div className="max-w-4xl mx-auto py-10 px-4">
-        
+
         {/* Tabs */}
         <div className="bg-white rounded-t-2xl px-6 pt-6 pb-2 flex gap-6 text-black font-semibold text-lg">
           <div
@@ -73,7 +111,7 @@ export default function FlightBooking() {
         {/* Flights Search */}
         {selectedTab === "flights" && (
           <div className="bg-white rounded-b-2xl p-6 shadow-lg text-black mt-4">
-            
+
             {/* Trip type */}
             <div className="flex gap-4 items-center">
               <label>
@@ -112,21 +150,28 @@ export default function FlightBooking() {
             {/* Search button */}
             <div className="mt-4 text-right">
               <button onClick={handleSearch} className="bg-pink-600 hover:bg-pink-700 px-6 py-2 rounded-lg text-white font-semibold">
-                Search
+                {loading ? "Searching..." : "Search"}
               </button>
             </div>
 
             {/* Display offers */}
-            {offers.length > 0 && (
-              <div className="mt-6 text-black">
-                <h2 className="text-2xl font-bold mb-6">Available Flights</h2>
+            <div className="mt-6 text-black">
+              <h2 className="text-2xl font-bold mb-6">Available Flights</h2>
+              {loading ? (
+                <p className="text-center text-gray-700 py-8">Loading flights...</p>
+              ) : offers.length > 0 ? (
                 <div className="space-y-4">
                   {offers.map((offer) => (
                     <FlightCard key={offer.id} offer={offer} />
                   ))}
                 </div>
-              </div>
-            )}
+              ) : (
+                <p className="text-gray-700 text-lg text-center py-8">
+                  No flights found for the selected search. Try different dates or destinations.
+                </p>
+              )}
+            </div>
+
           </div>
         )}
 
@@ -159,10 +204,5 @@ export default function FlightBooking() {
     </div>
   );
 }
-
-
-
-
-
 
 
